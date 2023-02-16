@@ -1,5 +1,6 @@
 body{
     background-image: url('../images/Background.png');
+    overflow: hidden;
 }
 
 .titulo {
@@ -34,6 +35,34 @@ span {
     background-color: white;    
     font-size: 1px;
     line-height: 300%;
+}
+
+.hentai {
+    position: absolute;
+    display: flex;
+    animation: hentai 2s;
+    top: 5%;
+    left: 15%;
+    width: 7%;
+}
+
+@keyframes hentai {
+    0%  {width: 100%; rotate: 0deg;}
+    100%    {width: 7%; rotate: 360deg;}
+}
+
+.hentai2 {
+    position: absolute;
+    display: flex;
+    animation: hentai2 2s;
+    top: 5%;
+    left: 80%;
+    width: 7%;
+}
+
+@keyframes hentai2 {
+    0%  {width: 100%; rotate: 0deg;}
+    100%    {width: 7%; rotate: 360deg;}
 }
 
 #comprar {
