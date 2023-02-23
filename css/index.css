@@ -10,7 +10,8 @@ body{
     font-size: 2.4vw;
     color: yellow;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: titulo 2s infinite alternate;   
+    animation: titulo 2s infinite alternate;  
+    z-index: 3; 
 }
 
 @keyframes titulo {
@@ -48,31 +49,31 @@ span {
 .hentai {
     position: absolute;
     display: flex;
-    animation: hentai 1s;
+    animation: hentai 2s infinite alternate;
     top: 7.5%;
-    left: 23%;
+        left: 23%;
     width: 6%;
     z-index: 2;
 }
 
 @keyframes hentai {
-    0%  {width: 100%; rotate: 0deg;left: 100px;}
-    100%    {width: 6%; rotate: 360deg;}
+    0% {rotate: 3deg;}
+    100% {rotate: -3deg;}
 }
 
 .hentai2 {
     position: absolute;
     display: flex;
-    animation: hentai2 1s;
+    animation: hentai2 2s infinite alternate;
     top: 7.5%;
-    left: 71.5%;
+        left: 71.5%;
     width: 6%;
     z-index: 2;
 }
 
 @keyframes hentai2 {
-    0%  {width: 100%; rotate: 0deg; right: 10%;}
-    100%    {width: 6%; rotate: 360deg; }   
+    0% {rotate: 3deg;}
+    100% {rotate: -3deg;}
 }
 
 #comprar {
