@@ -82,12 +82,13 @@ body{
     width: 30%;
     background-color: black;
 }
-.intro {
+.into {
  
-    font-size: 280%;
+    font-size: 100%;
     color: white;
     text-align: center;
     margin: 4.5%;
+    
 }
 .d3 {
     height: 10%;
@@ -199,6 +200,16 @@ rect {
     .neymar {
         width: 80%;
         height: 80%;
+    }
+    .footer {
+        display: flex;
+        width: 100%;
+        display: inline-block;
+        font-size: 2.8vw;
+        z-index: 1;
+    }
+    span {
+        padding-left: 7.4%;
     }
 }
 
