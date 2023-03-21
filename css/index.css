@@ -16,7 +16,6 @@ body{
     height: 25%;
     width: 100%;
     display: flex;
-    background-color: aqua;
     flex-direction: row;
     justify-items: center;
     justify-content: center;
@@ -62,13 +61,12 @@ body{
     justify-items: center;
     align-items: center;
     align-content: center;
-    background-color: aqua;
+
 }
 .d21 {
     height: 100%;
     width: 30%;
     display: flex;
-    background-color: blue;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -80,21 +78,22 @@ body{
 .d22 {
     height: 100%;
     width: 30%;
-    background-color: black;
 }
 .into {
- 
-    font-size: 100%;
+    display: flex;
+    font-size: 280%;
     color: white;
     text-align: center;
     margin: 4.5%;
-    
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 .d3 {
     height: 10%;
     width: 100%;
     display: flex;
-    background-color: aqua;
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -198,7 +197,7 @@ rect {
         width: 70%;
     }
     .neymar {
-        width: 80%;
+        width: 60%;
         height: 80%;
     }
     .footer {
