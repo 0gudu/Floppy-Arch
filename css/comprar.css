@@ -34,6 +34,55 @@ body{
     align-content: center;
     background-color: aqua;
 }
+.d21 {
+    height: 100%;
+    width: 60%;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 45% 45%;
+    column-gap: 5%;
+    row-gap: 5%;
+    background-color: blue;
+}
+.itemshowcase {
+    height: 100%;
+    width: 100%;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+.disqueteshowcase {
+    width: 100%;
+    height: 70%;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.legendashowcase {
+    width: 100%;
+    height: 30%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.legendap {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: yellow;
+}
+u {
+    color: yellow;
+}
 .d3 {
     height: 10%;
     width: 100%;
