@@ -68,6 +68,7 @@ body{
 }
 .yuuy {
     width: 100%;
+    height: 90%;
   padding: 12px 20px;
   margin: 10px 0;
   box-sizing: border-box;
@@ -82,6 +83,10 @@ body{
     display: flex;
     flex-direction: row;
 }
+#criar {
+    text-decoration: none;
+    color: yellow;
+}
 .button {
     font-family: 'Times New Roman', Times, serif;
 margin-left: 10px;
@@ -90,6 +95,11 @@ margin-left: 10px;
     width: 100%;
     height: 150%;
     font-size: 130%;
+}
+
+.button:hover {
+    background-color: orange;
+    cursor: pointer;
 }
 .button2 {
     font-family: 'Times New Roman', Times, serif;
@@ -100,6 +110,9 @@ margin-left: 10px;
     height: 150%;
     font-size: 130%;
     color: yellow;
+}
+.button2:hover {
+    cursor: pointer;
 }
 .login {
     width: 70%;
