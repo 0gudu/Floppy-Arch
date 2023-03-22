@@ -1,14 +1,10 @@
 body{
-    background-image: url('../images/Background.png');
+    background-image: url('../images/Background3.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
 .d0 {
     height: 100%;
     width: 100%;

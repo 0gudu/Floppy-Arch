@@ -1,18 +1,21 @@
-body{
-    background-image: url('../images/Background.png');
+body
+{
+    background-image: url('../images/Background3.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
 }
 
-.d0 {
+.d0 
+{
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.d1 {
+.d1 
+{
     height: 25%;
     width: 100%;
     display: flex;
@@ -22,18 +25,9 @@ body{
     align-items: center;
     align-content: center;
 }
-.disc1 {
-    width: 10%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-.disc2 {
-    width: 10%;
+.mundo 
+{
+    width: 15%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -63,6 +57,20 @@ body{
     align-content: center;
 
 }
+.d222
+{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.floppy_disk
+{
+    animation: intro 1s linear;
+    width: 70%;
+}
 .d21 {
     height: 100%;
     width: 30%;
@@ -72,14 +80,18 @@ body{
     align-items: center;
     align-content: center;
 }
-.neymar {
+.neymar 
+{
     width: 80%;
 }
-.d22 {
+.d22 
+{
     height: 100%;
     width: 30%;
+    font-size: 90%;
 }
-.into {
+.into 
+{
     display: flex;
     font-size: 280%;
     color: white;
@@ -90,7 +102,8 @@ body{
     align-items: center;
     align-content: center;
 }
-.d3 {
+.d3 
+{
     height: 10%;
     width: 100%;
     display: flex;
@@ -99,7 +112,8 @@ body{
     align-items: center;
     align-content: center;
 }
-.titulo {
+.titulo 
+{
     width: 100%;
     height: 60%;
     display: flex;
@@ -107,7 +121,8 @@ body{
     justify-items: center;
 
 }
- .wf {
+ .wf 
+ {
     width: 100%;
     height: 37%;
     display: flex;
@@ -116,7 +131,8 @@ body{
 
 }
 
-.footer {
+.footer 
+{
     display: flex;
     width: 100%;
     display: inline-block;
@@ -124,44 +140,26 @@ body{
     z-index: 1;
 }
 
-span {
+span 
+{
     padding-left: 9.8%;
 }
 
-.branco{
+.branco
+{
     color: white;
     background-color: white;    
     font-size: 1px;
     line-height: 300%;
 }
 
-.hentai {
-    position: absolute;
-    display: flex;
-    animation: hentai 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
+@keyframes intro 
+{
+    0% {width: 100000px;}
+    100% {width: 70%;}
 }
-
-@keyframes hentai {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
-.hentai2 {
-    position: absolute;
-    display: flex;
-    animation: hentai2 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
-}
-
-@keyframes hentai2 {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
-#comprar {
+#comprar 
+{
     color: yellow;
 }
 
