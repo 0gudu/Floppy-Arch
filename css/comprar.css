@@ -29,6 +29,7 @@ body{
     align-items: center;
     align-content: center;
 }
+
 .d1 {
     height: 10%;
     width: 100%;
@@ -51,6 +52,10 @@ body{
     align-content: center;
     background-color: aqua;
 }
+.nada {
+    width: 20%;
+    height: 100%;
+}
 .d21 {
     height: 100%;
     width: 60%;
@@ -64,6 +69,33 @@ body{
     column-gap: 5%;
     row-gap: 5%;
     background-color: blue;
+}
+.seta_direita {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+#seta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    animation: gira 1s alternate infinite;
+
+}
+#seta:hover {
+    tra
+}
+
+@keyframes gira {
+    0% {rotate: 3deg;}
+    100%{rotate: -3deg;}
 }
 .itemshowcase {
     height: 100%;
