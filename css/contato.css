@@ -51,6 +51,10 @@ body{
     align-content: center;
  
 }
+.contato {
+    background-color: aliceblue;
+    
+}
 .d222 {
     display: flex;
     justify-content: center;
