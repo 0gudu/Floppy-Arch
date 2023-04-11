@@ -19,16 +19,7 @@ body{
     align-items: center;
     align-content: center;
 }
-.comprar {
-    display: flex;
-    font-size: 150%;
-    color: yellow;
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
+
 
 .d1 {
     height: 10%;
