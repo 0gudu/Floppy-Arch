@@ -89,6 +89,9 @@ body{
     width: 100%;
     height: 10%;
     background-color: wheat;
+    font-family: 'Times New Roman', Times, serif;
+    color: yellow;
+    font-size: 100%;
 }
 .disc_price {
     width: 100%;
@@ -99,6 +102,24 @@ body{
     width: 100%;
     height: 20%;
     background-color: tomato;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.disc_comprar{
+    width: 30%;
+    height: 80%;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: yellow;
+}
+.disc_carrinho{
+    width: 50%;
+    height: 80%;
+    font-family: 'Times New Roman', Times, serif;
+
+    background-color: yellow;
 }
 .d3 {
     height: 10%;
