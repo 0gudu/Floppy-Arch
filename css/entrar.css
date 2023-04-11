@@ -30,12 +30,27 @@ body{
     align-items: center;
     align-content: center;
 }
-.criar_conta {
+.criar_conta 
+{
     display: flex;
     font-size: 150%;
     color: yellow;
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.botao_criarconta
+{
+    color: yellow;
+}
+.entrar_criarconta
+{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+        justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;

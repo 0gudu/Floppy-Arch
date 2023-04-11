@@ -89,12 +89,21 @@ body
 {
     height: 100%;
     width: 30%;
-    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.od
+{
+    height: 80%;
+    width: 80%;
+
 }
 .into 
 {
     display: flex;
-    font-size: 280%;
     color: white;
     text-align: center;
     margin: 4.5%;
