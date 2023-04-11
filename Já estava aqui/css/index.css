@@ -1,113 +1,33 @@
-body{
-    background-image: url('../images/Background3.png');
+body
+{
+    background-image: url('../images/Background.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
 }
 
-.d0 {
+.d0 
+{
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.d1 {
-    height: 10%;
-    width: 100%;
-    display: flex;
-
-    flex-direction: row;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-.flop {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-.entrar {
-    display: flex;
-    font-size: 150%;
-    color: yellow;
-    font-family: 'Times New Roman', Times, serif;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-.d2 {
-    height: 78%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
- 
-}
-.d222 {
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-.legenda {
-    font-size: 150%;
-}
-.campo {
-    width: 60%;
-    height: 20%;
-    border: 3px solid white;
-}
-.yuuy {
-    width: 100%;
-  padding: 12px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  font-size: 100%;
-  background: transparent;
-  color: white;
-  border: 3px solid white;
-  font-family: 'Times New Roman', Times, serif;
-}
-.butao {
-    margin: 5%;
-    display: flex;
-    flex-direction: row;
-}
-.button {
-    font-family: 'Times New Roman', Times, serif;
-margin-left: 10px;
-    background-color: yellow;
-    border: 0px;
-    width: 100%;
-    height: 150%;
-    font-size: 130%;
-}
-.button:hover
+.d1 
 {
-cursor: pointer;
-background-color: orange;
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
-.button2 {
-    font-family: 'Times New Roman', Times, serif;
-    margin-left: 40px;
-    background:transparent;
-    border: 0px;
-    width: 250%;
-    height: 150%;
-    font-size: 130%;
-    color: yellow;
-}
-.login {
-    width: 70%;
+.mundo 
+{
+    width: 15%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -115,13 +35,20 @@ background-color: orange;
     justify-items: center;
     align-items: center;
     align-content: center;
-    font-size: 150%;
-    color: white;
-    border: 6px white double;
 }
-.d21 {
-    height: 90%;
-    width: 50%;
+.tits {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.d2 {
+    height: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -130,17 +57,63 @@ background-color: orange;
     align-content: center;
 
 }
-.d3 {
-    height: 10%;
-    width: 100%;
+.d222
+{
+    width: 25%;
     display: flex;
-
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
 }
-.titulo {
+.floppy_disk
+{
+    animation: intro 1s linear;
+    width: 70%;
+}
+.d21 {
+    height: 100%;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.neymar 
+{
+    width: 80%;
+}
+.d22 
+{
+    height: 100%;
+    width: 30%;
+    font-size: 90%;
+}
+.into 
+{
+    display: flex;
+    font-size: 280%;
+    color: white;
+    text-align: center;
+    margin: 4.5%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.d3 
+{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.titulo 
+{
     width: 100%;
     height: 60%;
     display: flex;
@@ -148,7 +121,8 @@ background-color: orange;
     justify-items: center;
 
 }
- .wf {
+ .wf 
+ {
     width: 100%;
     height: 37%;
     display: flex;
@@ -157,52 +131,36 @@ background-color: orange;
 
 }
 
-.footer {
+.footer 
+{
     display: flex;
     width: 100%;
     display: inline-block;
     font-size: 2vw;
     z-index: 1;
+    background-color: rgb(0, 0, 255, 0.1);
 }
 
-span {
+span 
+{
     padding-left: 9.8%;
 }
 
-.branco{
+.branco
+{
     color: white;
     background-color: white;    
     font-size: 1px;
     line-height: 300%;
 }
 
-.hentai {
-    position: absolute;
-    display: flex;
-    animation: hentai 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
+@keyframes intro 
+{
+    0% {width: 100000px;}
+    100% {width: 70%;}
 }
-
-@keyframes hentai {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
-.hentai2 {
-    position: absolute;
-    display: flex;
-    animation: hentai2 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
-}
-
-@keyframes hentai2 {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
-#comprar {
+#comprar 
+{
     color: yellow;
 }
 
@@ -222,11 +180,12 @@ rect {
 
 @media screen and (max-width:450px) {
     .d1 {
-        height: 8%;
+        height: 15%;
+        justify-content: space-between;
     }
     .d2 {
-        height: 80%;
-        
+        height: 70%;
+        flex-direction: column;
     }
     .d21 {
         height: 50%;
@@ -237,7 +196,7 @@ rect {
         width: 70%;
     }
     .neymar {
-        width: 80%;
+        width: 60%;
         height: 80%;
     }
     .footer {
@@ -254,10 +213,12 @@ rect {
 
 @media screen and (min-width:450px) and (max-width:900px){
     .d1 {
-        height: 10%;
+        height: 15%;
+        justify-content: space-between;
     }
     .d2 {
-        height: 78%;
+        height: 70%;
+        flex-direction: column;
     }
     .d21 {
         height: 50%;

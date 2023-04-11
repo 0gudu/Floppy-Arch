@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/Background3.png');
+    background-image: url('../images/Background.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
@@ -163,6 +163,7 @@ background-color: orange;
     display: inline-block;
     font-size: 2vw;
     z-index: 1;
+    background-color: rgb(0, 0, 255, 0.1);
 }
 
 span {

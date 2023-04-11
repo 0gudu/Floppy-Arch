@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOPPY ARCH - Contato</title>
-    <link rel="stylesheet" href="css/contato.css" /> 
+    <title>FOPPY ARCH - Criar conta</title>
+    <link rel="stylesheet" href="css/criarconta.css" /> 
 </head>
 <body>
    <div class="d0">
@@ -16,7 +16,7 @@
                         <img src="images/floppy_arch_title.png" width="100%">
                     </div>
                     <div class="entrar">
-                        <p ><b>➝ Contato</b></p>    
+                        <p ><b>➝ Criar conta</b></p>    
                     </div>
                     
                 </div>
@@ -29,18 +29,22 @@
             </div>
             <div class="d21">
                 
-                <div class="contatos">
-                    <div classs="contatoss">
-                        <p>E-mail: floppyarch@gmail.com</p>   
-                    </div>
-                    <div classs="contatoss">
-                        <p>Instagram: @floppyarch</p>
-                    </div>
-                    <div classs="contatoss">
-                        <p>Telefone: 04830295656</p>
-                    </div>
+                <fieldset class="login">
+                    <fieldset class="campo">
+                        <legend class="legenda">Nome</legend>
+                        <input type="text" class="yuuy">
+                    </fieldset>
+                    <fieldset class="campo">
+                        <legend class="legenda">Senha</legend>
+                        <input type="password" class="yuuy">
+                    </fieldset>
+                    <fieldset class="campo">
+                        <legend class="legenda">Confirmar senha</legend>
+                        <input type="password" class="yuuy">
+                    </fieldset>
+                    <div class="butao"><button type="button" class="button">Criar conta</button> </div>
                     
-                </div>
+                </fieldset>
                 
             </div>
             <div class="d222">
@@ -50,11 +54,10 @@
         </div>
         
         <div class="d3">
-            <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
-                <div id="texto_menu" class="texto_menu">Menu</div>
+            <div class="footer">
                 <div class="branco"> a</div>
                 
-                <u><b><a href="index.html" id="menupadrao">⬅ Inicio</a></b></u>
+                <span><u><b><a href="index.html" id="menupadrao">⬅ Inicio</a></b></u></span>
                 <span><u><b><a href="comprar.html"  id="comprar">Comprar</a></b></u></span>
                 <span><u><b><a href="carrinho.html" id="menupadrao">Carrinho</a></b></u></span>
                 <span><u><b><a href="entrar.html"  id="login">Entrar</a></u></b></span>
@@ -65,14 +68,4 @@
         </div>
     </div>  
 </body>
-<script>
-    function ocultar()
-    {
-        texto_menu.style.display="none";
-    }
-    function aparecer()
-    {
-        texto_menu.style.display="inline";
-    }
-</script>
 </html>

@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/Background.png');
+    background-image: url('../images/Background3.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
@@ -51,10 +51,6 @@ body{
     align-content: center;
  
 }
-.contato {
-    background-color: aliceblue;
-    
-}
 .d222 {
     display: flex;
     justify-content: center;
@@ -100,9 +96,9 @@ background-color: orange;
     font-size: 130%;
     color: yellow;
 }
-.login {
+.contatos {
     width: 70%;
-    height: 100%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,6 +108,18 @@ background-color: orange;
     font-size: 150%;
     color: white;
     border: 6px white double;
+    font-size: 230%;
+}
+.contatoss
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    background-color: yellow;
 }
 .d21 {
     height: 90%;
@@ -125,14 +133,15 @@ background-color: orange;
 
 }
 .d3 {
-    height: 10%;
+    height: 15%;
     width: 100%;
     display: flex;
-
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
+    position: relative;
+    text-align: center;
 }
 .titulo {
     width: 100%;
@@ -142,22 +151,24 @@ background-color: orange;
     justify-items: center;
 
 }
- .wf {
-    width: 100%;
-    height: 37%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
-
-.footer {
+.footer 
+{
     display: flex;
     width: 100%;
     display: inline-block;
     font-size: 2vw;
-    z-index: 1;
-    background-color: rgb(0, 0, 255, 0.1);
+    position: absolute;
+    padding-top: 4%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 span {

@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/Background3.png');
+    background-image: url('../images/Background.png');
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
@@ -51,6 +51,10 @@ body{
     align-content: center;
  
 }
+.contato {
+    background-color: aliceblue;
+    
+}
 .d222 {
     display: flex;
     justify-content: center;
@@ -66,17 +70,7 @@ body{
     height: 20%;
     border: 3px solid white;
 }
-.yuuy {
-    width: 100%;
-  padding: 12px 20px;
-  margin: 10px 0;
-  box-sizing: border-box;
-  font-size: 100%;
-  background: transparent;
-  color: white;
-  border: 3px solid white;
-  font-family: 'Times New Roman', Times, serif;
-}
+
 .butao {
     margin: 5%;
     display: flex;
@@ -163,6 +157,7 @@ background-color: orange;
     display: inline-block;
     font-size: 2vw;
     z-index: 1;
+    background-color: rgb(0, 0, 255, 0.1);
 }
 
 span {
@@ -175,33 +170,6 @@ span {
     font-size: 1px;
     line-height: 300%;
 }
-
-.hentai {
-    position: absolute;
-    display: flex;
-    animation: hentai 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
-}
-
-@keyframes hentai {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
-.hentai2 {
-    position: absolute;
-    display: flex;
-    animation: hentai2 2s infinite alternate;
-    width: 6%;
-    z-index: 2;
-}
-
-@keyframes hentai2 {
-    0% {rotate: 3deg;}
-    100% {rotate: -3deg;}
-}
-
 #comprar {
     color: yellow;
 }
