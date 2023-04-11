@@ -34,7 +34,7 @@
                             Disquete personalizado do Neymar Dourado Mais
                         </div>
                         <div class="discs_capa"> 
-                            <u>Capacidade</u>: <select>
+                            <u>Capacidade</u>: <select id="ka" onchange="penis()">
                                 <option>32gb</option>
                                 <option>64gb</option>
                                 <option>128gb</option>
@@ -45,7 +45,7 @@
 
                         </div>
                         <div class="disc_price">
-                            Preço - > <span style="color: green;">R$40,00</span>
+                            Preço - > <span id="kk" style="color: green;">R$40,00</span>
                         </div>
                         <div class="disc_carrinhocompra">
                             <div class="disc_comprar"> <b>COMPRAR</b></div>
@@ -71,4 +71,18 @@
         </div>
     </div>  
 </body>
+<script>
+    function penis() {
+        var x = document.getElementById("ka").value;
+if (x === '64gb') {
+    document.getElementById("kk").innerHTML = "R$60,00";
+}
+else if (x == '32gb'){
+    document.getElementById("kk").innerHTML = "R$40,00";
+}
+else if (x == '128gb'){
+    document.getElementById("kk").innerHTML = "R$90,00";
+}
+    }
+</script>
 </html>
