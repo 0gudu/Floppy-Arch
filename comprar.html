@@ -26,15 +26,15 @@
 
             </div>
             <div class="d21">
-                <div class="itemshowcase">
+                <div onclick="Enviar(1);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/Colorido.png" width="90%">
                     </div>
-                    <div class="legendashowcase">
+                    <div  class="legendashowcase">
                         <u><b><p class="legendap">Disquete Colorido</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(2);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/disquete veridiano.png" width="90%">
                     </div>
@@ -42,7 +42,7 @@
                         <u><b><p class="legendap">Disquete Veridian</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(3);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/estampa.png" width="90%">
                     </div>
@@ -50,7 +50,7 @@
                         <u><b><p class="legendap">Disquete estampado</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(4);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/fafase lalau.png" width="90%">
                     </div>
@@ -58,15 +58,15 @@
                         <u><b><p class="legendap">Disquete lalau</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(5);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/germanodisk.png" width="90%">
                     </div>
                     <div class="legendashowcase">
-                        <b><u><p class="legendap">Disquete germanico</p></u></b>
+                        <b><u><p class="legendap">Disquete germano</p></u></b>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(6);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/neymar_gold.png" width="90%">
                     </div>
@@ -74,7 +74,7 @@
                         <u><b><p class="legendap">Disquete neymar gold</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(7);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/ratuedisk-gudulegal.png" width="90%">
                     </div>
@@ -82,7 +82,7 @@
                         <u><b><p class="legendap">Disquete ratue</p></b></u>
                     </div>
                 </div>
-                <div class="itemshowcase">
+                <div onclick="Enviar(8);" class="itemshowcase">
                     <div class="disqueteshowcase">
                         <img src="images/Personalizados/retrodisk.png" width="90%">
                     </div>
@@ -113,4 +113,10 @@
         </div>
     </div>  
 </body>
+<script>
+    function Enviar(codigo) {
+
+        window.open("pagina_disquete.php?codigo="+codigo,"_self")
+    }
+</script>
 </html>

@@ -1,3 +1,49 @@
+<?php
+    $codigo = $_GET["codigo"];
+    switch($codigo){
+        case 1:
+            $imagem = "images/personalizados/colorido.png";
+            $titulo = "Disquete Colorido";
+            $info = "Disquete com uma ampla variedade de cores";
+        break;
+        case 2:
+            $imagem = "images/personalizados/disquete veridiano.png";
+            $titulo = "Disquete Veridian";
+            $info = "@veridianoforaobaile";
+        break;
+        case 3:
+            $imagem = "images/personalizados/estampa.png";
+            $titulo = "Disquete Estampado";
+            $info = "rawr";
+        break;
+        case 4:
+            $imagem = "images/personalizados/fafase lalau.png";
+            $titulo = "Disquete lalau";
+            $info = "Obra de arte";
+        break;
+        case 5:
+            $imagem = "images/personalizados/germanodisk.png";
+            $titulo = "Disquete Germano";
+            $info = "Altamente germanico";
+        break;
+        case 6:
+            $imagem = "images/neymar_gold.png";
+            $titulo = "Neymar Gold Plus";
+            $info = "Disquete do Neymar ouro mais";
+        break;
+        case 7:
+            $imagem = "images/personalizados/ratuedisk-gudulegal.png";
+            $titulo = "Disquete Ratue";
+            $info = "gudu765";
+        break;
+        case 8:
+            $imagem = "images/personalizados/retrodisk.png";
+            $titulo = "Disquete Retrô";
+            $info = "Somente classicos";
+        break;
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,16 +68,16 @@
         <div class="d2">
             <div class="d21">
                 <div class="disc_titulo">
-                   <u><b>Neymar gold plus</b></u>
+                   <u><b><?php echo($titulo); ?></b></u>
                 </div>
                 <div class="disc_baixo">
                     <div class="disc_img">
-                        <img src="images/neymar_gold.png" width="97%" >
+                        <img src="<?php echo($imagem); ?>" width="97%" >
                     </div>
                     <div class="disc_info">
                         <div class="branco">a</div>
                         <div class="discs_nome">
-                            Disquete personalizado do Neymar Dourado Mais
+                            <?php echo($info); ?>
                         </div>
                         <div class="discs_capa"> 
                             <u>Capacidade</u>: <select id="ka" onchange="penis()">
@@ -77,22 +123,22 @@
 
     switch(x) {
         case '64gb': 
-            document.getElementById("kk").innerHTML = "R$60,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$60,00";
         break;
         case '32gb': 
-            document.getElementById("kk").innerHTML = "R$40,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$40,00";
         break;
         case '128gb': 
-            document.getElementById("kk").innerHTML = "R$90,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$90,00";
         break;
         case '240gb': 
-            document.getElementById("kk").innerHTML = "R$140,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$140,00";
         break;
         case '480gb': 
-            document.getElementById("kk").innerHTML = "R$200,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$200,00";
         break;
         case '960gb': 
-            document.getElementById("kk").innerHTML = "R$500,00" + ($codigo * 2);
+            document.getElementById("kk").innerHTML = "R$500,00";
         break;
     }
     }
