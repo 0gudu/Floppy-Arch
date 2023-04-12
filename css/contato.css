@@ -1,3 +1,4 @@
+/*fundo*/
 body{
     background-image: url('../images/Background3.png');
     overflow: hidden;
@@ -12,6 +13,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
+/*título*/
 .d1 {
     height: 10%;
     width: 100%;
@@ -40,6 +42,15 @@ body{
     align-items: center;
     align-content: center;
 }
+.titulo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+/*corpo*/
 .d2 {
     height: 78%;
     width: 100%;
@@ -132,6 +143,7 @@ background-color: orange;
     align-content: center;
 
 }
+/*menu*/
 .d3 {
     height: 15%;
     width: 100%;
@@ -142,14 +154,6 @@ background-color: orange;
     align-content: center;
     position: relative;
     text-align: center;
-}
-.titulo {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-
 }
 .texto_menu
 {
@@ -164,15 +168,13 @@ background-color: orange;
     width: 100%;
     display: inline-block;
     font-size: 2vw;
-    position: absolute;
-    padding-top: 4%;
     text-align: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 span {
-    padding-left: 9.8%;
+    padding-left: 5%;
 }
 
 .branco{
@@ -181,73 +183,27 @@ span {
     font-size: 1px;
     line-height: 300%;
 }
-#comprar {
-    color: yellow;
-}
-
-#login {
-    color: yellow;
-}
-
-#menupadrao {
+.menu_branco
+{
     color: white;
 }
-
+.menu_amarelo
+{
+    color: yellow;
+}
+.voltar
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
+}
+.voltar :hover
+{
+    cursor: pointer;
+}
 rect {
     width: 200px;
     height: 10px;
     background: white;
-}
-
-@media screen and (max-width:450px) {
-    .d1 {
-        height: 8%;
-    }
-    .d2 {
-        height: 80%;
-        
-    }
-    .d21 {
-        height: 50%;
-        width: 70%;
-    }
-    .d22 {
-        height: 50%;
-        width: 70%;
-    }
-    .neymar {
-        width: 80%;
-        height: 80%;
-    }
-    .footer {
-        display: flex;
-        width: 100%;
-        display: inline-block;
-        font-size: 2.8vw;
-        z-index: 1;
-    }
-    span {
-        padding-left: 7.4%;
-    }
-}
-
-@media screen and (min-width:450px) and (max-width:900px){
-    .d1 {
-        height: 10%;
-    }
-    .d2 {
-        height: 78%;
-    }
-    .d21 {
-        height: 50%;
-        width: 70%;
-    }
-    .d22 {
-        height: 50%;
-        width: 70%;
-    }
-    .neymar {
-        width: 50%;
-        height: 80%;
-    }
 }
