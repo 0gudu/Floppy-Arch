@@ -91,11 +91,11 @@
 
                         </div>
                         <div class="disc_price">
-                            Preço - > <span id="kk" style="color: green;">R$40,00</span>
+                            Preço ➝ <span id="kk" style="color: lightgreen; ">R$40,00</span>
                         </div>
                         <div class="disc_carrinhocompra">
-                            <div class="disc_comprar"> <b>COMPRAR</b></div>
-                            <div class="disc_carrinho"> <b>COLOCAR NO CARRINHO</b></div>
+                            <button type="button" class="disc_comprar"> <b>COMPRAR</b> </button> 
+                            <button type="button" class="disc_carrinho"> <b>COLOCAR NO CARRINHO</b> </button>
                         </div>
                     </div>
                 </div>

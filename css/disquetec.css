@@ -142,7 +142,16 @@ select {
     align-items: center;
     align-content: center;
     justify-items: center;
+    border-width: 6px;
+    border-color: rgb(173, 173, 5);
+
 }
+
+.disc_comprar:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
 .disc_carrinho{
     width: 65%;
     height: 80%;
@@ -154,7 +163,16 @@ select {
     align-items: center;
     align-content: center;
     justify-items: center;
+    border-width: 6px;
+    border-color: rgb(173, 173, 5);
+
 }
+
+.disc_carrinho:hover {
+    cursor: pointer;
+    background-color: orange;
+}
+
 .d3 {
     height: 10%;
     width: 100%;
