@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOPPY ARCH - Contato</title>
-    <link rel="stylesheet" href="css/contato.css" /> 
+    <title>Conta acessada - FLOPPY ARCH</title>
+    <link rel="stylesheet" href="css/criarconta.css" /> 
 </head>
 <body>
    <div class="d0">
@@ -15,8 +15,8 @@
                     <div class="flop">
                         <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
-                    <div class="entrar">
-                        <p ><b>➝ Contato</b></p>    
+                    <div class="criar_conta">
+                        <p ><b>➝ Criar conta</b></p>    
                     </div>
                     
                 </div>
@@ -29,18 +29,22 @@
             </div>
             <div class="d21">
                 
-                <div class="contatos">
-                    <div classs="contatoss">
-                        <p>E-mail: floppyarch@gmail.com</p>   
-                    </div>
-                    <div classs="contatoss">
-                        <p>Instagram: @floppyarch</p>
-                    </div>
-                    <div classs="contatoss">
-                        <p>Telefone: 04830295656</p>
-                    </div>
+                <fieldset class="login">
+                    <fieldset class="campo">
+                        <legend class="legenda">Nome</legend>
+                        <input type="text" class="yuuy">
+                    </fieldset>
+                    <fieldset class="campo">
+                        <legend class="legenda">Senha</legend>
+                        <input type="password" class="yuuy">
+                    </fieldset>
+                    <fieldset class="campo">
+                        <legend class="legenda">Confirmar senha</legend>
+                        <input type="password" class="yuuy">
+                    </fieldset>
+                    <div class="butao"><button type="button" class="button">Criar conta</button> </div>
                     
-                </div>
+                </fieldset>
                 
             </div>
             <div class="d222">

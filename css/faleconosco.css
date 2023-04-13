@@ -38,7 +38,7 @@ body
         border-color: white;
         border-style: solid;
         border-width: 4px;
-        height: 40px;
+        height: 50%;
         width: 60%;
         color: white;
         font-size: 30px;
@@ -64,32 +64,53 @@ body
         border-style: solid;
         overflow-x: hidden;
       }
-      cor1
+      color1
       {
         color: yellow;
       }
-      cor2
+      color2
       {
         color: greenyellow;
       }
-      cor3
+      color3
       {
         color: aqua;
       }
+      color4
+      {
+         color: red;
+      }
+      jão
+      {
+        color: rgb(255, 66, 170);
+      }
+      color123
+      {
+        animation: rgb 1s infinite;
+      }
+      @keyframes rgb
+      {
+          0% {color: rgb(255, 115, 0);}
+          50% {color: aqua}
+          100% {color: yellow;}
+      }
       .enviar
       {
-        height: 50px;
+        height: 60%;
         width: 8%;
         background-color: yellow;
         font-size: 30px;
         font-family: 'Times New Roman', Times, serif;
         font-style: bold;
         margin-left: 10px;
+        border-width: 6px;
+        border-color: yellow;
       }
       .enviar:hover
       {
         background-color: orange;
         cursor: pointer;
+        border-color: orange;
       }
       .p
       {
@@ -104,9 +125,12 @@ body
       .emojis
       {
         color: yellow;
-        padding-left: 5px;
+        padding-left: 10px;
+
       }
-      .inicio
+      .voltar
       {
         color: white;
+        cursor: pointer;
       }
+      

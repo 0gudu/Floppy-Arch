@@ -64,10 +64,11 @@ body{
     display: flex;
     flex-direction: row;
     width: 60%;
-        justify-content: center;
+    justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
+    height: 20%;
 }
 .d2 {
     height: 78%;
@@ -112,17 +113,19 @@ body{
 }
 .button {
     font-family: 'Times New Roman', Times, serif;
-margin-left: 10px;
+    margin-left: 10px;
     background-color: yellow;
-    border: 0px;
+    border-width: 6px;
+    border-color: yellow;
     width: 100%;
-    height: 150%;
+    height: 8%;
     font-size: 130%;
 }
 .button:hover
 {
 cursor: pointer;
 background-color: orange;
+border-color: orange;
 }
 .button2 {
     font-family: 'Times New Roman', Times, serif;

@@ -93,6 +93,11 @@ body
     width: 70%;
     position: absolute;
 }
+@keyframes intro 
+{
+    0% {width: 1060%;}
+    100% {width: 70%;}
+}
 .d21 {
     height: 100%;
     width: 30%;
@@ -162,12 +167,6 @@ body
     flex-direction: row;
     justify-content: space-around;
 }
-.footer:hover
-{
-    padding-top: 0%;
-    font-size: 2vw;
-    
-}
 span 
 {
     padding-left: 5%;
@@ -198,10 +197,4 @@ span
 .voltar :hover
 {
     cursor: pointer;
-}
-
-@keyframes intro 
-{
-    0% {width: 1060%;}
-    100% {width: 70%;}
 }

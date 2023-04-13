@@ -10,19 +10,19 @@
 </head>
 <body>
   <div class="titulo center">
-    <img src="images/floppy_arch_title.png"><p class="p">➝ Fale conosco</p>
+    <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a><p class="p">➝ Fale conosco</p>
   </div>
   <div class="meio">
     <div class="disquete center">
       <img src="images/disquete.gif" class="floppy_disk" width="70%">
-    </div>
-    <div id="resposta" class="resposta">  </div>
-    <div class="disquete center">
+      </div>
+      <div id="resposta" class="resposta">  </div>
+      <div class="disquete center">
       <img src="images/disquete.gif" class="floppy_disk" width="70%">
     </div>
-  </div>
-  <div class="digitar center">
-    <a href="index.html" id="menupadrao" class="inicio">⬅ Inicio</a> <p class="p2">Mensagem: </p> <input type="text" id="mensagem" class="mensagem" width="90%"> <a href="https://pt.piliapp.com/emoji/list/" target="_blank" class="emojis">Emojis</a><button class="enviar" onclick="Enviar();">Enviar</button>
+    </div>
+    <div class="digitar center">
+      <a class="voltar" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a> <p class="p2">Mensagem: </p> <input type="text" id="mensagem" class="mensagem" width="90%"> <a href="https://pt.piliapp.com/emoji/list/" target="_blank" class="emojis">Emojis</a><button class="enviar" onclick="Enviar();">Enviar</button>
   </div>
 </body>
 
@@ -60,13 +60,16 @@
 
   function Enviar()
   {
-    texto = "FLOPPY ARCH: <br>" + mensagem.value;
+    texto = "~ FLOPPY ARCH ~ <br>" + "ㅤ↳ㅤ" + mensagem.value;
 
     message = new Paho.MQTT.Message(texto);
     message.destinationName = topico;
     client.send(message);
   }
-
+  function voltarPagina() 
+  {
+      window.history.back();
+  }
 </script>
 
 </html>
