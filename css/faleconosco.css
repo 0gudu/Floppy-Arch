@@ -94,6 +94,9 @@ body
           50% {color: aqua}
           100% {color: yellow;}
       }
+      b{
+        font-style: bold;
+      }
       .enviar
       {
         height: 60%;
