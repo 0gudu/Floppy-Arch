@@ -1,0 +1,210 @@
+body{
+    background-image: url('../images/Background3.png');
+    overflow: hidden;
+    width: 100%;
+    height: 99.7vh;
+}
+
+.d0 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.d1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.flop {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.criar_conta {
+    display: flex;
+    font-size: 150%;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.d2 {
+    height: 78%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+ 
+}
+.d222 {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.legenda {
+    font-size: 150%;
+}
+.campo {
+    width: 60%;
+    height: 20%;
+    border: 3px solid white;
+}
+.yuuy {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 100%;
+    background: transparent;
+    color: white;
+    border: 3px solid ;
+    font-family: 'Times New Roman', Times, serif;
+}
+.butao {
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+}
+.button {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    background-color: yellow;
+    width: 100%;
+    height: 120%;
+    font-size: 130%;
+    border-width: 6px;
+    border-color: yellow;
+}
+.button:hover
+{
+cursor: pointer;
+background-color: orange;
+border-color: orange;
+}
+.button2 {
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 40px;
+    background:transparent;
+    border: 0px;
+    width: 250%;
+    height: 150%;
+    font-size: 130%;
+    color: yellow;
+}
+.login {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    font-size: 150%;
+    color: white;
+    border: 6px white double;
+}
+.d21 {
+    height: 90%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+
+}
+.titulo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+ .wf {
+    width: 100%;
+    height: 37%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+/*menu*/
+.d3 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.footer 
+{
+    display: flex;
+    width: 100%;
+    display: inline-block;
+    font-size: 2vw;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+span {
+    padding-left: 5%;
+}
+
+.branco{
+    color: white;
+    background-color: white;    
+    font-size: 1px;
+    line-height: 300%;
+}
+
+rect {
+    width: 200px;
+    height: 10px;
+    background: white;
+}
+.menu_branco
+{
+    color: white;
+}
+.menu_amarelo
+{
+    color: yellow;
+}
+.voltar
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
