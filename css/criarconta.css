@@ -76,6 +76,18 @@ body{
     border: 3px solid ;
     font-family: 'Times New Roman', Times, serif;
 }
+.certo
+{
+    color: greenyellow;
+}
+.errado
+{
+    color: red;
+}
+.null
+{
+    color: white;
+}
 .butao {
     margin: 5%;
     display: flex;

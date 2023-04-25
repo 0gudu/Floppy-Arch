@@ -36,11 +36,11 @@
                     </fieldset>
                     <fieldset class="campo">
                         <legend class="legenda">Senha</legend>
-                        <input type="password" class="yuuy">
+                        <input type="password" class="yuuy" id="senha11">
                     </fieldset>
                     <fieldset class="campo">
                         <legend class="legenda">Confirmar senha</legend>
-                        <input type="password" class="yuuy">
+                        <input type="password" class="yuuy" onkeyup="ValidarTelefone();" id="conf_senha">
                     </fieldset>
                     <div class="butao"><button type="button" class="button">Criar conta</button> </div>
                     
@@ -74,6 +74,26 @@
     </div>  
 </body>
 <script>
+        function ValidarTelefone()
+    {
+        //Acesse o site regex101.com
+        if(conf_senha.value == senha11.value)
+        {
+            conf_senha.classList.remove('errado');
+            conf_senha.classList.add('certo');
+        }
+        if(conf_senha.value != senha11.value)
+        {
+            conf_senha.classList.remove('certo');
+            conf_senha.classList.add('errado');
+        }
+        if(conf_senha.value == null)
+        {
+            conf_senha.classList.remove('certo');
+            conf_senha.classList.remove('errado');
+            conf_senha.classList.add('null');
+        }
+    } 
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()
