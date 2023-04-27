@@ -3,6 +3,7 @@ body{
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .d0 {
@@ -16,7 +17,6 @@ body{
     height: 10%;
     width: 100%;
     display: flex;
-    background-color: aqua;
     flex-direction: row;
     justify-items: center;
     justify-content: center;
@@ -49,15 +49,14 @@ body{
     justify-items: center;
     align-items: center;
     align-content: center;
-    background-color: aqua;
 }
 .campo {
-    width: 30%;
-    height: 10%;
+    width: 40%;
+    height: 60%;
     border: 3px solid white;
 }
 .legenda {
-    font-size: 150%;
+    font-size: 4vh;
     color: white;
 }
 .yuuy {
@@ -65,7 +64,7 @@ body{
     height: 90%;
   padding: 12px 20px;
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 150%;
   background: transparent;
   color: white;
   border: 3px solid white;
@@ -85,6 +84,10 @@ body{
     border: 9px double white;
     display: flex;
     flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center1;
 }
 
 .embaixo {
@@ -104,11 +107,40 @@ body{
     align-items: center;
     align-content: center;
 }
+.lado {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 90%;
+    height: 25%;
+    
+}
+.unico {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+    height: 25%;
+}
+.confirma {
+    width: 30%;
+    height: 15%;
+    background-color: yellow;
+    border-width: 6px;
+    border-color: yellow;
+    font-size: 150%;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.confirma:hover {
+    cursor: pointer;
+    background-color: orange;
+    border-color: orange;
+}
 .d3 {
     height: 10%;
     width: 100%;
     display: flex;
-    background-color: aqua;
     justify-content: center;
     justify-items: center;
     align-items: center;
