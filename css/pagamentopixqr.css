@@ -97,7 +97,7 @@ border-color: orange;
 .qr_code
 {
     display: flex;
-    width: 50%;
+    width: 49%;
     justify-content: center;
     justify-items: center;
     align-items: center;
