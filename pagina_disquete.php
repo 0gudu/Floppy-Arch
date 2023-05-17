@@ -95,7 +95,7 @@
                         </div>
                         <div class="disc_carrinhocompra">
                             <button type="button" class="disc_comprar"> <b>COMPRAR</b> </button> 
-                            <button type="button" class="disc_carrinho"> <b>COLOCAR NO CARRINHO</b> </button>
+                            <button type="button" class="disc_carrinho" onclick="botarnocarrinho('<?php echo $_GET['codigo']; ?>')"> <b>COLOCAR NO CARRINHO</b> </button>
                         </div>
                     </div>
                 </div>
@@ -118,6 +118,9 @@
     </div>  
 </body>
 <script>
+    function botarnocarrinho(x) {
+        window.open("colocarnocarrinho.php?codigo="+x,"_self");
+    }
     function penis() {
         var x = document.getElementById("ka").value;
 
