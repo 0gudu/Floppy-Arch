@@ -46,6 +46,8 @@ body
     justify-items: center;
     align-items: center;
     align-content: center;
+    min-width: 50rem;
+    min-height: 10rem;
 }
 .titulo 
 {
@@ -106,6 +108,7 @@ body
     justify-items: center;
     align-items: center;
     align-content: center;
+    min-width: 15rem;
 }
 .neymar 
 {
@@ -120,6 +123,7 @@ body
     justify-items: center;
     align-items: center;
     align-content: center;
+    min-width: 15rem;
 }
 .od
 {
