@@ -4,7 +4,7 @@ include ("conecta.php");
 $nome = $_POST["nome"];
 $email = $_POST["email"];
 $endereco = $_POST["endereco"];
-$senha = $_POST["endereco"];
+$senha = $_POST["senha"];
 $telefone = $_POST["telefone"];
 
 

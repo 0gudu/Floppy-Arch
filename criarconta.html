@@ -30,7 +30,8 @@
                     <div class="campos">
                         <form action="dadospessoa.php" class="campos" method="post">
                                 <div class="dir">
-                            
+                                       
+                                    <div class="aviso" id="aviso">Este nome já está sobre uso</div>
                                     <fieldset class="campo">
                                         <legend class="legenda">Nome</legend>
                                         <input type="text" class="yuuy" placeholder="Insira seu nome" id="nome" name="nome" onkeyup="verificar()">
@@ -42,8 +43,8 @@
                                     </fieldset>
 
                                     <fieldset class="campo">
-                                        <legend class="legenda">Telefone</legend>
-                                        <input type="text" class="yuuy" placeholder="Insira seu telefone" id="telefone" name="telefone">
+                                        <legend class="legenda" >Telefone</legend>
+                                        <input type="number" class="yuuy" placeholder="Insira seu telefone" id="telefone" name="telefone">
                                     </fieldset>
 
                                 </div>
@@ -57,7 +58,7 @@
 
                                     <fieldset class="campo">
                                         <legend class="legenda">Senha</legend>
-                                        <input type="password" class="yuuy" placeholder="Crie sua Senha" id="senha" name="senha" >
+                                        <input type="password" class="yuuy" placeholder="Crie sua Senha" id="senha" name="senha" onkeyup="senhass()">
                                     </fieldset>
 
                                     <fieldset class="campo">
@@ -71,7 +72,7 @@
 
 
                     </div>
-                    <button class="confirma" type="submit" onclick="enviarver()" id="confirma">Confirmar</button>
+                    <button class="confirma" type="button" onclick="enviarver()" id="confirma">Confirmar</button>
                 </form>
                     
                 </fieldset>
@@ -107,9 +108,11 @@
             if(xhttp.responseText == 0){
                 nome.style.color = "green";
                 name = 1;
+                aviso.style.display = "none";
             } else {
                 nome.style.color = "red";
                 name = 0;
+                aviso.style.display = "flex";
             }
             
         };
@@ -123,26 +126,23 @@
         if (senha.value == confirmaa.value) {
             confirmaa.classList.remove('errado');
             confirmaa.classList.add('certo');
+            senha1 = 1;
         } else {
             confirmaa.classList.remove('certo');
             confirmaa.classList.add('errado');
+            senha1 = 0;
         }
 
     }
 
     function enviarver() {
-        confirma = document.getElementById("confirma");
-        end = document.getElementById("endereco");
-        tel = document.getElementById("telefone");
-        email = document.getElementById("email");
-        senhas = document.getElementById("senha");
 
-        if (name == 0 ){
-            confirma.type = "button";
-            alert ("This name already exits in our website, please choose another one!");
+        if (name == 1 && endereco.value != "" && telefone.value != "" && email.value != "" &&  senha1 == 1){
+            confirma.type = "submit";
         }
         else {
-            confirma.type = "submit";
+            alert("veja se voce preencheu todos os campos");
+            confirma.type = "button";
         }
     }
 </script>

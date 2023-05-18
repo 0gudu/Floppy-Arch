@@ -113,7 +113,7 @@
                                         // Obtendo o resultado
                                         $resultado = $stmt->fetchColumn();
                                         echo("$resultado");
-                                        echo("($capacidade)");
+                                        echo(" ($capacidade)");
                                         echo('
                                         </p>
                                         <div class="botoes_perfil">');

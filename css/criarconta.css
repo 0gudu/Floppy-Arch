@@ -176,6 +176,14 @@ background-color: orange;
     align-content: center;
 
 }
+
+.aviso {
+    position: absolute;
+    width: fit-content;
+    background-color: gray;
+    border: 5px solid black;
+    display: none;
+}
 .d3 {
     height: 10%;
     width: 100%;
