@@ -33,7 +33,7 @@
                             
                                     <fieldset class="campo">
                                         <legend class="legenda">Nome</legend>
-                                        <input type="text" class="yuuy" placeholder="Insira seu nome" id="nome" name="nome">
+                                        <input type="text" class="yuuy" placeholder="Insira seu nome" id="nome" name="nome" onkeyup="verificar()">
                                     </fieldset>
 
                                     <fieldset class="campo">
@@ -43,7 +43,7 @@
 
                                     <fieldset class="campo">
                                         <legend class="legenda">Telefone</legend>
-                                        <input type="text" class="yuuy" placeholder="Insira seu telefone" id="endereco" name="telefone">
+                                        <input type="text" class="yuuy" placeholder="Insira seu telefone" id="telefone" name="telefone">
                                     </fieldset>
 
                                 </div>
@@ -66,13 +66,13 @@
                                     </fieldset>
 
                                 </div>
-                                <input type="submit">
                                 
-                        </form>
+                                
+
 
                     </div>
-                    <button class="confirma" type="submit">Confirmar</button>
-                    
+                    <button class="confirma" type="submit" onclick="enviarver()" id="confirma">Confirmar</button>
+                </form>
                     
                 </fieldset>
                 
@@ -97,4 +97,39 @@
         </div>
     </div>  
 </body>
+<script>
+    name = 0;
+
+    function verificar() { 
+        const xhttp = new XMLHttpRequest();
+        nome = document.getElementById("nome");
+        xhttp.onreadystatechange = function() {
+            if(xhttp.responseText == 0){
+                nome.style.color = "green";
+                name = 1;
+            } else {
+                nome.style.color = "red";
+                name = 0;
+            }
+            
+        };
+
+        xhttp.open("GET", "verificarnomeemail.php?q="+document.getElementById("nome").value+"&e="+document.getElementById("email").value);
+        xhttp.send();
+    }
+    function enviarver() {
+        confirma = document.getElementById("confirma");
+        end = document.getElementById("endereco");
+        tel = document.getElementById("telefone");
+        email = document.getElementById("email");
+
+        if (name == 0 ){
+            confirma.type = "button";
+            alert ("This name already exits in our website, please choose another one!");
+        }
+        else {
+            confirma.type = "submit";
+        }
+    }
+</script>
 </html>
