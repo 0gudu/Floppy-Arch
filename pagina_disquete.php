@@ -91,7 +91,7 @@
 
                         </div>
                         <div class="disc_price">
-                            Preço ➝ <span id="kk" style="color: lightgreen; ">R$40,00</span>
+                            Preço ➝ <span id="kk" name="kk" style="color: lightgreen; ">R$40,00</span>
                         </div>
                         <div class="disc_carrinhocompra">
                             <button type="button" class="disc_comprar"> <b>COMPRAR</b> </button> 
@@ -119,7 +119,9 @@
 </body>
 <script>
     function botarnocarrinho(x) {
-        window.open("colocarnocarrinho.php?codigo="+x,"_self");
+        var valor = document.getElementById("kk").textContent;  
+        var url = "colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor);
+        window.open(url, "_self");
     }
     function penis() {
         var x = document.getElementById("ka").value;

@@ -54,67 +54,80 @@
                                                             echo('
                                 <div class="perfil">
                                     <img class="fotos_perfis" src="');
-                                    switch ($n) {
-                                        case 1:
-                                            echo("images/personalizados/colorido.png");
-                                            break;
-                                        case 2:
-                                            echo("images/personalizados/disquete veridiano.png");
-                                            break;
-                                        case 3:
-                                            echo("images/personalizados/estampa.png");
-                                            break;
-                                        case 4:
-                                            echo("images/personalizados/fafase lalau.png");
-                                            break;
-                                        case 5:
-                                            echo("images/personalizados/germanodisk.png");
-                                            break;
-                                        case 6:
-                                            echo("images/personalizados/neymar_gold.png");
-                                            break;
-                                        case 7:
-                                            echo("images/personalizados/ratuedisk-gudulegal.png");
-                                            break;
-                                        case 8:
-                                            echo("images/personalizados/retrodisk.png");
-                                            break;
-                                    }
+                                   
+
+                                    // Preparando a consulta
+                                    $sql = "SELECT caminhofoto FROM produtos WHERE id_produto = :elemento";
+                                    $stmt = $pdo->prepare($sql);
+                                    $stmt->bindParam(':elemento', $n);
+
+                                    // Executando a consulta
+                                    $stmt->execute();
+
+                                    // Obtendo o resultado
+                                    $resultado = $stmt->fetchColumn();
+                                    echo("$resultado");
+
                                     echo ('">
                                     <div class="cimabaixo">
                                         <p class="nome_perfil">');
-                                        switch ($n) {
-                                            case 1:
-                                                echo("Disquete Colorido");
+                                        $sql = "SELECT nome FROM produtos WHERE id_produto = :elemento";
+                                        $stmt = $pdo->prepare($sql);
+                                        $stmt->bindParam(':elemento', $n);
+    
+                                        // Executando a consulta
+                                        $stmt->execute();
+                                        $sq = "SELECT valor FROM coisa WHERE id_coisa = :elemento";
+                                        $stm = $pdo->prepare($sq);
+                                        $stm->bindParam(':elemento', $m);
+
+                                        // Executando a consulta
+                                        $stm->execute();
+
+                                        // Obtendo o resultado
+                                        $resultado1 = $stm->fetchColumn();
+                                        switch ($resultado1) {
+                                            case "R$40,00":
+                                                $rs = "32gb";
                                                 break;
-                                            case 2:
-                                                echo("Disquete Veridian");
+                                            case "R$60,00";
+                                                $rs = "64gb";
                                                 break;
-                                            case 3:
-                                                echo("Disquete Estampado");
+                                            case "R$90,00":
+                                                $rs = "128gb";
                                                 break;
-                                            case 4:
-                                                echo("Disquete Lalau");
+                                            case "R$140,00":
+                                                $rs = "240gb";
                                                 break;
-                                            case 5:
-                                                echo("Disquete germano");
+                                            case "R$200,00":
+                                                $rs = "480gb";
                                                 break;
-                                            case 6:
-                                                echo("Disquete Neymar Gold");
+                                            case "R$500,00":
+                                                $rs = "960gb";
                                                 break;
-                                            case 7:
-                                                echo("Disquete Ratue");
-                                                break;
-                                            case 8:
-                                                echo("Disquete Retro");
-                                                break;
+
                                         }
+                                        $capacidade = $rs;
+
+                                        
+                                        // Obtendo o resultado
+                                        $resultado = $stmt->fetchColumn();
+                                        echo("$resultado");
+                                        echo("($capacidade)");
                                         echo('
                                         </p>
-                                        <div class="botoes_perfil">
-                                            ' . $m . '
+                                        <div class="botoes_perfil">');
+                                        
+                                        echo $resultado1;
+
+                                        echo('
+                                        
                                         </div>
-                                        <div style="background-color:red;  width:10%; height:20%;" onclick="Enviar(\'' . $m . '\')"></div>
+                                        
+                                        <div style="background-color:red;   font-weight: bold; width:10%; height:20%; display: flex; border-radius:10px;justify-content: center;
+                                        justify-items: center;
+                                        align-items: center;
+                                        align-content: center;" onclick="Enviar(\'' . $m . '\')">X</div>
                                     </div>
                                 </div>
                                 <hr class="hr3">
