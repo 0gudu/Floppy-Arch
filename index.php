@@ -1,3 +1,13 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['first_visit'])) {
+    // Perform actions for the first visit
+    $_SESSION['first_visit'] = true;
+    $_SESSION["user"] = "none";
+
+} 
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -49,7 +59,16 @@
                 <span><u><b><a href="index.html" id="menupadrao">⬅ Inicio</a></b></u></span>
                 <span><u><b><a href="comprar.html"  id="comprar">Comprar</a></b></u></span>
                 <span><u><b><a href="carrinho.php" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.html"  id="login">Entrar</a></u></b></span>
+                <span><u><b><a href="entrar.php"  id="login">
+                <?php 
+                    if($_SESSION['user'] == "none"){
+                        echo "entrar";
+                    } else {
+                        echo $_SESSION['user'];
+                    }
+                
+                ?>    
+                </a></u></b></span>
                 <span><u><b><a href="contato.html"  id="menupadrao">Contato</a></u></b></span>
 
                 <div class="branco"> a</div>

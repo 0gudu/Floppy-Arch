@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
     $codigo = $_GET["codigo"];
     switch($codigo){
@@ -119,9 +120,15 @@
 </body>
 <script>
     function botarnocarrinho(x) {
-        var valor = document.getElementById("kk").textContent;  
-        var url = "colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor);
-        window.open(url, "_self");
+        if ("<?php echo $_SESSION['user']; ?>" === "none") {
+            alert("Primeiramente faça login");
+            window.open("entrar.php");
+        }else {
+            var valor = document.getElementById("kk").textContent;  
+            var url = "colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor) + "&user=" + "<?php echo $_SESSION['user']; ?>";
+            window.open(url, "_self");
+        }
+        
     }
     function penis() {
         var x = document.getElementById("ka").value;

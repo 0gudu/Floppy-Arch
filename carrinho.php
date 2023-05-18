@@ -1,4 +1,6 @@
-
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -42,8 +44,10 @@
             <div class="d21" id="puta">
                 <?php
                     include ("conecta.php");
-
-                        $comando = $pdo->prepare("SELECT * FROM coisa"); 
+                        $comando = $pdo->prepare("SELECT * FROM coisa WHERE usuario = :user");
+                        $comando->bindParam(':user', $_SESSION['user']);
+                        $comando->execute();    
+                    
                         $resultado = $comando->execute();
 
                         while( $linhas = $comando->fetch()) 
