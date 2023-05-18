@@ -266,7 +266,12 @@ rect {
     height: 10px;
     background: white;
 }
-
+.certo {
+    color: green;
+}
+.errado {
+    color: red;
+}
 @media screen and (max-width:450px) {
     .d1 {
         height: 8%;

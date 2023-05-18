@@ -57,12 +57,12 @@
 
                                     <fieldset class="campo">
                                         <legend class="legenda">Senha</legend>
-                                        <input type="password" class="yuuy" placeholder="Crie sua Senha" id="senha" name="senha">
+                                        <input type="password" class="yuuy" placeholder="Crie sua Senha" id="senha" name="senha" >
                                     </fieldset>
 
                                     <fieldset class="campo">
                                         <legend class="legenda">Confirmar senha</legend>
-                                        <input type="password" class="yuuy" placeholder="Confirme sua senha">
+                                        <input type="password" class="yuuy" id="confirmaa" placeholder="Confirme sua senha" onkeyup="senhass()">
                                     </fieldset>
 
                                 </div>
@@ -117,11 +117,25 @@
         xhttp.open("GET", "verificarnomeemail.php?q="+document.getElementById("nome").value+"&e="+document.getElementById("email").value);
         xhttp.send();
     }
+
+    function senhass() {
+        senha1 = 0;
+        if (senha.value == confirmaa.value) {
+            confirmaa.classList.remove('errado');
+            confirmaa.classList.add('certo');
+        } else {
+            confirmaa.classList.remove('certo');
+            confirmaa.classList.add('errado');
+        }
+
+    }
+
     function enviarver() {
         confirma = document.getElementById("confirma");
         end = document.getElementById("endereco");
         tel = document.getElementById("telefone");
         email = document.getElementById("email");
+        senhas = document.getElementById("senha");
 
         if (name == 0 ){
             confirma.type = "button";
