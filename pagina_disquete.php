@@ -122,7 +122,7 @@
     function botarnocarrinho(x) {
         if ("<?php echo $_SESSION['user']; ?>" === "none") {
             alert("Primeiramente faça login");
-            window.open("entrar.php");
+            window.open("entrar.php","_self");
         }else {
             var valor = document.getElementById("kk").textContent;  
             var url = "colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor) + "&user=" + "<?php echo $_SESSION['user']; ?>";
