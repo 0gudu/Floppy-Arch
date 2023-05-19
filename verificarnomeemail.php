@@ -16,9 +16,6 @@
     $resultado = $stmt->fetchColumn();
     $cu += $resultado;
 
-    
-
-
     // Verificando se o elemento já existe no banco de dados
     if ($resultado > 0) {
         echo "1";

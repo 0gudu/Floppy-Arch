@@ -3,7 +3,7 @@
 
     $codigo = $_GET["codigo"];
 
-    $comando = $pdo->prepare("DELETE FROM coisa WHERE id_coisa=$codigo");
+    $comando = $pdo->prepare("DELETE FROM carrinho WHERE id_coisa=$codigo");
 
     $resultado = $comando->execute();
 

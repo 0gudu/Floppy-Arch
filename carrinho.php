@@ -1,5 +1,5 @@
 <?php 
-session_start();
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -33,8 +33,8 @@ session_start();
 
                 </div>
                 <div class="cima2">
-                    <a href="?" class="sair_alterar">← Sair</a>
-                    <a href="?" class="sair_alterar">Editar perfil</a>
+                    <a href="index.php" class="sair_alterar">← Sair</a>
+                    <a href="entrar.php" class="sair_alterar">Meu Perfil</a>
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Perfis ➝</p>

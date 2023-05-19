@@ -23,7 +23,7 @@
         </div>
         <div class="d2">
             <div class="seta_direita">
-                <a id="seta" href="comprar.html">
+                <a id="seta" href="comprar.php">
                     <img src="images/seta_esquerda.png" class="img_seta">
                 </a>
             </div>

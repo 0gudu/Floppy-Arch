@@ -5,7 +5,7 @@
     $valor = $_GET["valor"];
     $user = $_GET["user"];
 
-    $comando = $pdo->prepare("INSERT INTO coisa (item,valor,usuario) VALUES(:codigo,:valor,:user)");
+    $comando = $pdo->prepare("INSERT INTO carrinho (item,valor,usuario) VALUES(:codigo,:valor,:user)");
     $comando->bindParam(':codigo', $codigo);
     $comando->bindParam(':valor', $valor);
     $comando->bindParam(':user', $user);

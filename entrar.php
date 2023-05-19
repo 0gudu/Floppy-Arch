@@ -86,9 +86,9 @@ session_start();
                 <div class="branco"> a</div>
                 
                 <span><u><b><a href="index.php" id="menupadrao">⬅ Inicio</a></b></u></span>
-                <span><u><b><a href="comprar.html"  id="comprar">comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.html" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.html"  id="login"><?php 
+                <span><u><b><a href="comprar.php"  id="comprar">comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" id="menupadrao">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php"  id="login"><?php 
                     if($_SESSION['user'] == "none"){
                         echo "Entrar";
                     } else {
