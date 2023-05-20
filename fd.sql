@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/05/2023 às 13:42
+-- Tempo de geração: 20/05/2023 às 13:45
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `carrinho` (
   `id_coisa` int(11) NOT NULL,
   `item` int(11) NOT NULL,
-  `usuario` int(11) NOT NULL,
+  `usuario` varchar(11) NOT NULL,
   `valor` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -89,7 +89,9 @@ INSERT INTO `produtos` (`id_produto`, `nome`, `caminhofoto`) VALUES
 -- Índices de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  ADD PRIMARY KEY (`id_coisa`);
+  ADD PRIMARY KEY (`id_coisa`),
+  ADD KEY `item` (`item`),
+  ADD KEY `usuario` (`usuario`);
 
 --
 -- Índices de tabela `pessoas`
@@ -111,7 +113,18 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `carrinho`
+--
+ALTER TABLE `carrinho`
+  ADD CONSTRAINT `carrinho_ibfk_1` FOREIGN KEY (`item`) REFERENCES `produtos` (`id_produto`),
+  ADD CONSTRAINT `carrinho_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `pessoas` (`nome`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
