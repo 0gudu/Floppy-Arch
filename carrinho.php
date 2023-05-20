@@ -44,7 +44,7 @@
             <div class="d21" id="puta">
                 <?php
                     include ("conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM coisa WHERE usuario = :user");
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user");
                         $comando->bindParam(':user', $_SESSION['user']);
                         $comando->execute();    
                     
@@ -81,7 +81,7 @@
     
                                         // Executando a consulta
                                         $stmt->execute();
-                                        $sq = "SELECT valor FROM coisa WHERE id_coisa = :elemento";
+                                        $sq = "SELECT valor FROM carrinho WHERE id_coisa = :elemento";
                                         $stm = $pdo->prepare($sq);
                                         $stm->bindParam(':elemento', $m);
 
