@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    $codigo = $_GET["codigo"];
+    $codigo = $_POST["codigo"];
 
     $_SESSION['user'] = $codigo;
 

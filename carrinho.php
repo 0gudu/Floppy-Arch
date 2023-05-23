@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    $preco = 0;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -37,7 +38,7 @@
                     <a href="entrar.php" class="sair_alterar">Meu Perfil</a>
                 </div>
                 <hr class="hr1">
-                    <p class="nome_adm">Perfis ➝</p>
+                    <p class="nome_adm">Valor Total ➝ <?php echo ""; ?></p>
                     <Button class="adicionar">Finalizar Compra</Button>
             </div>
             <hr class="hr2">
@@ -49,7 +50,7 @@
                         $comando->execute();    
                     
                         $resultado = $comando->execute();
-
+                        
                         while( $linhas = $comando->fetch()) 
                             {
                                 $m = $linhas["id_coisa"]; //nome da coluna xampp
@@ -93,21 +94,27 @@
                                         switch ($resultado1) {
                                             case "R$40,00":
                                                 $rs = "32gb";
+                                                $preco += 40;
                                                 break;
                                             case "R$60,00";
                                                 $rs = "64gb";
+                                                $preco += 60;
                                                 break;
                                             case "R$90,00":
                                                 $rs = "128gb";
+                                                $preco += 90;
                                                 break;
                                             case "R$140,00":
                                                 $rs = "240gb";
+                                                $preco += 140;
                                                 break;
                                             case "R$200,00":
                                                 $rs = "480gb";
+                                                $preco += 200;
                                                 break;
                                             case "R$500,00":
                                                 $rs = "960gb";
+                                                $preco += 500;
                                                 break;
 
                                         }
@@ -145,6 +152,7 @@
             
             
         </div>
+
         
         
     </div>  

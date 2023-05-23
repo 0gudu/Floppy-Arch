@@ -129,7 +129,19 @@ session_start();
     function clicko(){
         if (name == 1) {
             document.getElementById("conf").style.display = "none";
-            window.open("login.php?codigo="+vsf.value,"_self")
+            var form = document.createElement("form");
+            form.method = "post";
+            form.action = "login.php";
+
+            var campoCodigo = document.createElement("input");
+            campoCodigo.type = "hidden";
+            campoCodigo.name = "codigo";
+            campoCodigo.value = vsf.value;
+            form.appendChild(campoCodigo);
+
+            document.body.appendChild(form);
+            form.submit();
+
         } else {
             document.getElementById("conf").style.display = "flex";
             nome.value = "";
