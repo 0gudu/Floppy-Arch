@@ -1,6 +1,58 @@
 <?php 
     session_start();
     $preco = 0;
+    
+    include ("conecta.php");
+
+    $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user");
+    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->execute();    
+                    
+    $resultado = $comando->execute();
+
+    while( $linhas = $comando->fetch()) 
+        {
+            $m = $linhas["id_coisa"]; //nome da coluna xampp
+            $n = $linhas["item"];
+
+            $sql = "SELECT nome FROM produtos WHERE id_produto = :elemento";
+            $stmt = $pdo->prepare($sql);
+            $stmt->bindParam(':elemento', $n);
+
+            // Executando a consulta
+            $stmt->execute();
+
+            $sq = "SELECT valor FROM carrinho WHERE id_coisa = :elemento";
+            $stm = $pdo->prepare($sq);
+            $stm->bindParam(':elemento', $m);
+
+            // Executando a consulta
+            $stm->execute();
+
+            // Obtendo o resultado
+            $resultado1 = $stm->fetchColumn();
+            switch ($resultado1) {
+                case "R$40,00";
+                    $preco += 40;
+                    break;
+                case "R$60,00";
+                    $preco += 60;
+                    break;
+                case "R$90,00":
+                    $preco += 90;
+                    break;
+                case "R$140,00":
+                    $preco += 140;
+                    break;
+                case "R$200,00":
+                    $preco += 200;
+                    break;
+                case "R$500,00":
+                    $preco += 500;
+                    break;
+
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,19 +90,19 @@
                     <a href="entrar.php" class="sair_alterar">Meu Perfil</a>
                 </div>
                 <hr class="hr1">
-                    <p class="nome_adm">Valor Total ➝ <?php echo ""; ?></p>
-                    <Button class="adicionar">Finalizar Compra</Button>
+                    <p class="nome_adm">Valor Total ➝ R$<?php echo $preco; ?>,00</p>
+                    <Button class="adicionar" onclick="pedido()">Finalizar Compra</Button>
             </div>
             <hr class="hr2">
             <div class="d21" id="puta">
                 <?php
                     include ("conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user");
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 0");
                         $comando->bindParam(':user', $_SESSION['user']);
                         $comando->execute();    
                     
                         $resultado = $comando->execute();
-                        
+
                         while( $linhas = $comando->fetch()) 
                             {
                                 $m = $linhas["id_coisa"]; //nome da coluna xampp
@@ -154,10 +206,13 @@
         </div>
 
         
-        
+        <?php echo $preco; ?>
     </div>  
 </body>
 <script>
+    function pedido() {
+        window.open("pedido.php","_self");
+    }
     function Enviar(codigo) {
         window.open("excluir_carrinho.php?codigo="+codigo,"_self")
     }

@@ -112,12 +112,10 @@ session_start();
         senha = document.getElementById("sifude");
         xhttp.onreadystatechange = function() {
             if(xhttp.responseText == 1){
-                name = 1;
-                
+                name = 1; 
 
             } else {
                 name = 0;
-                
             }
             
         };
