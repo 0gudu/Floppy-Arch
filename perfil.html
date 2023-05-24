@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/perfil.css" /> 
+</head>
+<body>
+    <div class="d0">
+        <div class="d1">
+            <div class="tits">
+                <div class="titulo">
+                    <div class="flop">
+                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                    </div>
+                    <div class="entrar">
+                        <p ><b>➝ Contato</b></p>    
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="d2">
+            <div class="d4 center">
+                <div class="nome_foto center">
+                    <div class="foto">
+                        Sua foto aqui
+                    </div>
+                    <div class="nome">Nome Completo do Usuário</div>
+                </div>
+            </div>
+            <hr width="60%">
+            <div class="d5 center">
+                <div class="d6 center">
+                    <p class="dados">
+                        E-mail: exemplo@de.email.br<br><br>
+                        Telefone: 99999-9999<br><br>
+                        Endereço: Rua Rua, Bairro Bairro, Cidade Cidade<br><br>
+                    </p> 
+                    <div class="botoes">
+                        <button class="button">Pedidos
+                        <button class="button_txt">Sair
+                        <button class="button_txt">Editar foto
+                    </div> 
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="d3" >
+            <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
+                <div class="menu" id="menu">
+                    <div class="branco"> a</div>
+                    <a class="voltar" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
+                    <span><u><b><a href="comprar.html" class="menu_amarelo">Comprar</a></b></u></span>
+                    <span><u><b><a href="carrinho.html" class="menu_branco">Carrinho</a></b></u></span>
+                    <span><u><b><a href="entrar.html" class="menu_amarelo">Entrar</a></u></b></span>
+                    <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
+                    <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+    
+                    <!-- fezer comentárion no html -->
+                    <div class="branco"> a</div>
+
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+<script>
+    texto_menu.style.display="inline";
+    menu.style.display="none";
+    function ocultar()
+    {
+        texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }        
+    function voltarPagina() 
+    {
+        window.history.back();
+    }
+</script>
+</html>

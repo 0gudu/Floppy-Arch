@@ -1,0 +1,222 @@
+/*fundo*/
+body{
+    background-image: url('../images/Background3.png');
+    overflow: hidden;
+    width: 100%;
+    height: 99.7vh;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.d0 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*título*/
+.d1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.flop {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.entrar {
+    display: flex;
+    font-size: 150%;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.titulo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+/*corpo*/
+.d2 {
+    height: 78%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+ 
+}
+.d4
+{
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    min-height: 8rem;
+}
+.nome_foto
+{
+    height: 100%;
+    flex-direction: row;
+    font-size: x-large;
+    color: white;
+}
+.foto
+{
+    width: 5rem;
+    height: 5rem;
+    background-color: brown;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    background-color: gray;
+    font-size: small;
+}
+.nome
+{
+    margin-left: 10px;
+}
+.d5
+{
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    min-height: 20rem;
+
+}
+.dados
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.botoes
+{
+    width: 30%;
+    height: 15%;
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    min-height: 3rem;
+    min-width: 30rem;
+}
+.button {
+    height: 100%;
+    width: 55%;
+    background-color: yellow;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    border-width: 6px;
+    border-color: yellow;
+}
+.button:hover
+{
+    background-color: orange;
+    cursor: pointer;
+    border-color: orange;
+}
+.button_txt
+{
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.d6
+{
+    height: 100%;
+    background-color: blue; 
+    flex-direction: column;
+}
+/*menu*/
+.d3 {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    text-align: center;
+}
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.footer 
+{
+    display: flex;
+    width: 100%;
+    display: inline-block;
+    font-size: 2vw;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+span {
+    padding-left: 5%;
+}
+
+.branco{
+    color: white;
+    background-color: white;    
+    font-size: 1px;
+    line-height: 300%;
+}
+.menu_branco
+{
+    color: white;
+}
+.menu_amarelo
+{
+    color: yellow;
+}
+.voltar
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
+}
+.voltar :hover
+{
+    cursor: pointer;
+}
+rect {
+    width: 200px;
+    height: 10px;
+    background: white;
+}
