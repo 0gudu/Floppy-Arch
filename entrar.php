@@ -54,7 +54,7 @@ session_start();
                             </fieldset>
                         <div class="butao"><button type="button" class="button" onclick="clicko()">
                             Entrar</button> 
-                        <button type="button" class="button2"><u> <a id="criar" href="criarconta.html">Criar conta</a></u> </button></div>
+                        <button type="button" class="button2"><u> <a id="criar" href="criarconta.php">Criar conta</a></u> </button></div>
                         
                     </fieldset>
                         ');
@@ -119,7 +119,6 @@ session_start();
             }
             
         };
-        console.log(name);
         xhttp.open("GET", "vernome.php?q="+document.getElementById("vsf").value+"&e="+document.getElementById("sifude").value);
         xhttp.send();
     }

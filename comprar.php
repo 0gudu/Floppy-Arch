@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -105,7 +108,16 @@
                 <span><u><b><a href="index.php" id="menupadrao">⬅ Inicio</a></b></u></span>
                 <span><u><b><a href="comprar.php"  id="comprar">Comprar</a></b></u></span>
                 <span><u><b><a href="carrinho.php" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.php"  id="login">Entrar</a></u></b></span>
+                <span><u><b><a href="entrar.php"  id="login">
+                <?php 
+                    if($_SESSION['user'] == "none"){
+                        echo "entrar";
+                    } else {
+                        echo $_SESSION['user'];
+                    }
+                
+                ?>    
+                </a></u></b></span>
                 <span><u><b><a href="contato.html"  id="menupadrao">Contato</a></u></b></span>
 
                 <div class="branco"> a</div>
