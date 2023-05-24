@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 20/05/2023 às 13:45
+-- Tempo de geração: 24/05/2023 às 15:16
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -31,7 +31,8 @@ CREATE TABLE `carrinho` (
   `id_coisa` int(11) NOT NULL,
   `item` int(11) NOT NULL,
   `usuario` varchar(11) NOT NULL,
-  `valor` varchar(11) NOT NULL
+  `valor` varchar(11) NOT NULL,
+  `pedido` int(111) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -113,7 +114,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Restrições para tabelas despejadas
