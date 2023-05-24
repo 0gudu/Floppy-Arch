@@ -45,7 +45,7 @@ if (!isset($_SESSION['first_visit'])) {
                 <img src="images/neymar_gold.png" class="neymar">
             </div>
             <div class="d22">
-                <p class="into">Um produto que visa a nostalgia juntamente a viabilidade de armazenamento em seu sistema, com isso em mente apresentamos uma nova geração de disquetes.</p>
+                <h1 class="into">Um produto que visa a nostalgia juntamente a viabilidade de armazenamento em seu sistema, com isso em mente apresentamos uma nova geração de disquetes.</h1>
             </div>
             <div class="d222">
                 <img src="images/disquete.gif" class="floppy_disk">
@@ -53,13 +53,15 @@ if (!isset($_SESSION['first_visit'])) {
         </div>
         
         <div class="d3">
-            <div class="footer">
+        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
+                <div class="menu" id="menu">
                 <div class="branco"> a</div>
-                
-                <span><u><b><a href="index.php" id="menupadrao">⬅ Inicio</a></b></u></span>
-                <span><u><b><a href="comprar.php"  id="comprar">Comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.php" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.php"  id="login">
+
+                <a class="voltar" style="color: white;" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
+                <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php" class="menu_amarelo">
                 <?php 
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
@@ -67,13 +69,33 @@ if (!isset($_SESSION['first_visit'])) {
                         echo $_SESSION['user'];
                     }
                 
-                ?>    
+                ?>  </a></u></b></span>
+                <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
+                <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                  
                 </a></u></b></span>
-                <span><u><b><a href="contato.html"  id="menupadrao">Contato</a></u></b></span>
 
                 <div class="branco"> a</div>
             </div>
         </div>
     </div>  
 </body>
+<script>
+ texto_menu.style.display="inline";
+    menu.style.display="none";
+    function ocultar()
+    {
+        texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }        
+    function voltarPagina() 
+    {
+        window.history.back();
+    }
+</script>
 </html>

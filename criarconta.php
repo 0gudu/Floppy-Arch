@@ -16,7 +16,7 @@ session_start();
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <img src="images/floppy_arch_title.png" width="100%">
+                    <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="entrar">
                         <p ><b>➝ Criar conta</b></p>    
@@ -86,14 +86,15 @@ session_start();
         
         <div class="d3">
 
-            <div class="footer">
-                
+        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
+                <div class="menu" id="menu">
                 <div class="branco"> a</div>
-                
-                <span><u><b><a href="index.php" id="menupadrao">⬅ Inicio</a></b></u></span>
-                <span><u><b><a href="comprar.php"  id="comprar">Comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.php" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.php"  id="login">
+
+                <a class="voltar" style="color: white;" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
+                <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php" class="menu_amarelo">
                 <?php 
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
@@ -101,9 +102,11 @@ session_start();
                         echo $_SESSION['user'];
                     }
                 
-                ?>    
+                ?>  </a></u></b></span>
+                <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
+                <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                  
                 </a></u></b></span>
-                <span><u><b><a href="contato.html"  id="menupadrao">Contato</a></u></b></span>
 
                 <div class="branco"> a</div>
             </div>
@@ -156,6 +159,22 @@ session_start();
             alert("veja se voce preencheu todos os campos");
             confirma.type = "button";
         }
+    }
+    texto_menu.style.display="inline";
+    menu.style.display="none";
+    function ocultar()
+    {
+        texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }        
+    function voltarPagina() 
+    {
+        window.history.back();
     }
 </script>
 </html>

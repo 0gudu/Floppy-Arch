@@ -69,7 +69,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                    <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Carrinho</b></p>    
@@ -210,6 +210,10 @@
     </div>  
 </body>
 <script>
+    if ("<?php echo $_SESSION['user']; ?>" === "none") {
+            alert("Primeiramente faça login");
+            window.open("entrar.php","_self");
+        }
     function pedido() {
         window.open("pedido.php","_self");
     }

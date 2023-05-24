@@ -1,3 +1,4 @@
+/*fundo*/
 body
 {
     background-image: url('../images/Background.png');
@@ -5,7 +6,6 @@ body
     width: 100%;
     height: 99.7vh;
 }
-
 .d0 
 {
     height: 100%;
@@ -14,6 +14,7 @@ body
     flex-direction: column;
     justify-content: space-around;
 }
+/*cabeçalho da página*/
 .d1 
 {
     height: 25%;
@@ -46,6 +47,25 @@ body
     align-items: center;
     align-content: center;
 }
+.titulo 
+{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+ .wf 
+ {
+    width: 100%;
+    height: 37%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+/*corpo da página*/
 .d2 {
     height: 60%;
     width: 100%;
@@ -65,11 +85,18 @@ body
     justify-items: center;
     align-items: center;
     align-content: center;
+    position: relative;
 }
 .floppy_disk
 {
     animation: intro 1s linear;
     width: 70%;
+    position: absolute;
+}
+@keyframes intro 
+{
+    0% {width: 1060%;}
+    100% {width: 70%;}
 }
 .d21 {
     height: 100%;
@@ -88,12 +115,21 @@ body
 {
     height: 100%;
     width: 30%;
-    font-size: 90%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.od
+{
+    height: 80%;
+    width: 80%;
+
 }
 .into 
 {
     display: flex;
-    font-size: 280%;
     color: white;
     text-align: center;
     margin: 4.5%;
@@ -107,43 +143,33 @@ body
     height: 10%;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     justify-items: center;
     align-items: center;
     align-content: center;
+    position: relative;
+    text-align: center;
 }
-.titulo 
+.texto_menu
 {
-    width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 
 }
- .wf 
- {
-    width: 100%;
-    height: 37%;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-
-}
-
 .footer 
 {
     display: flex;
     width: 100%;
     display: inline-block;
     font-size: 2vw;
-    z-index: 1;
-    background-color: rgb(0, 0, 255, 0.1);
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
-
 span 
 {
-    padding-left: 9.8%;
+    padding-left: 5%;
 }
 
 .branco
@@ -153,83 +179,22 @@ span
     font-size: 1px;
     line-height: 300%;
 }
-
-@keyframes intro 
+.menu_branco
 {
-    0% {width: 100000px;}
-    100% {width: 70%;}
-}
-#comprar 
-{
-    color: yellow;
-}
-
-#login {
-    color: yellow;
-}
-
-#menupadrao {
     color: white;
 }
-
-rect {
-    width: 200px;
-    height: 10px;
-    background: white;
+.menu_amarelo
+{
+    color: yellow;
 }
-
-@media screen and (max-width:450px) {
-    .d1 {
-        height: 15%;
-        justify-content: space-between;
-    }
-    .d2 {
-        height: 70%;
-        flex-direction: column;
-    }
-    .d21 {
-        height: 50%;
-        width: 70%;
-    }
-    .d22 {
-        height: 50%;
-        width: 70%;
-    }
-    .neymar {
-        width: 60%;
-        height: 80%;
-    }
-    .footer {
-        display: flex;
-        width: 100%;
-        display: inline-block;
-        font-size: 2.8vw;
-        z-index: 1;
-    }
-    span {
-        padding-left: 7.4%;
-    }
+.voltar
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
 }
-
-@media screen and (min-width:450px) and (max-width:900px){
-    .d1 {
-        height: 15%;
-        justify-content: space-between;
-    }
-    .d2 {
-        height: 70%;
-        flex-direction: column;
-    }
-    .d21 {
-        height: 50%;
-        width: 70%;
-    }
-    .d22 {
-        height: 50%;
-        width: 70%;
-    }
-    .neymar {
-        width: 50%;
-        height: 80%;
-    }
+.voltar :hover
+{
+    cursor: pointer;
 }
