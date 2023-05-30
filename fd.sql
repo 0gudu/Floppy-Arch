@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `carrinho` (
   `id_coisa` int(11) NOT NULL,
   `item` int(11) NOT NULL,
-  `usuario` varchar(11) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
   `valor` varchar(11) NOT NULL,
   `pedido` int(111) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

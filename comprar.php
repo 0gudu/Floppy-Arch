@@ -133,7 +133,7 @@ session_start();
     function Enviar(codigo) {
 
         window.open("pagina_disquete.php?codigo="+codigo,"_self")
-    }
+    }   
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()

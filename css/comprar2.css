@@ -12,24 +12,12 @@ body{
     flex-direction: column;
     justify-content: space-around;
 }
-.d1 {
-    height: 10%;
-    width: 100%;
+.flop {
     display: flex;
-
-    flex-direction: row;
-    justify-items: center;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     align-content: center;
-}
-.tits {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-self: center;
 }
 .comprar {
     display: flex;
@@ -38,6 +26,17 @@ body{
     font-family: 'Times New Roman', Times, serif;
     justify-content: center;
     justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.d1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
     align-items: center;
     align-content: center;
 }
@@ -50,139 +49,105 @@ body{
     justify-items: center;
     align-items: center;
     align-content: center;
-
+}
+.nada {
+    width: 20%;
+    height: 100%;
 }
 .d21 {
-    width: 70%;
     height: 100%;
-
+    width: 60%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: 45% 45%;
+    column-gap: 5%;
+    row-gap: 5%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow: auto;
+}
+.seta_direita {
+    width: 20%;
+    height: 100%;
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
-    flex-direction: column;
 }
-.disc_titulo {
+.img_seta {
+    height: 100%;
+    width: 40%;
+}
+.img_seta:hover {
+    mouse: pointer; 
+    animation: gira 1s alternate infinite;
+}
+#seta {
     width: 100%;
-    height: 10%;
-
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
-    font-size: 250%;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
 }
-.disc_baixo {
+#seta:hover {
+    
+}
+
+@keyframes gira {
+    0% {width: 50%;}
+    100%{width: 60%;}
+}
+.itemshowcase {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(36, 36, 36, 0.4);
+    border: 3px solid white;
+}
+.itemshowcase:hover {
+    height: 105%;
+    width: 105%;
+    border-color: yellow;
+    cursor: pointer;
+}
+.disqueteshowcase {
     width: 100%;
     height: 70%;
-
-    display: flex;
-    flex-direction: row;
-}
-.disc_img {
-    width: 35%;
-    height: 90%;
-
     display: flex;
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
 }
-.disc_info {
-    width: 55%;
-    height: 90%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-select {
-    font-size: 70%;
-    font-family: 'Times New Roman', Times, serif;
-}
-.discs_nome {
-    width: 100%;    
+.legendashowcase {
+    width: 100%;
     height: 30%;
-
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 210%;
-    color: white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
-.discs_capa {
-    width: 100%;
-    height: 10%;
-
+.legendap {
     font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
     color: yellow;
-    font-size: 200%;
 }
-
-.disc_price {
+u {
+    color: yellow;
+}
+.d3 {
+    height: 10%;
     width: 100%;
-    height: 15%;
-
-    font-size: 300%;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
-}
-.disc_carrinhocompra {
-    width: 100%;
-    height: 20%;
-
-    display: flex;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
-
-.disc_comprar{
-    width: 30%;
-    height: 80%;
-    font-family: 'Times New Roman', Times, serif;
-    background-color: yellow;
-    font-size: 180%;
-    display: flex;
+    display: flex;  
     justify-content: center;
+    justify-items: center;
     align-items: center;
     align-content: center;
-    justify-items: center;
-    border-width: 6px;
-    border-color: rgb(173, 173, 5);
-
 }
-
-.disc_comprar:hover {
-    cursor: pointer;
-    background-color: orange;
-}
-
-.disc_carrinho{
-    width: 65%;
-    height: 80%;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 180%;
-    background-color: yellow;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
-    border-width: 6px;
-    border-color: rgb(173, 173, 5);
-
-}
-
-.disc_carrinho:hover {
-    cursor: pointer;
-    background-color: orange;
-}
-
 .titulo {
     width: 100%;
     height: 60%;
@@ -266,6 +231,7 @@ rect {
     height: 10px;
     background: white;
 }
+
 @media screen and (max-width:450px) {
     .d1 {
         height: 8%;

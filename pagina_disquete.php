@@ -1,49 +1,17 @@
 <?php session_start(); ?>
 <?php
     $codigo = $_GET["codigo"];
-    switch($codigo){
-        case 1:
-            $imagem = "images/personalizados/colorido.png";
-            $titulo = "Disquete Colorido";
-            $info = "Disquete com uma ampla variedade de cores";
-        break;
-        case 2:
-            $imagem = "images/personalizados/disquete veridiano.png";
-            $titulo = "Disquete Veridian";
-            $info = "@veridianoforaobaile";
-        break;
-        case 3:
-            $imagem = "images/personalizados/estampa.png";
-            $titulo = "Disquete Estampado";
-            $info = "rawr";
-        break;
-        case 4:
-            $imagem = "images/personalizados/fafase lalau.png";
-            $titulo = "Disquete lalau";
-            $info = "Obra de arte";
-        break;
-        case 5:
-            $imagem = "images/personalizados/germanodisk.png";
-            $titulo = "Disquete Germano";
-            $info = "Altamente germanico";
-        break;
-        case 6:
-            $imagem = "images/neymar_gold.png";
-            $titulo = "Neymar Gold Plus";
-            $info = "Disquete do Neymar ouro mais";
-        break;
-        case 7:
-            $imagem = "images/personalizados/ratuedisk-gudulegal.png";
-            $titulo = "Disquete Ratue";
-            $info = "gudu765";
-        break;
-        case 8:
-            $imagem = "images/personalizados/retrodisk.png";
-            $titulo = "Disquete Retrô";
-            $info = "Somente classicos";
-        break;
 
-    }
+    include ("conecta.php");
+    $comando = $pdo->prepare("SELECT * FROM produtos WHERE id_produto = :user");
+    $comando->bindParam(':user', $codigo);
+    $comando->execute();    
+                    
+    while ($linhas = $comando->fetch()) {
+        $imagem = $linhas["caminhofoto"];
+        $titulo = $linhas["nome"];
+        $info = $linhas["descricao"];
+    }   
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -95,7 +63,7 @@
                             Preço ➝ <span id="kk" name="kk" style="color: lightgreen; ">R$40,00</span>
                         </div>
                         <div class="disc_carrinhocompra">
-                            <button type="button" class="disc_comprar"> <b>COMPRAR</b> </button> 
+                            <button type="button" class="disc_comprar" onclick="comprarja('<?php echo $_GET['codigo']; ?>')"> <b>COMPRAR</b> </button> 
                             <button type="button" class="disc_carrinho" onclick="botarnocarrinho('<?php echo $_GET['codigo']; ?>')"> <b>COLOCAR NO CARRINHO</b> </button>
                         </div>
                     </div>
@@ -138,11 +106,22 @@
             window.open("entrar.php","_self");
         }else {
             var valor = document.getElementById("kk").textContent;  
-            var url = "php/colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor) + "&user=" + "<?php echo $_SESSION['user']; ?>";
+            var url = "colocarnocarrinho.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor) + "&user=" + "<?php echo $_SESSION['user']; ?>";
             window.open(url, "_self");
         }
         
     }
+    function comprarja(x){
+        if ("<?php echo $_SESSION['user']; ?>" === "none") {
+            alert("Primeiramente faça login");
+            window.open("entrar.php","_self");
+        }else {
+            var valor = document.getElementById("kk").textContent;  
+            var url = "pedidocomprarja.php?codigo=" + encodeURIComponent(x) + "&valor=" + encodeURIComponent(valor) + "&user=" + "<?php echo $_SESSION['user']; ?>";
+            window.open(url, "_self");
+        }
+    }
+
     function penis() {
         var x = document.getElementById("ka").value;
 

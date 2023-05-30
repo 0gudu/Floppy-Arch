@@ -5,7 +5,14 @@ body{
     width: 100%;
     height: 99.7vh;
 }
-
+.center
+{
+    display: flex; 
+    justify-content: center;
+    justify-items: center;                                  
+    align-items: center;                          
+    align-content: center;
+}
 .d0 {
     height: 100%;
     width: 100%;
@@ -123,14 +130,20 @@ body{
 }
 .adicionar
 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: yellow;
     border-width: 6px;
     border-color: yellow;
     width: 80%;
-    font-size: 130%;
+    font-size: x-large;
     height: 10%;
     margin: 10%;
+}
+.adicionar:hover
+{
+    background-color: orange;
+    border-color: orange;
+    cursor: pointer; 
 }
 .d21 {
     height: 100%;
@@ -139,7 +152,93 @@ body{
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    min-height: 10rem;
 
+}
+::-webkit-scrollbar
+{
+    border-color: white;
+    border-style: solid;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb
+{
+    background-color: white;
+    border-style: outset;
+    border-color: white;
+}
+::-webkit-scrollbar-thumb:hover
+{
+    background-color: yellow;
+    border-style: outset;
+    border-color: yellow;
+    border-width: 3px;
+}
+::-webkit-scrollbar-thumb:active
+{
+    background-color: orange;
+    border-style: inset;
+    border-color: orange;
+}
+.cimabaixo
+{
+    width: 88%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0%;
+    
+}
+.botoes_carrinho
+{
+    display: flex;
+    flex-direction: row;
+    height: 45%; 
+    width: 100%;
+    justify-content: space-between;
+}
+.butones
+{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.button_remover
+{
+    background-color:yellow;   
+    font-weight: bold; 
+    width:100%; 
+    height: 100%; 
+    margin-left: 5%;
+    border-width: 6px; 
+    border-color: yellow;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-width: 8rem;
+}
+.button_remover:hover
+{
+    background-color: orange;
+    border-color: orange;
+    cursor: pointer;
+}
+.ver_prod
+{
+    background-color: transparent;
+    border: none;
+    color: yellow;
+    text-decoration: underline;
+    font-size: x-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    min-width: 10rem;
+}
+.valor_prod
+{
+    color: lightgreen;
+    font-size: xx-large;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 .perfil
 {
@@ -162,15 +261,7 @@ body{
     border-width: 2px;
     border-style: solid;
 }
-.cimabaixo
-{
-    width: 88%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0%;
-    
-}
+
 .nome_perfil
 {
     margin: 0%;
@@ -198,6 +289,8 @@ body{
     justify-items: center;
     align-items: center;
     align-content: center;
+    min-height: 2rem;
+
 }
 .href_perfil
 {
@@ -217,10 +310,9 @@ body{
 .hr3
 {
     width: 90%;
-    height: 5px;
+    margin-top: 2rem;
     border-style: solid;
-    color: white;
-    margin-top: 0%;
+    border-color: white;
 }
 /*menu*/
 .d3 {

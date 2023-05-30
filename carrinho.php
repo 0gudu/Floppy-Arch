@@ -179,18 +179,14 @@
                                         echo(" ($capacidade)");
                                         echo('
                                         </p>
-                                        <div class="botoes_perfil">');
-                                        
-                                        echo $resultado1;
 
-                                        echo('
-                                        
+                                        <div class="botoes_carrinho ">
+                                            <div class="butones">
+                                                <button class="button_remover center" onclick="Enviar(\'' . $m . '\')">Remover</button>
+                                                <button href="pagina_disquete.php" class="ver_prod">Ver produto</button>
+                                                <p class="valor_prod">' . $resultado1 . '</p>
+                                            </div>
                                         </div>
-                                        
-                                        <div style="background-color:red;   font-weight: bold; width:10%; height:20%; display: flex; border-radius:10px;justify-content: center;
-                                        justify-items: center;
-                                        align-items: center;
-                                        align-content: center;" onclick="Enviar(\'' . $m . '\')">X</div>
                                     </div>
                                 </div>
                                 <hr class="hr3">

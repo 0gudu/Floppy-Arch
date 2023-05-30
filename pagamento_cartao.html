@@ -34,35 +34,35 @@
                         <div class="lado">
                             <fieldset class="campo">
                                 <legend class="legenda">Nome</legend>
-                                <input type="text" class="yuuy">
+                                <input type="text" class="yuuy" id="nome">
                             </fieldset>
-    
+
                             <fieldset class="campo">
                                 <legend class="legenda">Validade (MM/AA)</legend>
-                                <input type="text" class="yuuy">
+                                <input type="text" class="yuuy" id="val" onkeyup="validarval()">
                             </fieldset>
                         </div>
- 
+
                         <div class="lado">
                             <fieldset class="campo">
                                 <legend class="legenda">CPF</legend>
-                                <input type="text" class="yuuy">
+                                <input type="text" class="yuuy" id="cpf" onkeyup="validarcpf()">
                             </fieldset>
-    
+
                             <fieldset class="campo">
                                 <legend class="legenda">Codigo CVV</legend>
-                                <input type="text" class="yuuy">
+                                <input type="text" class="yuuy" id="cvv" onkeyup="validarcvv()">
                             </fieldset>
                         </div>
 
                         <div class="unico">
                             <fieldset class="campo">
                                 <legend class="legenda">Numero do cartão</legend>
-                                <input type="text" class="yuuy">
+                                <input type="text" class="yuuy" id="cc" onkeyup="validarcc()">
                             </fieldset>
                         </div>
                         
-                        <button class="confirma" type="button">Confirmar</button>
+                        <button class="confirma" type="button" onclick="confirma()">Confirmar</button>
 
                     </fieldset>
                     
@@ -90,4 +90,101 @@
         </div>
     </div>  
 </body>
+<script>
+    cpf1 = 0;
+    cvv1 = 0;
+    cc1 = 0;   
+    val1 = 0; 
+    function validarcpf() {
+        expressao = /^[0-9]{11}$/g;
+        resposta = expressao.test(cpf.value);
+        if (resposta==true)
+        {
+            cpf.classList.remove('errado');
+            cpf.classList.add('certo');
+            cpf1=1;
+        }
+        if (resposta==false)
+        {
+            cpf.classList.remove('certo');
+            cpf.classList.add('errado');
+            cpf1 = 0;
+        }
+    }
+
+    function validarcvv() {
+        expressao = /^[0-9]{3}$/g;
+        resposta = expressao.test(cvv.value);
+        if (resposta==true)
+        {
+            cvv.classList.remove('errado');
+            cvv.classList.add('certo');
+            cvv1 = 1;
+        }
+        if (resposta==false)
+        {
+            cvv.classList.remove('certo');
+            cvv.classList.add('errado');
+            cvv1 = 0;
+        }
+
+    }
+    function validarcc() {
+        expressao = /^[0-9]{16}$/g;
+        resposta = expressao.test(cc.value);
+        if (resposta==true)
+        {
+            cc.classList.remove('errado');
+            cc.classList.add('certo');
+            cc1 = 1;
+        }
+        if (resposta==false)
+        {
+            cc.classList.remove('certo');
+            cc.classList.add('errado');
+            cc1 = 0;
+        }
+    }
+    function validarval() {
+        expressao = /^[0-9]{4}$/g;
+        resposta = expressao.test(val.value);
+        if (resposta==true)
+        {
+            val.classList.remove('errado');
+            val.classList.add('certo');
+            val1 = 1;
+        }
+        if (resposta==false)
+        {
+            val.classList.remove('certo');
+            val.classList.add('errado');
+            val1 = 0;
+        }
+    }
+    function confirma() {
+        if(cpf1 == 1 && cvv1 == 1 && cc1 == 1 && val1 == 1 && nome.value != "")
+        {
+            window.location.href = "index.html";
+        }
+        else {
+            alert("complete todos os campos corretamente")
+        }
+    }
+    texto_menu.style.display="inline";
+    menu.style.display="none";
+    function ocultar()
+    {
+        texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }        
+    function voltarPagina() 
+    {
+        window.history.back();
+    }
+</script>
 </html>
