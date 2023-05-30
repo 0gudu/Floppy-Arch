@@ -111,6 +111,7 @@ body{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
+    text-align: center;
 }
 .botoes
 {
@@ -153,7 +154,6 @@ body{
 .d6
 {
     height: 100%;
-    background-color: blue; 
     flex-direction: column;
 }
 /*menu*/
@@ -219,4 +219,14 @@ rect {
     width: 200px;
     height: 10px;
     background: white;
+}
+.config
+{
+    position: absolute;
+    width: 40%;
+    height: 40%;
+    background-color: gray;
+    margin-left: 30%;
+    margin-top: 10%;
+
 }
