@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="css/perfil.css" /> 
 </head>
 <body>
-    <div class="config" id="config"></div>
+    <div class="config" id="config">
+        <div class="titulo_config center">
+            Configurações <button class="fechar" onclick="desaparecerConfig()" id="fechar">Fechar ✖</button>
+        </div>
+        <hr class="hr_config">
+        <button class="button_config">Editar perfil</button>
+        <button class="button_config">Acessibilidade</button>
+        <button class="button_config">Sair</button>
+        <button class="button_config_verm">Apagar conta</button>
+
+    </div>
     <div class="d0">
         <div class="d1">
             <div class="tits">
@@ -43,8 +53,7 @@
                     </p> 
                     <div class="botoes">
                         <button class="button">Pedidos
-                        <button class="button_txt">Sair
-                        <button class="button_txt">Configurações
+                        <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 
                 </div>
             </div>
@@ -87,6 +96,15 @@
     function voltarPagina() 
     {
         window.history.back();
+    }
+    
+    function aparecerConfig()
+    {
+        config.style.display="flex";
+    }
+    function desaparecerConfig()
+    {
+        config.style.display = "none";
     }
 </script>
 </html>

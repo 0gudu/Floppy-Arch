@@ -128,7 +128,7 @@ body{
 }
 .button {
     height: 100%;
-    width: 55%;
+    width: 60%;
     background-color: yellow;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
@@ -150,6 +150,14 @@ body{
     color: yellow;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: x-large;
+}
+.button_txt:hover
+{
+    color: orange;
+}
+.button_txt:active
+{
+    color: yellow;
 }
 .d6
 {
@@ -223,10 +231,92 @@ rect {
 .config
 {
     position: absolute;
-    width: 40%;
+    display: none;
+    flex-direction: column;
+    width: 30%;
     height: 40%;
-    background-color: gray;
-    margin-left: 30%;
-    margin-top: 10%;
-
+    background-color: rgba(39, 39, 39, 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    border-width: 6px;
+    border-style:ridge;
+    border-color: lightgray;
+    min-width: 20rem;
+    min-height: 10rem;
+}
+.titulo_config
+{
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-color: lightgrey;
+    font-size: large;
+    margin-bottom: 0%;
+}
+.hr_config
+{
+    width: 100%; 
+    color: lightgray;
+    margin-top: 0%; 
+}
+.button_config
+{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: x-large;
+    height: 2.5rem;
+}
+.button_config:hover
+{
+    background-color: lightgrey;
+    color: black;
+}
+.button_config:active
+{
+    background-color: yellow;
+}
+.button_config_verm
+{
+    width: 100%;
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: x-large;
+    height: 2.5rem;
+}
+.button_config_verm:hover
+{
+    background-color: red;
+    color: black;
+}
+.button_config_verm:active
+{
+    background-color: orange;
+    color: black;
+}
+.fechar
+{
+    background-color: transparent;
+    color: black;
+    border: none;
+    background-color: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.fechar:hover
+{
+    background-color: red;
+}
+.fechar:active
+{
+    background-color: orange;
 }
