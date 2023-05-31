@@ -261,6 +261,7 @@ rect {
     width: 100%; 
     color: lightgray;
     margin-top: 0%; 
+    margin-bottom: 0%;
 }
 .button_config
 {
@@ -303,7 +304,7 @@ rect {
     background-color: orange;
     color: black;
 }
-.fechar
+.fechar_voltar
 {
     background-color: transparent;
     color: black;
@@ -312,11 +313,53 @@ rect {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
 }
-.fechar:hover
+.fechar_voltar:hover
 {
-    background-color: red;
+    background-color: yellow;
 }
-.fechar:active
+.fechar_voltar:active
 {
     background-color: orange;
+}
+
+.editar_perfil
+{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    background-color: rgba(39, 39, 39, 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    border-width: 6px;
+    border-style:ridge;
+    border-color: lightgray;
+    min-width: 20rem;
+    min-height: 10rem;  
+}
+.titulo_config
+{
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-color: lightgrey;
+    font-size: large;
+    margin-bottom: 0%;
+}
+
+.edicao_perfil
+{
+    width: 100%;
+    height: 95%;
+    background-color: aqua;
+    overflow-y: scroll;
+}
+.edicao_perfil2
+{
+    width: 100%;
+    height: 200vh;
 }
