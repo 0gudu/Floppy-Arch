@@ -1,0 +1,365 @@
+/*fundo*/
+body{
+    background-image: url('../images/Background3.png');
+    overflow: hidden;
+    width: 100%;
+    height: 99.7vh;
+}
+.center
+{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.d0 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+/*título*/
+.d1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.flop {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.entrar {
+    display: flex;
+    font-size: 150%;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.titulo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+/*corpo*/
+.d2 {
+    height: 78%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+ 
+}
+.d4
+{
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    min-height: 8rem;
+}
+.nome_foto
+{
+    height: 100%;
+    flex-direction: row;
+    font-size: x-large;
+    color: white;
+}
+.foto
+{
+    width: 5rem;
+    height: 5rem;
+    background-color: brown;
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    background-color: gray;
+    font-size: small;
+}
+.nome
+{
+    margin-left: 10px;
+}
+.d5
+{
+    width: 100%;
+    height: 70%;
+    flex-direction: column;
+    min-height: 20rem;
+
+}
+.dados
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-align: center;
+}
+.botoes
+{
+    width: 60%;
+    height: 15%;
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    min-height: 3rem;
+    min-width: 35rem;
+}
+.button {
+    height: 100%;
+    width: 50%;
+    background-color: yellow;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    border-width: 6px;
+    border-color: yellow;
+}
+.button:hover
+{
+    background-color: orange;
+    cursor: pointer;
+    border-color: orange;
+}
+.button_txt
+{
+    background-color: transparent;
+    border-color: transparent;
+    text-decoration: underline;
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+.button_txt:hover
+{
+    color: orange;
+}
+.button_txt:active
+{
+    color: yellow;
+}
+.d6
+{
+    height: 100%;
+    flex-direction: column;
+}
+/*menu*/
+.d3 {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    text-align: center;
+}
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.footer 
+{
+    display: flex;
+    width: 100%;
+    display: inline-block;
+    font-size: 2vw;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+span {
+    padding-left: 5%;
+}
+
+.branco{
+    color: white;
+    background-color: white;    
+    font-size: 1px;
+    line-height: 300%;
+}
+.menu_branco
+{
+    color: white;
+}
+.menu_amarelo
+{
+    color: yellow;
+}
+.voltar
+{
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
+}
+.voltar :hover
+{
+    cursor: pointer;
+}
+rect {
+    width: 200px;
+    height: 10px;
+    background: white;
+}
+.config
+{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 30%;
+    height: 40%;
+    background-color: rgba(39, 39, 39, 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    border-width: 6px;
+    border-style:ridge;
+    border-color: lightgray;
+    min-width: 20rem;
+    min-height: 10rem;
+}
+.titulo_config
+{
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-color: lightgrey;
+    font-size: large;
+    margin-bottom: 0%;
+}
+.hr_config
+{
+    width: 100%; 
+    color: lightgray;
+    margin-top: 0%; 
+    margin-bottom: 0%;
+}
+.button_config
+{
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: x-large;
+    height: 2.5rem;
+}
+.button_config:hover
+{
+    background-color: lightgrey;
+    color: black;
+}
+.button_config:active
+{
+    background-color: yellow;
+}
+.button_config_verm
+{
+    width: 100%;
+    background-color: transparent;
+    color: red;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    font-size: x-large;
+    height: 2.5rem;
+}
+.button_config_verm:hover
+{
+    background-color: red;
+    color: black;
+}
+.button_config_verm:active
+{
+    background-color: orange;
+    color: black;
+}
+.fechar_voltar
+{
+    background-color: transparent;
+    color: black;
+    border: none;
+    background-color: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.fechar_voltar:hover
+{
+    background-color: yellow;
+}
+.fechar_voltar:active
+{
+    background-color: orange;
+}
+
+.editar_perfil
+{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    background-color: rgba(39, 39, 39, 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    border-width: 6px;
+    border-style:ridge;
+    border-color: lightgray;
+    min-width: 20rem;
+    min-height: 10rem;  
+}
+.titulo_config
+{
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-color: lightgrey;
+    font-size: large;
+    margin-bottom: 0%;
+}
+
+.edicao_perfil
+{
+    width: 100%;
+    height: 95%;
+    background-color: aqua;
+    overflow-y: scroll;
+}
+.edicao_perfil2
+{
+    width: 100%;
+    height: 200vh;
+}

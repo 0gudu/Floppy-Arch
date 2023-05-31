@@ -56,7 +56,7 @@ session_start();
 
                                     <fieldset class="campo">
                                         <legend class="legenda">E-mail</legend>
-                                        <input type="text" class="yuuy" placeholder="Insira seu E-mail" id="email" name="email">
+                                        <input type="email" class="yuuy" placeholder="Insira seu E-mail" id="email" name="email">
                                     </fieldset>
 
                                     <fieldset class="campo">

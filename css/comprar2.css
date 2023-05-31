@@ -56,15 +56,25 @@ body{
 }
 .d21 {
     height: 100%;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    
+    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow: auto;
+}
+.prod {
+    height: 100%;
     width: 60%;
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     grid-template-rows: 45% 45%;
     column-gap: 5%;
     row-gap: 5%;
-    overflow-x: scroll;
-    overflow-y: scroll;
-    overflow: auto;
 }
 .seta_direita {
     width: 20%;

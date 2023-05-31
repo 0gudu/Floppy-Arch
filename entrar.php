@@ -23,7 +23,18 @@ session_start();
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo "Meu Perfil";
+                        include ("conecta.php");
+                        $comando = $pdo->prepare("SELECT adm FROM pessoas where nome = :user");
+                        $comando->bindParam(':user', $_SESSION['user']);
+                        $comando->execute();
+                        $res =$comando->fetch();
+                        if ($res['adm'] == 1)
+                        {
+                            header("location: perfiladministrador.php");
+                        }else {
+                            header("location: perfil.php");
+                        }
+                        
                     }
                 
                 ?> </b></p>    
@@ -58,18 +69,6 @@ session_start();
                         
                     </fieldset>
                         ');
-                    }else {
-                        echo '<div style="display:flex; flex-direction:column; color:white; font-weight:bolder; font-size:3vh;">';
-                        echo $_SESSION["user"];
-                            
-                            echo ('
-                            <form action="sair.php">
-                            <div class="butao" ><button type="submit" class="button">
-                            Sair</button> </div>
-                            </form>
-                            </fieldset>
-                            </div>
-                            ');
                     }
                 ?>
                 

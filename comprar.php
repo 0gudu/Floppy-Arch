@@ -8,7 +8,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floppy Arch</title>
-    <link rel="stylesheet" href="css/comprar.css" /> 
+    <link rel="stylesheet" href="css/comprar2.css" /> 
 </head>
 <body>
    <div class="d0">
@@ -19,85 +19,43 @@ session_start();
                     <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="comprar">
-                        <p ><b>➝ Comprar (1/2)</b></p>    
+                        <p ><b>➝ Comprar</b></p>    
                     </div>
                 </div>
             </div>
         </div>
         <div class="d2">
-            <div class="nada">
-
-            </div>
             <div class="d21">
-                <div onclick="Enviar(1);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/Colorido.png" width="90%">
-                    </div>
-                    <div  class="legendashowcase">
-                        <u><b><p class="legendap">Disquete Colorido</p></b></u>
-                    </div>
+                <div class="prod">
+                <?php 
+                    include ("conecta.php");
+                    $comando = $pdo->prepare("SELECT * FROM produtos");
+                    $comando->execute();    
+                
+                    $resultado = $comando->execute();
+
+                    while( $linhas = $comando->fetch()) 
+                        {
+                            $idprod = $linhas["id_produto"]; //nome da coluna xampp
+                            $nome = $linhas["nome"];
+                            $foto = $linhas["caminhofoto"];
+
+                            echo('
+                            <div onclick="Enviar(' . $idprod . ');" class="itemshowcase">
+                            <div class="disqueteshowcase">
+                                <img src="' . $foto . '" width="90%">
+                            </div>
+                            <div  class="legendashowcase">
+                                <u><b><p class="legendap">' . $nome . '</p></b></u>
+                            </div>
+                        </div>
+                            
+                            
+                            ');
+
+                        }
+                ?>
                 </div>
-                <div onclick="Enviar(2);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/disquete veridiano.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete Veridian</p></b></u>
-                    </div>
-                </div>
-                <div onclick="Enviar(3);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/estampa.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete estampado</p></b></u>
-                    </div>
-                </div>
-                <div onclick="Enviar(4);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/fafase lalau.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete lalau</p></b></u>
-                    </div>
-                </div>
-                <div onclick="Enviar(5);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/germanodisk.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <b><u><p class="legendap">Disquete germano</p></u></b>
-                    </div>
-                </div>
-                <div onclick="Enviar(6);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/neymar_gold.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete neymar gold</p></b></u>
-                    </div>
-                </div>
-                <div onclick="Enviar(7);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/ratuedisk-gudulegal.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete ratue</p></b></u>
-                    </div>
-                </div>
-                <div onclick="Enviar(8);" class="itemshowcase">
-                    <div class="disqueteshowcase">
-                        <img src="images/Personalizados/retrodisk.png" width="90%">
-                    </div>
-                    <div class="legendashowcase">
-                        <u><b><p class="legendap">Disquete retro</p></b></u>
-                    </div>
-                </div>
-            </div>
-            <div class="seta_direita">
-                <a id="seta" href="comprar2.php">
-                <img src="images/Seta_direita.png" class="img_seta">
-                </a>
             </div>
         </div>
         
