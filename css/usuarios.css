@@ -132,6 +132,11 @@ body{
     height: 10%;
     margin: 10%;
 }
+.adicionar:hover
+{
+    background-color: orange;
+    border-color: orange;
+}
 .d21 {
     height: 80vh;
     width: 69%;
@@ -200,6 +205,14 @@ body{
     font-size: x-large;
     color: yellow;
 }
+.href_perfil:hover
+{
+    color: orange;
+}
+.href_perfil:active
+{
+    color: yellow;
+}
 .botao_removerperfil
 {
     font-family: 'Times New Roman', Times, serif;
@@ -209,6 +222,11 @@ body{
     width: 30%;
     font-size: 130%;
     height: 90%;
+}
+.botao_removerperfil:hover
+{
+    background-color: orange;
+    border-color: orange;
 }
 .hr3
 {

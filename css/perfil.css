@@ -355,11 +355,18 @@ rect {
 {
     width: 100%;
     height: 95%;
-    background-color: aqua;
-    overflow-y: scroll;
+    overflow-y: auto;
+    font-size: large;
+    color: white;
 }
 .edicao_perfil2
 {
     width: 100%;
-    height: 200vh;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.input_imagem
+{
+    background-color: brown;
 }
