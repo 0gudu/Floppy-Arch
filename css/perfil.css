@@ -256,6 +256,28 @@ rect {
     font-size: large;
     margin-bottom: 0%;
 }
+.pedidos {
+    position: absolute;
+    width: 10%;
+    height: 200px;
+    background-color: yellow;
+    overflow-y: scroll;
+    display: none;
+    flex-direction: column;
+}
+.fecha {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+}
+.pedidolista {
+    width: 80%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    margin: 10px;
+}
 .hr_config
 {
     width: 100%; 

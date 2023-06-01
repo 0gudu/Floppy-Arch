@@ -78,7 +78,28 @@
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p> 
                     <div class="botoes">
-                        <button class="button">Pedidos
+                        <button class="button" onclick="descer()">Pedidos</button>
+                        <div class="pedidos" id="pedidos">
+                            <?php
+                            include ("conecta.php");
+
+                            $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho where usuario = :user");
+                            $comando->bindParam(':user', $_SESSION['user']);
+                            $comando->execute();
+                            
+                            $resultado = $comando->fetchColumn();
+                            
+                            $x = 0;
+                            while ($x != $resultado) {
+                                $p = $x + 1;
+                                echo "<div onclick='pedido($p)' class='pedidolista'></div>";
+                                $x++;
+                            }
+                            ?>
+                            
+                            <button class="fecha" onclick="subir()">X</button>
+                            
+                        </div>
                         <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 
                 </div>
@@ -114,7 +135,23 @@
         </div>
     </div>  
 </body>
+<script src="jquery-3.6.4.min.js"> </script>
 <script>
+
+    SEGUNDOS = 1000;
+    
+    function descer()
+    {
+        $("#pedidos").slideDown(SEGUNDOS);
+        document.getElementById("pedidos").style.display = "flex";
+    }
+
+    function subir()
+    {
+        $("#pedidos").slideUp(SEGUNDOS);
+
+    }
+
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()
