@@ -126,9 +126,14 @@ body{
     min-height: 3rem;
     min-width: 35rem;
 }
+.href_produtos
+{
+    height: 100%;
+    width: 50%;  
+}
 .button {
     height: 100%;
-    width: 50%;
+    width: 100%;
     background-color: yellow;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;

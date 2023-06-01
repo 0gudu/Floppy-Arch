@@ -126,9 +126,14 @@ body{
     min-height: 3rem;
     min-width: 30rem;
 }
+.href_pedidos
+{
+    height: 100%;
+    width: 60%;  
+}
 .button {
     height: 100%;
-    width: 60%;
+    width: 100%;
     background-color: yellow;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
