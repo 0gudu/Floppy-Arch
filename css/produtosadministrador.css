@@ -5,14 +5,7 @@ body{
     width: 100%;
     height: 99.7vh;
 }
-.center
-{
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-}
+
 .d0 {
     height: 100%;
     width: 100%;
@@ -89,7 +82,6 @@ body{
     justify-items: center;
     align-items: center;
     align-content: center;
-    font-size: larger;
 }
 .nome_adm
 {
@@ -152,10 +144,10 @@ body{
     overflow-y: scroll;
 
 }
-.perfil
+.produto
 {
     width: 90%;
-    height: 20%;
+    height: 70%;
     margin: 5%;
     display: flex;
     flex-direction: row;
@@ -165,30 +157,75 @@ body{
     align-content: center;
     margin-bottom: 0%;
 }
+.img_dados
+{
+    display: flex;
+    flex-direction: row;
+}
+.fotos_produtos
+{
+    width: 15rem;
+    height: 15rem;
+    margin-left: 0%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    background-color: gray;
+}
 .cimabaixo
 {
-    width: 100%;
+    width: 88%;
     height: 100%;
     display: flex;
     flex-direction: column;
     padding: 0%;
     
 }
-.tt_pedido
+.nome_produto
 {
     margin: 0%;
     width: 100%;
     height: 49%;
     display: flex;
     color: white;
+    padding-left: 5%;
     font-size: 180%;
     justify-content: left;
     justify-items: center;
     align-items: center;
     align-content: center;
 }
+.descricao_produto
+{
+    margin: 0%;
+    width: 100%;
+    height: 49%;
+    display: flex;
+    color: white;
+    padding-left: 5%;
+    font-size: 180%;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.cap_precos
+{
+    margin: 0%;
+    width: 100%;
+    height: 49%;
+    display: flex;
+    color: white;
+    padding-left: 5%;
+    font-size: 180%;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    align-content: center;   
+}
 .botoes_perfil
 {
+    margin: 0%;
     width: 100%;
     height: 49%;
     display: flex;
@@ -211,13 +248,13 @@ body{
 {
     color: yellow;
 }
-.button_pedido
+.botao_removerperfil
 {
     font-family: 'Times New Roman', Times, serif;
     background-color: yellow;
     border-width: 6px;
     border-color: yellow;
-    width: 25%;
+    width: 30%;
     font-size: 130%;
     height: 90%;
 }
@@ -225,21 +262,6 @@ body{
 {
     background-color: orange;
     border-color: orange;
-}
-.preco_valor_preco
-{
-    width: 25%;
-    font-size: x-large;
-    display: flex;
-    flex-direction: row;
-}
-.preco
-{
-    color: white;
-}
-.valor_preco
-{
-    color: lightgreen;
 }
 .hr3
 {

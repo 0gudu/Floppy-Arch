@@ -55,6 +55,7 @@
 
   // Função executada quando a variável (tópico) no servidor receber uma mensagem:
   function MensagemRecebida(message) {
+      resposta.innerHTML = ""; // Limpa o conteúdo anterior
       resposta.innerHTML += "<br><br>" + message.payloadString;
   }
 
