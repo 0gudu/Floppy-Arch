@@ -368,7 +368,7 @@ rect {
 .edicao_perfil2
 {
     width: 100%;
-    -minheight: 100%;
+    min-height: 100%;
     flex-direction: column;
     justify-content: center;
 }
@@ -376,7 +376,6 @@ rect {
 {
     width: 65%;
     margin-bottom: 5%;
-    margin-top: 10%;
     border-color: white;
     border-style: solid;
 }
