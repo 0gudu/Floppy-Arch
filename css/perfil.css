@@ -286,7 +286,7 @@ rect {
 }
 .button_config:active
 {
-    background-color: yellow;
+    background-color: orange;
 }
 .button_config_verm
 {
@@ -320,7 +320,7 @@ rect {
 }
 .fechar_voltar:hover
 {
-    background-color: yellow;
+    background-color: white;
 }
 .fechar_voltar:active
 {
@@ -363,15 +363,68 @@ rect {
     overflow-y: auto;
     font-size: large;
     color: white;
+    overflow-y: auto;
 }
 .edicao_perfil2
 {
     width: 100%;
-    height: 100%;
+    -minheight: 100%;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
 }
-.input_imagem
+.editar_foto_perfil
 {
-    background-color: brown;
+    width: 65%;
+    margin-bottom: 5%;
+    margin-top: 10%;
+    border-color: white;
+    border-style: solid;
+}
+.input_sq
+{
+    width: 70%;
+    min-height:20%;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: space-between;
+}
+.input
+{
+    min-width: 80%;
+    max-width: 80%;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: white;
+    border-width: 2px;
+    background-color: transparent;
+    padding-left: 1%;
+    color: white;
+    max-height: 40%;
+    height: 1.5rem;
+    min-height: 1.5rem;
+}
+.editar_button
+{
+    width: 45%;
+    height: 2rem;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightgray;
+    border: none;
+}
+.editar_button:hover
+{
+    background-color: white;
+}
+.editar_button:active
+{
+    background-color: orange;
+}
+.dotted
+{
+    width: 98%;
+    height: 70%;
+    border-style: dotted;
+    border-color: gray;
+    border-width: 3px;
 }
