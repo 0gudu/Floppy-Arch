@@ -66,12 +66,12 @@ if (!isset($_SESSION['first_visit'])) {
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo $_SESSION['user'];
+                        echo $_SESSION['name'];
                     }
                 
                 ?>  </a></u></b></span>
                 <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
                   
                 </a></u></b></span>
 

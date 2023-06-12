@@ -34,10 +34,10 @@ session_start();
                         <form action="dadospessoa.php" class="campos" method="post">
                                 <div class="dir">
                                        
-                                    <div class="aviso" id="aviso">Este nome já está sobre uso</div>
+                                    
                                     <fieldset class="campo">
                                         <legend class="legenda">Nome</legend>
-                                        <input type="text" class="yuuy" placeholder="Insira seu nome" id="nome" name="nome" onkeyup="verificar()">
+                                        <input type="text" class="yuuy" placeholder="Insira seu nome" id="nome" name="nome">
                                     </fieldset>
 
                                     <fieldset class="campo">
@@ -53,10 +53,10 @@ session_start();
                                 </div>
 
                                 <div class="esq">
-
+                                <div class="aviso" id="aviso">Este email já está sobre uso</div>
                                     <fieldset class="campo">
                                         <legend class="legenda">E-mail</legend>
-                                        <input type="email" class="yuuy" placeholder="Insira seu E-mail" id="email" name="email">
+                                        <input type="email" class="yuuy" placeholder="Insira seu E-mail" id="email" name="email" onkeyup="verificar()">
                                     </fieldset>
 
                                     <fieldset class="campo">
@@ -99,12 +99,12 @@ session_start();
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo $_SESSION['user'];
+                        echo $_SESSION['name'];
                     }
                 
                 ?>  </a></u></b></span>
                 <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
                   
                 </a></u></b></span>
 
@@ -119,21 +119,21 @@ session_start();
 
     function verificar() { 
         const xhttp = new XMLHttpRequest();
-        nome = document.getElementById("nome");
+        nome = document.getElementById("email");
         xhttp.onreadystatechange = function() {
             if(xhttp.responseText == 0){
-                nome.style.color = "green";
+                email.style.color = "green";
                 name = 1;
                 aviso.style.display = "none";
             } else {
-                nome.style.color = "red";
+                email.style.color = "red";
                 name = 0;
                 aviso.style.display = "flex";
             }
             
         };
 
-        xhttp.open("GET", "verificarnomeemail.php?q="+document.getElementById("nome").value+"&e="+document.getElementById("email").value);
+        xhttp.open("GET", "verificarnomeemail.php?q="+document.getElementById("email").value+"&e="+document.getElementById("email").value);
         xhttp.send();
     }
 

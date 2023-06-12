@@ -85,7 +85,7 @@
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo $_SESSION['user'];
+                        echo $_SESSION['name'];
                     }
                 
                 ?>  </a></u></b></span>

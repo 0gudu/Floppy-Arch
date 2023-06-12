@@ -56,7 +56,7 @@ session_start();
                         <fieldset class="login">
                         <div id="conf" class="conf">NOME OU SENHA INCORRETOS</div>
                             <fieldset class="campo">
-                                <legend class="legenda">Nome</legend>
+                                <legend class="legenda">Email</legend>
                                 <input type="text" name="vsf" id="vsf" class="yuuy">
                             </fieldset>
                             <fieldset class="campo">
@@ -94,12 +94,12 @@ session_start();
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo $_SESSION['user'];
+                        echo $_SESSION['name'];
                     }
                 
                 ?>  </a></u></b></span>
                 <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
                   
                 </a></u></b></span>
 
@@ -109,6 +109,7 @@ session_start();
     </div>  
 </body>
 <script>
+    name = 0;
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()
@@ -144,6 +145,10 @@ session_start();
     }
 
     function clicko(){
+        
+
+        console.log(name);
+
         if (name == 1) {
             document.getElementById("conf").style.display = "none";
             var form = document.createElement("form");

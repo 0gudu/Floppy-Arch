@@ -26,4 +26,5 @@
         echo "cu <br>";
         $x++;
     }
+    header("location: perfil.php");
 ?>

@@ -66,14 +66,14 @@
                     <div class="foto">
                         Sua foto aqui
                     </div>
-                    <div class="nome"><?php echo $_SESSION['user']?></div>
+                    <div class="nome"><?php echo $_SESSION['name'];?></div>
                 </div>
             </div>
             <hr width="60%">
             <div class="d5 center">
                 <div class="d6 center">
                     <p class="dados">
-                        E-mail: <?php echo $res['email'];?><br><br>
+                        E-mail: <?php echo $res['nome'];?><br><br>
                         Telefone: <?php echo $res['telefone'];?><br><br>
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p> 
@@ -120,12 +120,12 @@
                     if($_SESSION['user'] == "none"){
                         echo "entrar";
                     } else {
-                        echo $_SESSION['user'];
+                        echo $_SESSION['name'];
                     }
                 
                 ?>  </a></u></b></span>
                     <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                    <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                    <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
     
                     <!-- fezer comentárion no html -->
                     <div class="branco"> a</div>

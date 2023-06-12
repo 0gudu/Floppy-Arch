@@ -17,6 +17,13 @@
     $comando->bindParam(':pedido', $cu);
     $comando->bindParam(':usuario', $_SESSION['user']);
     $comando->execute();
+    
+    $comando = $pdo->prepare("UPDATE carrinho
+    SET pedido = :pedido
+    WHERE usuario = :usuario and pedido = 0;");
 
+    $comando->bindParam(':pedido', $cu);
+    $comando->bindParam(':usuario', $_SESSION['user']);
+    $comando->execute();
    header("location: pedidos.php");
 ?>
