@@ -211,7 +211,7 @@
             window.open("entrar.php","_self");
         }
     function pedido() {
-        window.open("pedido.php","_self");
+        window.open("pedidocarrinho.php","_self");
     }
     function Enviar(codigo) {
         window.open("excluir_carrinho.php?codigo="+codigo,"_self")

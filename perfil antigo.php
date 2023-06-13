@@ -4,16 +4,6 @@
         header("location: entrar.php");
     }
     include ("conecta.php");
-
-    $comando = $pdo->prepare("SELECT adm FROM pessoas WHERE nome = :user");
-    $comando->bindParam(':user', $_SESSION['user']);
-    $comando->execute();
-    $res =$comando->fetch();
-
-    if ($res['adm'] == 0) {
-        header("location: entrar.php");
-    }
-    include ("conecta.php");
     $comando = $pdo->prepare("SELECT * FROM pessoas WHERE nome = :user");
     $comando->bindParam(':user', $_SESSION['user']);
     $comando->execute();
@@ -25,8 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil ADM - FOPPY ARCH</title>
-    <link rel="stylesheet" href="css/perfiladministrador.css" /> 
+    <title>Perfil</title>
+    <link rel="stylesheet" href="css/perfil.css" /> 
 </head>
 <body>
     <div class="config" id="config">
@@ -35,7 +25,7 @@
             <button class="fechar_voltar" onclick="desaparecerConfig()" id="fechar">Fechar ✖</button>
         </div>
         <hr class="hr_config">
-        <button class="button_config" onclick="aparecerEditar()">Editar perfil</button>
+        <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
         <button class="button_config">Acessibilidade</button>
         <form action="sair.php">
             <button type="submit" class="button_config">Sair</button>
@@ -43,7 +33,6 @@
         <button class="button_config_verm">Apagar conta</button>
 
     </div>
-
     <div class="editar_perfil" id="editar_perfil">
         <div class="titulo_config center">
             <button class="fechar_voltar" onclick="voltarParaConfig()" id="fechar_editar">⬅ Voltar</button>
@@ -52,50 +41,20 @@
         </div>
         <hr class="hr_config">
         <div class="edicao_perfil">
-            <div class="edicao_perfil2 center">
-                <fieldset class="editar_foto_perfil">
-                    <legend>Foto de perfil</legend>
-                    <input type="file" class="input_imagem" accept="image/*">
-                    <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                </fieldset>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Nome:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o nome..."></textarea>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Telefone:
-                    <input type="text" class="input" placeholder="Alterar a senha..."></input>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Endereço:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o endereço..."></textarea>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Senha:
-                    <input type="password" class="input" placeholder="Alterar a senha..."></input>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    <button class="editar_button"><div class="dotted">Concluir</div>
-                    <button class="editar_button">Cancelar
-                </div>
-            </div>
+            <div class="edicao_perfil2"></div>
         </div>
     </div>
+    
 
     <div class="d0">
         <div class="d1">
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="entrar">
-                        <p ><b>➝ Perfil - ADM</b></p>    
+                        <p ><b>➝ Perfil</b></p>    
                     </div>
                     
                 </div>
@@ -114,14 +73,34 @@
             <hr width="60%">
             <div class="d5 center">
                 <div class="d6 center">
-                <p class="dados">
+                    <p class="dados">
                         E-mail: <?php echo $res['nome'];?><br><br>
                         Telefone: <?php echo $res['telefone'];?><br><br>
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p> 
                     <div class="botoes">
-                        <a href="produtos_adm.html" class="href_produtos"><button class="button">Produtos</button></a>
-                        <a href="usuarios.php" class="button_txt">Usuários</a>
+                        <button class="button" onclick="descer()">Pedidos</button>
+                        <div class="pedidos" id="pedidos">
+                            <?php
+                            include ("conecta.php");
+
+                            $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho where usuario = :user");
+                            $comando->bindParam(':user', $_SESSION['user']);
+                            $comando->execute();
+                            
+                            $resultado = $comando->fetchColumn();
+                            
+                            $x = 0;
+                            while ($x != $resultado) {
+                                $p = $x + 1;
+                                echo "<div onclick='pedido($p)' class='pedidolista'></div>";
+                                $x++;
+                            }
+                            ?>
+                            
+                            <button class="fecha" onclick="subir()">X</button>
+                            
+                        </div>
                         <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 
                 </div>
@@ -157,7 +136,23 @@
         </div>
     </div>  
 </body>
+<script src="jquery-3.6.4.min.js"> </script>
 <script>
+
+    SEGUNDOS = 1000;
+    
+    function descer()
+    {
+        $("#pedidos").slideDown(SEGUNDOS);
+        document.getElementById("pedidos").style.display = "flex";
+    }
+
+    function subir()
+    {
+        $("#pedidos").slideUp(SEGUNDOS);
+
+    }
+
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()
