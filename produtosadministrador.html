@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Usuários - FOPPY ARCH</title>
+    <title>Produtos - FOPPY ARCH</title>
     <link rel="stylesheet" href="css/produtosadministrador.css" /> 
 </head>
 <body>
@@ -16,7 +16,7 @@
                         <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
-                        <p ><b>➝ Usuários</b></p>    
+                        <p ><b>➝ Produtos </b></p>    
                     </div>
                     
                 </div>
@@ -30,18 +30,26 @@
                     <p class="nome_adm">João Victor Ferreira </p>
                 </div>
                 <hr class="hr1">
-                    <p class="nome_adm">Perfis ➝</p>
-                    <a href="criarconta.html"><Button class="adicionar" href="criarconta.html" >Adicionar perfil</Button></a>
+                    <p class="nome_adm">Produtos ➝</p>
+                    <a href="criarconta.html"><Button class="adicionar">Adicionar Produto +</Button></a>
             </div>
             <hr class="hr2">
             <div class="d21">
 
-                <div class="produto">
-                    <div class="img_titulo">
-                        <div class="picture"></div>
-                        <div class="dados"></div>
+                <div class="produto" id="imgTitulo">
+                    <div class="img_titulo" >
+                        <div class="picture" id="pic"></div>
+                        <div class="dados" id="dados">
+                            <div class="titulo_produto"><p style="margin: 0%; margin-left: 2%;">Título do produto</p></div>
+                            <div class="titulo_produto_mm"></div>
+                            <div class="botoes_produto">
+                                <Button class="button_produto">Remover</Button>
+                                <Button class="txt_button_produto" onclick="mostrarMais()" id="mostrarMaisBt">Mostrar mais</Button>
+                                <Button class="txt_button_produto" onclick="mostrarMenos()" id="mostrarMenosBt" style="display: none;">Mostrar menos</Button>
+                                <Button class="txt_button_produto">Editar</Button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="botoes_produto"></div>
                 </div>
                 <hr class="hr3">
 
@@ -86,6 +94,23 @@
     function voltarPagina() 
     {
         window.history.back();
+    }
+
+    function mostrarMais()
+    {
+        imgTitulo.style.height="100%";
+        mostrarMaisBt.style.display="none";
+        mostrarMenosBt.style.display="block";
+        dados.style.width="100%";       
+        pic.style.height="9.7rem";
+        pic.style.width="9.7rem";
+    }
+    function mostrarMenos()
+    {
+        imgTitulo.style.height="10rem";
+        mostrarMaisBt.style.display="block";
+        mostrarMenosBt.style.display="none";
+        dados.style.width="90%";
     }
 </script>
 </html>
