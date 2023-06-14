@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: May 31, 2023 at 11:08 PM
--- Server version: 8.0.31
--- PHP Version: 8.0.26
+-- Host: 127.0.0.1
+-- Tempo de geração: 14/06/2023 às 15:12
+-- Versão do servidor: 10.4.28-MariaDB
+-- Versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,75 +18,80 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fd`
+-- Banco de dados: `fd`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carrinho`
+-- Estrutura para tabela `carrinho`
 --
 
-DROP TABLE IF EXISTS `carrinho`;
-CREATE TABLE IF NOT EXISTS `carrinho` (
-  `id_coisa` int NOT NULL AUTO_INCREMENT,
-  `item` int NOT NULL,
-  `usuario` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `valor` varchar(11) COLLATE utf8mb4_general_ci NOT NULL,
-  `pedido` int NOT NULL,
-  PRIMARY KEY (`id_coisa`),
-  KEY `item` (`item`),
-  KEY `usuario` (`usuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `carrinho` (
+  `id_coisa` int(11) NOT NULL,
+  `item` int(11) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `valor` varchar(11) NOT NULL,
+  `pedido` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `carrinho`
+-- Despejando dados para a tabela `carrinho`
 --
 
 INSERT INTO `carrinho` (`id_coisa`, `item`, `usuario`, `valor`, `pedido`) VALUES
-(41, 2, 'gustavo', 'R$40,00', 1);
+(53, 6, 'matheusburladap@cock.li', 'R$40,00', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pessoas`
+-- Estrutura para tabela `pedidos`
 --
 
-DROP TABLE IF EXISTS `pessoas`;
-CREATE TABLE IF NOT EXISTS `pessoas` (
-  `nome` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `endereco` varchar(60) COLLATE utf8mb4_general_ci NOT NULL,
-  `senha` varchar(40) COLLATE utf8mb4_general_ci NOT NULL,
-  `telefone` int NOT NULL,
-  `adm` int NOT NULL,
-  PRIMARY KEY (`nome`)
+CREATE TABLE `pedidos` (
+  `id_pedido` int(11) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `numero` int(11) NOT NULL,
+  `status` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `pessoas`
+--
+
+CREATE TABLE `pessoas` (
+  `nome` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `endereco` varchar(60) NOT NULL,
+  `senha` varchar(40) NOT NULL,
+  `telefone` int(11) NOT NULL,
+  `adm` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `pessoas`
+-- Despejando dados para a tabela `pessoas`
 --
 
 INSERT INTO `pessoas` (`nome`, `email`, `endereco`, `senha`, `telefone`, `adm`) VALUES
-('gustavo', 'fggfg', 'eee', 'fff', 24234, 1);
+('matheusburladap@cock.li', 'matheus burladao', 'reino da selva tarzan', '12123', 212, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produtos`
+-- Estrutura para tabela `produtos`
 --
 
-DROP TABLE IF EXISTS `produtos`;
-CREATE TABLE IF NOT EXISTS `produtos` (
-  `id_produto` int NOT NULL,
-  `nome` varchar(30) COLLATE utf8mb4_general_ci NOT NULL,
-  `caminhofoto` varchar(90) COLLATE utf8mb4_general_ci NOT NULL,
-  `descricao` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  PRIMARY KEY (`id_produto`)
+CREATE TABLE `produtos` (
+  `id_produto` int(11) NOT NULL,
+  `nome` varchar(30) NOT NULL,
+  `caminhofoto` varchar(90) NOT NULL,
+  `descricao` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `produtos`
+-- Despejando dados para a tabela `produtos`
 --
 
 INSERT INTO `produtos` (`id_produto`, `nome`, `caminhofoto`, `descricao`) VALUES
@@ -100,15 +105,68 @@ INSERT INTO `produtos` (`id_produto`, `nome`, `caminhofoto`, `descricao`) VALUES
 (8, 'Disquete Retrô', 'images/personalizados/retrodisk.png', 'Somente classicos');
 
 --
--- Constraints for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Constraints for table `carrinho`
+-- Índices de tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  ADD PRIMARY KEY (`id_coisa`),
+  ADD KEY `item` (`item`),
+  ADD KEY `usuario` (`usuario`);
+
+--
+-- Índices de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD PRIMARY KEY (`id_pedido`),
+  ADD KEY `usuario` (`usuario`);
+
+--
+-- Índices de tabela `pessoas`
+--
+ALTER TABLE `pessoas`
+  ADD PRIMARY KEY (`nome`);
+
+--
+-- Índices de tabela `produtos`
+--
+ALTER TABLE `produtos`
+  ADD PRIMARY KEY (`id_produto`);
+
+--
+-- AUTO_INCREMENT para tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `carrinho`
+--
+ALTER TABLE `carrinho`
+  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
+-- AUTO_INCREMENT de tabela `pedidos`
+--
+ALTER TABLE `pedidos`
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restrições para tabelas despejadas
+--
+
+--
+-- Restrições para tabelas `carrinho`
 --
 ALTER TABLE `carrinho`
   ADD CONSTRAINT `carrinho_ibfk_1` FOREIGN KEY (`item`) REFERENCES `produtos` (`id_produto`),
   ADD CONSTRAINT `carrinho_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `pessoas` (`nome`);
+
+--
+-- Restrições para tabelas `pedidos`
+--
+ALTER TABLE `pedidos`
+  ADD CONSTRAINT `pedidos_ibfk_1` FOREIGN KEY (`usuario`) REFERENCES `pessoas` (`nome`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

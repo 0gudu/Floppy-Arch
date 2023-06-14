@@ -19,6 +19,14 @@
     $comando->bindParam(':user', $user);
     $comando->bindParam(':pedido', $cu);
     $comando->execute();
+
+    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss) VALUES(:user, :numero, :statuss);");
+    $comando->bindParam(':user', $user);
+    $comando->bindParam(':numero', $cu);
+    $comando->bindParam(':statuss', $status);
+    $status = "n pago";
+    $comando->execute();
+    
 ?>
 <script>
     var url = "pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";

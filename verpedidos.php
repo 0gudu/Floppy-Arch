@@ -40,23 +40,39 @@
             </div>
             <hr class="hr2">
             <div class="d21">
+            <?php
+                    include ("conecta.php");
 
-                <div class="perfil">
-                    <div class="cimabaixo">
-                        <p class="tt_pedido">
-                            Pedido (31/05/2023) - 5 produtos - Pago e não enviado
-                        </p>
-                        <div class="botoes_perfil">
-                            <button class="button_pedido">Confirmar recebimento</button>
-                            <button class="button_pedido">Cancelar pedido</button>
-                            <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
-                            <div class="preco_valor_preco">
-                                <p class="preco">Valor total:</p>
-                                <p class="valor_preco">R$ 40,00</p>
+                        $comando = $pdo->prepare("SELECT * FROM pedidos WHERE usuario = :user"); 
+                        $comando->bindParam(':user', $_SESSION['user']);
+                        $resultado = $comando->execute();
+
+                        while( $linhas = $comando->fetch()) 
+                            {
+
+                                echo('
+                                
+                                <div class="perfil">
+                                <div class="cimabaixo">
+                                    <p class="tt_pedido">
+                                        Pedido (31/05/2023) - 5 produtos - Pago e não enviado
+                                    </p>
+                                    <div class="botoes_perfil">
+                                        <button class="button_pedido">Confirmar recebimento</button>
+                                        <button class="button_pedido">Cancelar pedido</button>
+                                        <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
+                                        <div class="preco_valor_preco">
+                                            <p class="preco">Valor total:</p>
+                                            <p class="valor_preco">R$ 40,00</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
+                                ');
+                            }
+
+                ?>
+                
                 <hr class="hr3">
 
             </div>

@@ -16,7 +16,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Websitr Icon" type="gif">
-    href=""
     <title>Perfil - FOPPY ARCH</title>
     <link rel="stylesheet" href="css/perfil.css" /> 
 </head>

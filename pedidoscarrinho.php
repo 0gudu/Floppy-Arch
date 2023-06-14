@@ -1,9 +1,27 @@
 <?php
     session_start();
     include ("conecta.php");
-    $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido > 0");
+    $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho;");
+    $comando->execute();
+    
+    $resultado = $comando->fetchColumn();
+    $user = $_SESSION['user'];
+    $cu = $resultado + 1;
+
+    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss) VALUES(:user, :numero, :statuss);");
+    $comando->bindParam(':user', $user);
+    $comando->bindParam(':numero', $cu);
+    $comando->bindParam(':statuss', $status);
+    $status = "n pago";
+    $comando->execute();
+
+    $comando = $pdo->prepare("UPDATE carrinho
+    SET
+      pedido = $cu
+    WHERE
+      pedido = 0 AND usuario = :user");
     $comando->bindParam(':user', $_SESSION['user']);
-    $comando->execute();    
+    $comando->execute();
                     
     $resultado = $comando->execute();
 
@@ -15,16 +33,9 @@
             echo ("item:$n pedido:$p <br>");
         }
 
-        $_SESSION['user'];
-    $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho;");
-    $comando->execute();
-    
-    $resultado = $comando->fetchColumn();
+        
 
-    $x = 0;
-    while ($x != $resultado) {
-        echo "cu <br>";
-        $x++;
-    }
+        
+    
     header("location: perfil.php");
 ?>
