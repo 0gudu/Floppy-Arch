@@ -8,6 +8,48 @@
     <link rel="stylesheet" href="css/produtosadministrador.css" /> 
 </head>
 <body>
+    <div class="editar_perfil" id="editar_perfil">
+        <div class="titulo_config center">
+            <button class="fechar_voltar" onclick="voltarParaConfig()" id="fechar_editar">⬅ Voltar</button>
+            Editar Perfil
+            <button class="fechar_voltar" onclick="desaparecerEditarPerfil()" id="fechar">Fechar ✖</button>
+        </div>
+        <hr class="hr_config">
+        <div class="edicao_perfil">
+            <div class="edicao_perfil2 center">
+                <fieldset class="editar_foto_perfil">
+                    <legend>Foto de perfil</legend>
+                    <input type="file" class="input_imagem" accept="image/*">
+                    <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
+                </fieldset>
+                <hr width="70%">
+                <div class="input_sq center">
+                    Nome:
+                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o nome..."></textarea>
+                </div>
+                <hr width="70%">
+                <div class="input_sq center">
+                    Telefone:
+                    <input type="text" class="input" placeholder="Alterar a senha..."></input>
+                </div>
+                <hr width="70%">
+                <div class="input_sq center">
+                    Endereço:
+                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o endereço..."></textarea>
+                </div>
+                <hr width="70%">
+                <div class="input_sq center">
+                    Senha:
+                    <input type="password" class="input" placeholder="Alterar a senha..."></input>
+                </div>
+                <hr width="70%">
+                <div class="input_sq center">
+                    <button class="editar_button"><div class="dotted">Concluir</div>
+                    <button class="editar_button">Cancelar
+                </div>
+            </div>
+        </div>
+    </div>
    <div class="d0">
         <div class="d1">
             <div class="tits">
@@ -46,7 +88,7 @@
                                 <Button class="button_produto">Remover</Button>
                                 <Button class="txt_button_produto" onclick="mostrarMais()" id="mostrarMaisBt">Mostrar mais</Button>
                                 <Button class="txt_button_produto" onclick="mostrarMenos()" id="mostrarMenosBt" style="display: none;">Mostrar menos</Button>
-                                <Button class="txt_button_produto">Editar</Button>
+                                <Button class="txt_button_produto" onclick="aparecerEditar()">Editar</Button>
                             </div>
                         </div>
                     </div>
@@ -104,13 +146,33 @@
         dados.style.width="100%";       
         pic.style.height="9.7rem";
         pic.style.width="9.7rem";
+        pic.style.minWidth="9.7rem";
     }
     function mostrarMenos()
     {
-        imgTitulo.style.height="10rem";
+        imgTitulo.style.height="6rem";
         mostrarMaisBt.style.display="block";
         mostrarMenosBt.style.display="none";
         dados.style.width="90%";
+        pic.style.height="5.7rem";
+        pic.style.width="5.7rem";
+        pic.style.minWidth="5.7rem";
+    }
+
+    function aparecerEditar()
+    {
+        config.style.display = "none";
+        editar_perfil.style.display = "flex";
+
+    }
+    function voltarParaConfig()
+    {
+        editar_perfil.style.display = "none";
+        config.style.display = "flex";
+    }
+    function desaparecerEditarPerfil()
+    {
+        editar_perfil.style.display = "none";
     }
 </script>
 </html>
