@@ -1,7 +1,7 @@
 <?php
     session_start();
     include ("conecta.php");
-
+ 
     $valortota = $_GET['valortota'];
 
     $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho;");
@@ -36,10 +36,8 @@
 
             echo ("item:$n pedido:$p <br>");
         }
-
-        
-
-        
-    
-    header("location: perfil.php");
 ?>
+<script>
+    var url = "pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valortota; ?>&user=<?php echo $_SESSION['user']; ?>";
+    window.open(url, "_self");
+</script>

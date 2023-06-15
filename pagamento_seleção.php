@@ -1,8 +1,8 @@
 <?php 
+    session_start();
     $pedido = $_GET["pedido"];
     $valor = $_GET["valor"];
     $user = $_GET["user"];
-    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -31,7 +31,7 @@
         </div>
         <div class="d2">
 
-            <div class="totalval">Total: <b style="color: rgb(10, 230, 10);"><?php echo $valor;?></b></div>
+            <div class="totalval">Total: <b style="color: rgb(10, 230, 10);">R$<?php echo $valor;?>,00</b></div>
 
             <div class="embaixo">
 
@@ -45,9 +45,9 @@
                         
                         <div class="textometo">Metodos de Pagamento:</div>
                         <div style="display: flex; flex-direction: row; justify-content: space-between; width: 80%; height: 23%; ">
-                            <div class="metodo"><a style="color: yellow;"href="pagamento_cartao.html">Cartao</a></div>
-                            <div class="metodo"><a style="color: yellow;" href="paga">Pix</a></div>
-                            <div class="metodo"><a style="color: yellow;" href="pornhub.com">Boleto</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_cartao.php')"><a style="color: yellow;" >Cartao</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_pix.php')"><a style="color: yellow;" >Pix</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_boleto.php')"><a style="color: yellow;">Boleto</a></div>
                         </div>
                     </fieldset>
                     
@@ -90,7 +90,13 @@
     </div>  
 </body>
 <script>
-texto_menu.style.display="inline";
+
+    function pagamento(x){
+        var url = x + "?pedido=<?php echo $pedido; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
+        window.open(url, "_self");
+    }
+
+    texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()
     {

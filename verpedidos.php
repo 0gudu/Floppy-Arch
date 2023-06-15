@@ -67,9 +67,8 @@
                                             <button class="button_pedido" onclick="cancelar(' . $id . ')">Cancelar pedido</button>
                                             <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
                                             <div class="preco_valor_preco">
-                                                <p class="preco">Valor total:</p>
-                                                <p class="valor_preco">R$ ' . $valortota . '
-                                                ,00</p>
+                                                <p class="preco">Valor total:  &nbsp;</p>
+                                                <p class="valor_preco">R$' . $valortota . ',00</p>
                                             </div>
                                         </div>
                                     </div>

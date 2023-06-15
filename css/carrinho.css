@@ -202,13 +202,15 @@ body{
 {
     height: 100%;
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     flex-direction: row;
 }
 .button_remover
 {
     background-color:yellow;   
     font-weight: bold; 
-    width:100%; 
+    width:20; 
     height: 100%; 
     margin-left: 5%;
     border-width: 6px; 
@@ -291,6 +293,12 @@ body{
     align-content: center;
     min-height: 2rem;
 
+}
+.montedebotao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 5%;
 }
 .href_perfil
 {

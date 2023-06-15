@@ -32,22 +32,22 @@
             // Obtendo o resultado
             $resultado1 = $stm->fetchColumn();
             switch ($resultado1) {
-                case "R$40,00";
+                case 40;
                     $preco += 40;
                     break;
-                case "R$60,00";
+                case 60;
                     $preco += 60;
                     break;
-                case "R$90,00":
+                case 90:
                     $preco += 90;
                     break;
-                case "R$140,00":
+                case 140:
                     $preco += 140;
                     break;
-                case "R$200,00":
+                case 200:
                     $preco += 200;
                     break;
-                case "R$500,00":
+                case 500:
                     $preco += 500;
                     break;
 
@@ -144,29 +144,29 @@
                                         // Obtendo o resultado
                                         $resultado1 = $stm->fetchColumn();
                                         switch ($resultado1) {
-                                            case "R$40,00":
+                                            case 40:
                                                 $rs = "32gb";
                                             
                                                 break;
-                                            case "R$60,00";
+                                            case 60:
                                                 $rs = "64gb";
                                                 
                                                 break;
-                                            case "R$90,00":
+                                            case 90:
                                                 $rs = "128gb";
                                                 
                                                 break;
-                                            case "R$140,00":
+                                            case 140:
                                                 $rs = "240gb";
                                                 
                                                 break;
-                                            case "R$200,00":
+                                            case 200:
                                                 $rs = "480gb";
                                                 
                                                 break;
-                                            case "R$500,00":
+                                            case 500:
                                                 $rs = "960gb";
-                                                
+    
                                                 break;
 
                                         }
@@ -182,9 +182,11 @@
 
                                         <div class="botoes_carrinho ">
                                             <div class="butones">
-                                                <button class="button_remover center" onclick="Enviar(\'' . $m . '\')">Remover</button>
-                                                <button href="pagina_disquete.php" class="ver_prod">Ver produto</button>
-                                                <p class="valor_prod">' . $resultado1 . '</p>
+                                                <div class="montedebotao">
+                                                    <button class="button_remover center" onclick="Enviar(\'' . $m . '\')">Remover</button>
+                                                    <button href="pagina_disquete.php" class="ver_prod">Ver produto</button>
+                                                </div>
+                                                <p class="valor_prod">R$' . $resultado1 . ',00</p>
                                             </div>
                                         </div>
                                     </div>
@@ -211,7 +213,7 @@
             window.open("entrar.php","_self");
         }
     function pedido() {
-        window.open("pedidoscarrinho.php?valortota="+<?php echo $preco; ?>,"_self");
+            window.open("pedidoscarrinho.php?valortota="+<?php echo $preco; ?>,"_self");
     }
     function Enviar(codigo) {
         window.open("excluir_carrinho.php?codigo="+codigo,"_self")

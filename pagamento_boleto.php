@@ -41,22 +41,30 @@
 
         </div>
 
-        <div class="d3" >
-            <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+        <div class="d3">
+        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
                 <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
                 <div class="menu" id="menu">
-                    <div class="branco"> a</div>
-                    <a class="voltar" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
-                    <span><u><b><a href="comprar.html" class="menu_amarelo">Comprar</a></b></u></span>
-                    <span><u><b><a href="carrinho.html" class="menu_branco">Carrinho</a></b></u></span>
-                    <span><u><b><a href="entrar.html" class="menu_amarelo">Entrar</a></u></b></span>
-                    <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                    <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
+                <div class="branco"> a</div>
 
-                    <!-- fezer comentárion no html -->
-                    <div class="branco"> a</div>
+                <a class="voltar" style="color: white;" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
+                <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php" class="menu_amarelo">
+                <?php 
+                    if($_SESSION['user'] == "none"){
+                        echo "entrar";
+                    } else {
+                        echo $_SESSION['name'];
+                    }
+                
+                ?>  </a></u></b></span>
+                <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
+                  
+                </a></u></b></span>
 
-                </div>
+                <div class="branco"> a</div>
             </div>
         </div>
     </div>  
