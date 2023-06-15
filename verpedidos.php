@@ -16,7 +16,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Pedidos</b></p>    
@@ -30,7 +30,7 @@
             <div class="d222">
                 <div class="cima">
                     <img class="foto_adm" src="images/adm.png" >
-                    <p class="nome_adm">João Victor Ferreira </p>
+                    <p class="nome_adm"><?php echo $_SESSION['name'];?></p>
                 </div>
                 <div class="cima2">
                 </div>
@@ -49,17 +49,37 @@
 
                         while( $linhas = $comando->fetch()) 
                             {
-
+                                $id = $linhas["id_pedido"];
+                                $m = $linhas["datas"];
+                                $n = $linhas["statuss"];
+                                $valortota = $linhas["valor"];
                                 echo('
                                 
                                 <div class="perfil">
                                 <div class="cimabaixo">
                                     <p class="tt_pedido">
-                                        Pedido (31/05/2023) - 5 produtos - Pago e não enviado
-                                    </p>
+                                        Pedido (' . $m . ') - ');
+                                        if($n == 'n pago'){
+                                            echo 'Não pago
+                                            </p>
+                                            <div class="botoes_perfil">
+                                            <button class="button_pedido">Pagar</button>
+                                            <button class="button_pedido" onclick="cancelar(' . $id . ')">Cancelar pedido</button>
+                                            <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
+                                            <div class="preco_valor_preco">
+                                                <p class="preco">Valor total:</p>
+                                                <p class="valor_preco">R$ ' . $valortota . '
+                                                ,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>';
+                                        }else 
+                                        {
+                                            echo 'Pago e não enviado
+                                            </p>
                                     <div class="botoes_perfil">
                                         <button class="button_pedido">Confirmar recebimento</button>
-                                        <button class="button_pedido">Cancelar pedido</button>
                                         <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
                                         <div class="preco_valor_preco">
                                             <p class="preco">Valor total:</p>
@@ -68,7 +88,11 @@
                                     </div>
                                 </div>
                             </div>
-                                ');
+                                ';
+                                        }
+                                        
+
+                                    
                             }
 
                 ?>
@@ -108,6 +132,9 @@
     </div>  
 </body>
 <script>
+    function cancelar(x) {
+        window.open("pedidocancelar.php?id="+x,"_self");
+    }
     texto_menu.style.display="inline";
     menu.style.display="none";
     function ocultar()

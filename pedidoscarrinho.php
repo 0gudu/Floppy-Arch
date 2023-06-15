@@ -1,6 +1,9 @@
 <?php
     session_start();
     include ("conecta.php");
+
+    $valortota = $_GET['valortota'];
+
     $comando = $pdo->prepare("SELECT MAX(pedido) FROM carrinho;");
     $comando->execute();
     
@@ -8,11 +11,12 @@
     $user = $_SESSION['user'];
     $cu = $resultado + 1;
 
-    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss) VALUES(:user, :numero, :statuss);");
+    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss, datas, valor) VALUES(:user, :numero, :statuss, CURRENT_TIMESTAMP, :valor);");
     $comando->bindParam(':user', $user);
     $comando->bindParam(':numero', $cu);
     $comando->bindParam(':statuss', $status);
     $status = "n pago";
+    $comando->bindParam(':valor', $valortota);
     $comando->execute();
 
     $comando = $pdo->prepare("UPDATE carrinho

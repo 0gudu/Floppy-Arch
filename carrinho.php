@@ -69,7 +69,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                    <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                    <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Carrinho</b></p>    
@@ -146,27 +146,27 @@
                                         switch ($resultado1) {
                                             case "R$40,00":
                                                 $rs = "32gb";
-                                                $preco += 40;
+                                            
                                                 break;
                                             case "R$60,00";
                                                 $rs = "64gb";
-                                                $preco += 60;
+                                                
                                                 break;
                                             case "R$90,00":
                                                 $rs = "128gb";
-                                                $preco += 90;
+                                                
                                                 break;
                                             case "R$140,00":
                                                 $rs = "240gb";
-                                                $preco += 140;
+                                                
                                                 break;
                                             case "R$200,00":
                                                 $rs = "480gb";
-                                                $preco += 200;
+                                                
                                                 break;
                                             case "R$500,00":
                                                 $rs = "960gb";
-                                                $preco += 500;
+                                                
                                                 break;
 
                                         }
@@ -211,7 +211,7 @@
             window.open("entrar.php","_self");
         }
     function pedido() {
-        window.open("pedidoscarrinho.php","_self");
+        window.open("pedidoscarrinho.php?valortota="+<?php echo $preco; ?>,"_self");
     }
     function Enviar(codigo) {
         window.open("excluir_carrinho.php?codigo="+codigo,"_self")

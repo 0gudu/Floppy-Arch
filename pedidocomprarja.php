@@ -20,7 +20,7 @@
     $comando->bindParam(':pedido', $cu);
     $comando->execute();
 
-    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss) VALUES(:user, :numero, :statuss);");
+    $comando = $pdo->prepare("INSERT INTO pedidos(usuario, numero, statuss, datas) VALUES(:user, :numero, :statuss, CURRENT_TIMESTAMP);");
     $comando->bindParam(':user', $user);
     $comando->bindParam(':numero', $cu);
     $comando->bindParam(':statuss', $status);

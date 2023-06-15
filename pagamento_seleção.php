@@ -2,6 +2,7 @@
     $pedido = $_GET["pedido"];
     $valor = $_GET["valor"];
     $user = $_GET["user"];
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,7 +19,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <img src="images/floppy_arch_title.png" width="100%">
+                        <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="titulopag">
                         <p ><b>➝ Pagamento</b></p>    
@@ -61,18 +62,49 @@
         </div>
         
         <div class="d3">
-            <div class="footer">
+        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
+                <div class="menu" id="menu">
                 <div class="branco"> a</div>
+
+                <a class="voltar" style="color: white;" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
+                <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php" class="menu_amarelo">
+                <?php 
+                    if($_SESSION['user'] == "none"){
+                        echo "entrar";
+                    } else {
+                        echo $_SESSION['name'];
+                    }
                 
-                <span><u><b><a href="index.html" id="menupadrao">⬅ Inicio</a></b></u></span>
-                <span><u><b><a href="comprar.html"  id="comprar">Comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.html" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.html"  id="login">Entrar</a></u></b></span>
-                <span><u><b><a href="contato.html"  id="menupadrao">Contato</a></u></b></span>
+                ?>  </a></u></b></span>
+                <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
+                  
+                </a></u></b></span>
 
                 <div class="branco"> a</div>
             </div>
         </div>
     </div>  
 </body>
+<script>
+texto_menu.style.display="inline";
+    menu.style.display="none";
+    function ocultar()
+    {
+        texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }        
+    function voltarPagina() 
+    {
+        window.history.back();
+    }
+</script>
 </html>
