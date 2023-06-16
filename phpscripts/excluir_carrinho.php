@@ -1,5 +1,5 @@
 <?php
-    include("conecta.php");
+    include("../includes/conecta.php");
 
     $codigo = $_GET["codigo"];
 
@@ -7,5 +7,5 @@
 
     $resultado = $comando->execute();
 
-    header("location: carrinho.php");
+    header("location: ../pages/carrinho.php");
 ?>

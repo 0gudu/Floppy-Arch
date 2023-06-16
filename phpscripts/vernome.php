@@ -1,5 +1,5 @@
 <?php
-    include("conecta.php");
+    include("../includes/conecta.php");
     $cu = 0;
     $elemento = $_GET['q']; // Ou qualquer outra forma de obter o valor
     $elemento1 = $_GET['e']; // Ou qualquer outra forma de obter o valor

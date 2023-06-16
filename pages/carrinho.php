@@ -2,7 +2,7 @@
     session_start();
     $preco = 0;
     
-    include ("conecta.php");
+    include ("../includes/conecta.php");
 
     $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user and pedido = 0");
     $comando->bindParam(':user', $_SESSION['user']);
@@ -61,7 +61,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador - FOPPY ARCH</title>
-    <link rel="stylesheet" href="css/carrinho.css" /> 
+    <link rel="stylesheet" href="../css/carrinho.css" /> 
 </head>
 <body>
    <div class="d0">
@@ -69,7 +69,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                    <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
+                    <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Carrinho</b></p>    
@@ -86,8 +86,8 @@
 
                 </div>
                 <div class="cima2">
-                    <a href="index.php" class="sair_alterar">← Sair</a>
-                    <a href="entrar.php" class="sair_alterar">Meu Perfil</a>
+                    <a href="../index.php" class="sair_alterar">← Sair</a>
+                    <a href="../pages/entrar.php" class="sair_alterar">Meu Perfil</a>
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Valor Total ➝ R$<?php echo $preco; ?>,00</p>
@@ -96,7 +96,7 @@
             <hr class="hr2">
             <div class="d21" id="puta">
                 <?php
-                    include ("conecta.php");
+                    include ("../includes/conecta.php");
                         $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 0");
                         $comando->bindParam(':user', $_SESSION['user']);
                         $comando->execute();    
@@ -213,26 +213,10 @@
             window.open("entrar.php","_self");
         }
     function pedido() {
-            window.open("pedidoscarrinho.php?valortota="+<?php echo $preco; ?>,"_self");
+            window.open("../phpscripts/pedidoscarrinho.php?valortota="+<?php echo $preco; ?>,"_self");
     }
     function Enviar(codigo) {
-        window.open("excluir_carrinho.php?codigo="+codigo,"_self")
-    }
-    texto_menu.style.display="inline";
-    menu.style.display="none";
-    function ocultar()
-    {
-        texto_menu.style.display="none";
-        menu.style.display="inline";
-    }
-    function aparecer()
-    {
-        texto_menu.style.display="inline";
-        menu.style.display="none";
-    }        
-    function voltarPagina() 
-    {
-        window.history.back();
+        window.open("../phpscripts/excluir_carrinho.php?codigo="+codigo,"_self")
     }
 </script>
 </html>

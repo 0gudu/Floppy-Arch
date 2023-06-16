@@ -1,5 +1,5 @@
 <?php
-    include("conecta.php");
+    include("../includes/conecta.php");
     
     $preco = 0;
     $codigo = $_GET["codigo"];
@@ -34,5 +34,5 @@
     $comando->bindParam(':user', $user);
     $comando->execute();
 
-    header("location: carrinho.php"); 
+    header("location: ../pages/carrinho.php"); 
 ?>

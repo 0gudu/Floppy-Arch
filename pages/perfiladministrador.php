@@ -3,6 +3,16 @@
     if($_SESSION['user'] == "none"){
         header("location: entrar.php");
     }
+    include ("../includes/conecta.php");
+
+    $comando = $pdo->prepare("SELECT adm FROM pessoas WHERE nome = :user");
+    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->execute();
+    $res =$comando->fetch();
+
+    if ($res['adm'] == 0) {
+        header("location: entrar.php");
+    }
     include ("conecta.php");
     $comando = $pdo->prepare("SELECT * FROM pessoas WHERE nome = :user");
     $comando->bindParam(':user', $_SESSION['user']);
@@ -15,9 +25,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Websitr Icon" type="gif">
-    <title>Perfil - FOPPY ARCH</title>
-    <link rel="stylesheet" href="css/perfil.css" /> 
+    <title>Perfil ADM - FOPPY ARCH</title>
+    <link rel="stylesheet" href="css/perfiladministrador.css" /> 
 </head>
 <body>
     <div class="config" id="config">
@@ -26,7 +35,7 @@
             <button class="fechar_voltar" onclick="desaparecerConfig()" id="fechar">Fechar ✖</button>
         </div>
         <hr class="hr_config">
-        <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
+        <button class="button_config" onclick="aparecerEditar()">Editar perfil</button>
         <button class="button_config">Acessibilidade</button>
         <form action="sair.php">
             <button type="submit" class="button_config">Sair</button>
@@ -34,6 +43,7 @@
         <button class="button_config_verm">Apagar conta</button>
 
     </div>
+
     <div class="editar_perfil" id="editar_perfil">
         <div class="titulo_config center">
             <button class="fechar_voltar" onclick="voltarParaConfig()" id="fechar_editar">⬅ Voltar</button>
@@ -82,10 +92,10 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.php"><img src="images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="entrar">
-                        <p ><b>➝ Perfil</b></p>    
+                        <p ><b>➝ Perfil - ADM</b></p>    
                     </div>
                     
                 </div>
@@ -108,9 +118,10 @@
                         E-mail: <?php echo $res['nome'];?><br><br>
                         Telefone: <?php echo $res['telefone'];?><br><br>
                         Endereço: <?php echo $res['endereco'];?><br><br>
-                    </p>
+                    </p> 
                     <div class="botoes">
-                        <a href="verpedidos.php" class="href_pedidos"><button class="button">Pedidos</button></a>
+                        <a href="produtos_adm.html" class="href_produtos"><button class="button">Produtos</button></a>
+                        <a href="usuarios.php" class="button_txt">Usuários</a>
                         <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 
                 </div>
@@ -118,75 +129,8 @@
             
         </div>
         
-        <div class="d3" >
-            <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
-                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
-                <div class="menu" id="menu">
-                    <div class="branco"> a</div>
-                    <a class="voltar" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
-                    <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.php" class="menu_amarelo">
-                <?php 
-                    if($_SESSION['user'] == "none"){
-                        echo "entrar";
-                    } else {
-                        echo $_SESSION['name'];
-                    }
-                
-                ?>  </a></u></b></span>
-                    <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                    <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
-    
-                    <!-- fezer comentárion no html -->
-                    <div class="branco"> a</div>
-
-                </div>
-            </div>
-        </div>
+        <?php include("menu.php");?>
     </div>  
 </body>
-<script>
-    texto_menu.style.display="inline";
-    menu.style.display="none";
-    function ocultar()
-    {
-        texto_menu.style.display="none";
-        menu.style.display="inline";
-    }
-    function aparecer()
-    {
-        texto_menu.style.display="inline";
-        menu.style.display="none";
-    }        
-    function voltarPagina() 
-    {
-        window.history.back();
-    }
-    
-    function aparecerConfig()
-    {
-        config.style.display="flex";
-    }
-    function desaparecerConfig()
-    {
-        config.style.display = "none";
-    }
-
-    function aparecerEditar()
-    {
-        config.style.display = "none";
-        editar_perfil.style.display = "flex";
-
-    }
-    function voltarParaConfig()
-    {
-        editar_perfil.style.display = "none";
-        config.style.display = "flex";
-    }
-    function desaparecerEditarPerfil()
-    {
-        editar_perfil.style.display = "none";
-    }
-</script>
+<script src="../js/perfil.js"></script>
 </html>

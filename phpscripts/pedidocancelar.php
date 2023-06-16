@@ -1,5 +1,5 @@
 <?php
-    include("conecta.php");
+    include("../includes/conecta.php");
     $id = $_GET["id"];
 
     $comando = $pdo->prepare("SELECT * FROM pedidos WHERE id_pedido = :id");
@@ -23,5 +23,5 @@
     $comando->bindParam(':pedido', $num);
     $comando->execute();
 
-    header("location: verpedidos.php")
+    header("location: ../pages/verpedidos.php")
 ?>

@@ -1,5 +1,5 @@
 <?php 
-    include("conecta.php");
+    include("../includes/conecta.php");
     session_start();
 
     $preco = 0;
@@ -53,6 +53,6 @@
     
 ?>
 <script>
-    var url = "pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
+    var url = "../pages/pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
     window.open(url, "_self");
 </script>

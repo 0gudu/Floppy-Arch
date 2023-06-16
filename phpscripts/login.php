@@ -1,5 +1,5 @@
 <?php 
-    include("conecta.php");
+    include("../includes/conecta.php");
     session_start();
     
     $codigo = $_POST["codigo"];
@@ -13,5 +13,5 @@
     $_SESSION['user'] = $codigo;
     $_SESSION['name'] = $name;
 
-    header("location: index.php");
+    header("location: ../pages/index.php");
 ?>

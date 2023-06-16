@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include ("conecta.php");
+    include ("../includes/conecta.php");
  
     $valortota = $_GET['valortota'];
 
@@ -38,6 +38,6 @@
         }
 ?>
 <script>
-    var url = "pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valortota; ?>&user=<?php echo $_SESSION['user']; ?>";
+    var url = "../pages/pagamento_seleção.php?pedido=<?php echo $cu; ?>&valor=<?php echo $valortota; ?>&user=<?php echo $_SESSION['user']; ?>";
     window.open(url, "_self");
 </script>

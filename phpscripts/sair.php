@@ -3,5 +3,5 @@
 
     $_SESSION['user'] = "none";
 
-    header("location: entrar.php")
+    header("location: ../pages/entrar.php")
 ?>

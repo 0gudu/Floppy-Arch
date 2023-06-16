@@ -183,7 +183,8 @@
     function confirma() {
         if(cpf1 == 1 && cvv1 == 1 && cc1 == 1 && val1 == 1 && nome.value != "")
         {
-            window.location.href = "index.html";
+            var url = "pagarpedido.php?pedido=<?php echo $pedido; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
+            window.open(url, "_self");
         }
         else {
             alert("complete todos os campos corretamente")
