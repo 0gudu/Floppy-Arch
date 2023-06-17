@@ -45,9 +45,9 @@
                         
                         <div class="textometo">Metodos de Pagamento:</div>
                         <div style="display: flex; flex-direction: row; justify-content: space-between; width: 80%; height: 23%; ">
-                            <div class="metodo" onclick="pagamento('paymentpages/pagamento_cartao.php')"><a style="color: yellow;" >Cartao</a></div>
-                            <div class="metodo" onclick="pagamento('paymentpages/pagamento_pix.php')"><a style="color: yellow;" >Pix</a></div>
-                            <div class="metodo" onclick="pagamento('paymentpages/pagamento_boleto.php')"><a style="color: yellow;">Boleto</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_cartao.php')"><a style="color: yellow;" >Cartao</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_pix.php')"><a style="color: yellow;" >Pix</a></div>
+                            <div class="metodo" onclick="pagamento('pagamento_boleto.php')"><a style="color: yellow;">Boleto</a></div>
                         </div>
                     </fieldset>
                     

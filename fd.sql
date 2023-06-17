@@ -90,14 +90,14 @@ CREATE TABLE `produtos` (
 --
 
 INSERT INTO `produtos` (`id_produto`, `nome`, `caminhofoto`, `descricao`) VALUES
-(1, 'Disquete Colorido', 'images/personalizados/colorido.png', 'Disquete com uma ampla variedade de cores'),
-(2, 'Disquete Veridian', 'images/personalizados/disquete veridiano.png', '@veridianoforaobaile'),
-(3, 'Disquete Estampado', 'images/personalizados/estampa.png', 'rawr'),
-(4, 'Disquete Fafase Lalau', 'images/personalizados/fafase lalau.png', 'Obra de arte'),
-(5, 'Disquete Germano', 'images/personalizados/germanodisk.png', 'Altamente germanico'),
-(6, 'Disquete Neymar Gold', 'images/personalizados/neymar_gold.png', 'Disquete Neymar ouro mais'),
-(7, 'Disquete ratue', 'images/personalizados/ratuedisk-gudulegal.png', 'gudu765'),
-(8, 'Disquete Retrô', 'images/personalizados/retrodisk.png', 'Somente classicos');
+(1, 'Disquete Colorido', '../images/personalizados/colorido.png', 'Disquete com uma ampla variedade de cores'),
+(2, 'Disquete Veridian', '../images/personalizados/disquete veridiano.png', '@veridianoforaobaile'),
+(3, 'Disquete Estampado', '../images/personalizados/estampa.png', 'rawr'),
+(4, 'Disquete Fafase Lalau', '../images/personalizados/fafase lalau.png', 'Obra de arte'),
+(5, 'Disquete Germano', '../images/personalizados/germanodisk.png', 'Altamente germanico'),
+(6, 'Disquete Neymar Gold', '../images/personalizados/neymar_gold.png', 'Disquete Neymar ouro mais'),
+(7, 'Disquete ratue', '../images/personalizados/ratuedisk-gudulegal.png', 'gudu765'),
+(8, 'Disquete Retrô', '../images/personalizados/retrodisk.png', 'Somente classicos');
 
 --
 -- Índices para tabelas despejadas

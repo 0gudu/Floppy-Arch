@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floppy Arch</title>
-    <link rel="stylesheet" href="css/pagcartao.css" /> 
+    <link rel="stylesheet" href="../css/pagcartao.css" /> 
 </head>
 <body>
    <div class="d0">
@@ -19,7 +19,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <img src="images/floppy_arch_title.png" width="100%">
+                        <img src="../images/floppy_arch_title.png" width="100%">
                     </div>
                     <div class="titulopag">
                         <p ><b>➝ Pagamento</b></p>    
@@ -81,32 +81,8 @@
 
         </div>
         
-        <div class="d3">
-        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
-                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
-                <div class="menu" id="menu">
-                <div class="branco"> a</div>
+        <?php include("../includes/menu.php");?>
 
-                <a class="voltar" style="color: white;" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
-                <span><u><b><a href="comprar.php"  class="menu_amarelo"     id="comprar">Comprar</a></b></u></span>
-                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao">Carrinho</a></b></u></span>
-                <span><u><b><a href="entrar.php" class="menu_amarelo">
-                <?php 
-                    if($_SESSION['user'] == "none"){
-                        echo "entrar";
-                    } else {
-                        echo $_SESSION['name'];
-                    }
-                
-                ?>  </a></u></b></span>
-                <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
-                  
-                </a></u></b></span>
-
-                <div class="branco"> a</div>
-            </div>
-        </div>
     </div>  
 </body>
 <script>
@@ -183,28 +159,12 @@
     function confirma() {
         if(cpf1 == 1 && cvv1 == 1 && cc1 == 1 && val1 == 1 && nome.value != "")
         {
-            var url = "pagarpedido.php?pedido=<?php echo $pedido; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
+            var url = "../phpscripts/pagarpedido.php?pedido=<?php echo $pedido; ?>&valor=<?php echo $valor; ?>&user=<?php echo $_SESSION['user']; ?>";
             window.open(url, "_self");
         }
         else {
-            alert("complete todos os campos corretamente")
+            alert("complete todos os campos corretamente");
         }
-    }
-    texto_menu.style.display="inline";
-    menu.style.display="none";
-    function ocultar()
-    {
-        texto_menu.style.display="none";
-        menu.style.display="inline";
-    }
-    function aparecer()
-    {
-        texto_menu.style.display="inline";
-        menu.style.display="none";
-    }        
-    function voltarPagina() 
-    {
-        window.history.back();
     }
 </script>
 </html>
