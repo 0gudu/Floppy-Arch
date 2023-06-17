@@ -83,7 +83,7 @@
                         <div class="picture" id="pic"></div>
                         <div class="dados" id="dados">
                             <div class="titulo_produto"><p style="margin: 0%; margin-left: 2%;">Título do produto</p></div>
-                            <div class="titulo_produto_mm"></div>
+                            <p class="dados_prod" id="dadosProd">Descrição produto  </p>
                             <div class="botoes_produto">
                                 <Button class="button_produto">Remover</Button>
                                 <Button class="txt_button_produto" onclick="mostrarMais()" id="mostrarMaisBt">Mostrar mais</Button>
@@ -93,6 +93,8 @@
                         </div>
                     </div>
                 </div>
+
+                
                 <hr class="hr3">
 
 
@@ -140,23 +142,23 @@
 
     function mostrarMais()
     {
-        imgTitulo.style.height="100%";
         mostrarMaisBt.style.display="none";
         mostrarMenosBt.style.display="block";
         dados.style.width="100%";       
         pic.style.height="9.7rem";
         pic.style.width="9.7rem";
         pic.style.minWidth="9.7rem";
+        dadosProd.style.display="block";
     }
     function mostrarMenos()
     {
-        imgTitulo.style.height="6rem";
         mostrarMaisBt.style.display="block";
         mostrarMenosBt.style.display="none";
         dados.style.width="90%";
         pic.style.height="5.7rem";
         pic.style.width="5.7rem";
         pic.style.minWidth="5.7rem";
+        dadosProd.style.display="none";
     }
 
     function aparecerEditar()
