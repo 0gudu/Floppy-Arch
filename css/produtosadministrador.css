@@ -1,0 +1,456 @@
+body{
+    padding: 0%;
+    background-image: url('../images/Background3.png');
+    overflow: hidden;
+    width: 100%;
+    height: 99.7vh;
+}
+
+.d0 {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.d1 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.flop {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.criar_conta {
+    display: flex;
+    font-size: 150%;
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.titulo {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+ .wf {
+    width: 100%;
+    height: 37%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+.d2 {
+    padding: 0%;
+    height: 78%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+ 
+}
+.d222 {
+    margin: 0%;
+    width: 30%;
+    height: 80vh;
+    text-align: center;
+}
+.cimabaixo
+{
+    width: 100%;
+    height: 900%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.cima
+{
+    margin: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.nome_adm
+{
+    color: white;
+    margin: 5%;
+    font-size:x-large;
+}
+.foto_adm
+{
+    width: 40%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+.hr1
+{
+    width: 80%;
+    border-style: solid;
+    color: white;
+}
+.cima2
+{
+    margin-left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+.sair_alterar
+{
+    color: yellow;
+    font-size: 200%;
+}
+.hr2
+{
+    border-style: solid;
+    border-color: white;
+}
+.adicionar
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: yellow;
+    border-width: 6px;
+    border-color: yellow;
+    width: 80%;
+    font-size: 130%;
+    height: 10%;
+    margin: 10%;
+}
+.adicionar:hover
+{
+    background-color: orange;
+    border-color: orange;
+}
+.d21 {
+    height: 80vh;
+    width: 69%;
+    margin-right: 1%;
+    overflow-y: scroll;
+
+}
+.produto
+{
+    width: 90%;
+    min-height: 6rem;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 1%;
+}
+.img_titulo
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.picture
+{
+    height: 5.7rem;
+    width: 5.7rem;
+    min-width: 5.7rem;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    background-color: black;
+    display: block;
+
+}
+.dados
+{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.dados_prod
+{
+    display: none;
+    font-size: larger;
+    color: white;
+    margin-left: 5%;
+    max-width: 90%;
+}
+.picture_edit
+{
+    display: none;
+}
+.botoes_produto
+{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+.titulo_produto
+{
+    width: 100%;
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}
+.button_produto
+{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: yellow;
+    border-width: 6px;
+    border-color: yellow;
+    width: 30%;
+    font-size: x-large;
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 2%;
+}
+.button_produto:hover
+{
+    background-color: orange;
+    border-color: orange;
+}
+.txt_button_produto
+{
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+    color: yellow;
+    margin-right: 5%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    text-decoration: underline;
+    display: block;
+}
+.txt_button_produto:hover
+{
+    color: orange;
+}
+.txt_button_produto:active
+{
+    color: yellow;
+}
+
+.botao_removerperfil:hover
+{
+    background-color: orange;
+    border-color: orange;
+}
+.hr3
+{
+    width: 90%;
+    border-style: solid;
+    color: white;
+    margin-top: 0%;
+}
+/*menu*/
+.d3 {
+    height: 10%;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.footer 
+{
+    display: flex;
+    width: 100%;
+    display: inline-block;
+    font-size: 2vw;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+span {
+    padding-left: 5%;
+}
+
+.branco{
+    color: white;
+    background-color: white;    
+    font-size: 1px;
+    line-height: 300%;
+}
+
+rect {
+    width: 200px;
+    height: 10px;
+    background: white;
+}
+.menu_branco
+{
+    color: white;
+}
+.menu_amarelo
+{
+    color: yellow;
+}
+.voltar
+{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.fechar_voltar
+{
+    background-color: transparent;
+    color: black;
+    border: none;
+    background-color: lightgrey;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+.fechar_voltar:hover
+{
+    background-color: white;
+}
+.fechar_voltar:active
+{
+    background-color: orange;
+}
+
+.editar_perfil
+{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    background-color: rgba(39, 39, 39, 0.9);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    border-width: 6px;
+    border-style:ridge;
+    border-color: lightgray;
+    min-width: 20rem;
+    min-height: 10rem;  
+}
+.titulo_config
+{
+    color: lightgrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom-color: lightgrey;
+    font-size: large;
+    margin-bottom: 0%;
+}
+
+.edicao_perfil
+{
+    width: 100%;
+    height: 95%;
+    overflow-y: auto;
+    font-size: large;
+    color: white;
+    overflow-y: auto;
+}
+.edicao_perfil2
+{
+    width: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+.editar_foto_perfil
+{
+    width: 65%;
+    margin-bottom: 5%;
+    border-color: white;
+    border-style: solid;
+}
+.input_sq
+{
+    width: 70%;
+    min-height:20%;
+    display: flex;
+    flex-direction: space-between;
+    justify-content: space-between;
+}
+.input
+{
+    min-width: 80%;
+    max-width: 80%;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: white;
+    border-width: 2px;
+    background-color: transparent;
+    padding-left: 1%;
+    color: white;
+    max-height: 40%;
+    height: 1.5rem;
+    min-height: 1.5rem;
+}
+.editar_button
+{
+    width: 45%;
+    height: 2rem;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightgray;
+    border: none;
+}
+.editar_button:hover
+{
+    background-color: white;
+}
+.editar_button:active
+{
+    background-color: orange;
+}
+.dotted
+{
+    width: 98%;
+    height: 70%;
+    border-style: dotted;
+    border-color: gray;
+    border-width: 3px;
+}
