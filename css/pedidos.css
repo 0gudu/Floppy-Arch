@@ -311,3 +311,100 @@ rect {
     border-color: transparent;
     cursor: pointer;
 }
+
+.verprod {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    right: 10%;
+    bottom: 30%;
+    background-image: url('../images/Background3.png');
+    border: 5px solid white;
+    box-shadow: 10px 5px 5px 0px black;
+    border-radius: 3px;
+    overflow-y: scroll;
+
+}
+
+.x {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 0px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    font-size: 150%;
+    border: 5px solid black;
+}
+.perfil
+{
+    width: 90%;
+    height: 100px;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 0%;
+}
+.cimabaixo
+{
+    width: 88%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0%;
+    
+}
+.nome_perfil
+{
+    margin: 0%;
+    width: 100%;
+    height: 49%;
+    display: flex;
+    color: white;
+    padding-left: 5%;
+    font-size: 180%;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+
+.botoes_perfil
+{
+    margin: 0%;
+    width: 100%;
+    height: 49%;
+    display: flex;
+    font-size: 3vh;
+    color: white;
+    flex-direction: row;
+    justify-content: flex-end;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    min-height: 2rem;
+
+}
+.butones
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+}
+.valor_prod
+{
+    color: lightgreen;
+    font-size: xx-large;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

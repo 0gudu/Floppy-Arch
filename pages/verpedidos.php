@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="../css/pedidos.css" /> 
 </head>
 <body>
+    <div class="verprod">
+        <p class="x">&nbsp x &nbsp </p>
+        <?php include("../phpscripts/verprodpedidos.php");?>
+    </div>
    <div class="d0">
         <div class="d1">
             <div class="tits">
