@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Jun-2023 às 14:28
+-- Tempo de geração: 20-Jun-2023 às 16:12
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -44,11 +44,17 @@ CREATE TABLE `carrinho` (
 CREATE TABLE `pedidos` (
   `id_pedido` int(11) NOT NULL,
   `usuario` varchar(50) NOT NULL,
-  `numero` int(11) NOT NULL,
   `valor` int(111) NOT NULL,
   `statuss` varchar(30) NOT NULL,
   `datas` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Extraindo dados da tabela `pedidos`
+--
+
+INSERT INTO `pedidos` (`id_pedido`, `usuario`, `valor`, `statuss`, `datas`) VALUES
+(20, 'matheusburladap@cock.li', 0, '', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -109,7 +115,8 @@ INSERT INTO `produtos` (`id_produto`, `nome`, `caminhofoto`, `descricao`) VALUES
 ALTER TABLE `carrinho`
   ADD PRIMARY KEY (`id_coisa`),
   ADD KEY `item` (`item`),
-  ADD KEY `usuario` (`usuario`);
+  ADD KEY `usuario` (`usuario`),
+  ADD KEY `pedido` (`pedido`);
 
 --
 -- Índices para tabela `pedidos`
@@ -138,13 +145,13 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT de tabela `carrinho`
 --
 ALTER TABLE `carrinho`
-  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `id_coisa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT de tabela `pedidos`
 --
 ALTER TABLE `pedidos`
-  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_pedido` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Restrições para despejos de tabelas
@@ -155,7 +162,8 @@ ALTER TABLE `pedidos`
 --
 ALTER TABLE `carrinho`
   ADD CONSTRAINT `carrinho_ibfk_1` FOREIGN KEY (`item`) REFERENCES `produtos` (`id_produto`),
-  ADD CONSTRAINT `carrinho_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `pessoas` (`nome`);
+  ADD CONSTRAINT `carrinho_ibfk_2` FOREIGN KEY (`usuario`) REFERENCES `pessoas` (`nome`),
+  ADD CONSTRAINT `carrinho_ibfk_3` FOREIGN KEY (`pedido`) REFERENCES `pedidos` (`id_pedido`);
 
 --
 -- Limitadores para a tabela `pedidos`

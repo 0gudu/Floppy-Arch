@@ -28,7 +28,7 @@
             break;
   
     }
-    $comando = $pdo->prepare("INSERT INTO carrinho (item,valor,usuario) VALUES(:codigo,:valor,:user)");
+    $comando = $pdo->prepare("INSERT INTO carrinho (item,valor,usuario,pedido) VALUES(:codigo,:valor,:user,20)");
     $comando->bindParam(':codigo', $codigo);
     $comando->bindParam(':valor', $preco);
     $comando->bindParam(':user', $user);

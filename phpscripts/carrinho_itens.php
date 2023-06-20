@@ -1,6 +1,6 @@
 <?php
                     include ("../includes/conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 0");
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 20");
                         $comando->bindParam(':user', $_SESSION['user']);
                         $comando->execute();    
                     
