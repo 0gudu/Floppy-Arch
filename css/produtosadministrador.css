@@ -182,7 +182,9 @@ body{
     border-color: white;
     border-width: 2px;
     border-style: solid;
-    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: block;
 
 }

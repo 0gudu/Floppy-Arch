@@ -61,7 +61,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.html"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Produtos </b></p>    
@@ -84,69 +84,58 @@
             <hr class="hr2">
             <div class="d21">
 
-            <?php include("../phpscripts/produtosadministrador_items.php");?>
+                <?php include("../phpscripts/produtosadministrador_items.php");?>
 
             </div>
-            
         </div>
         
-        <div class="d3" >
-            <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
-                <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
-                <div class="menu" id="menu">
-                    <div class="branco"> a</div>
-                    <a class="voltar" onclick="voltarPagina()"><u><b>⬅ Voltar</b></u></a>
-                    <span><u><b><a href="comprar.html" class="menu_amarelo">Comprar</a></b></u></span>
-                    <span><u><b><a href="carrinho.html" class="menu_branco">Carrinho</a></b></u></span>
-                    <span><u><b><a href="entrar.html" class="menu_amarelo">Entrar</a></u></b></span>
-                    <span><u><b><a href="contato.html" class="menu_branco">Contato</a></u></b></span>
-                    <span><u><b><a href="faleconosco.html" class="menu_branco">Fale conosco</a></u></b></span>
-    
-                    <!-- fezer comentárion no html -->
-                    <div class="branco"> a</div>
-
-                </div>
-            </div>
-        </div>
+        <?php include("../includes/menu.php"); ?>
     </div>  
 </body>
 <script>
-    texto_menu.style.display="inline";
-    menu.style.display="none";
-    function ocultar()
+  
+
+  /*  function mostrarMais(x)
     {
-        texto_menu.style.display="none";
-        menu.style.display="inline";
-    }
-    function aparecer()
-    {
-        texto_menu.style.display="inline";
-        menu.style.display="none";
-    }        
-    function voltarPagina() 
-    {
-        window.history.back();
+        console.log(x);
+        document.getElementById(x).style.display="block";
+   }*/
+   function mostrarMais(x) {
+    
+    var pic = document.getElementById("pic" + x);
+    var dados = document.getElementById("dados" +x);
+    var dadosProd = document.getElementById("dadosProd" + x);
+    var mostrarMais = document.getElementById("mostrarMais" + x);
+    var mostrarMenos = document.getElementById("mostrarMenos" + x);
+    console.log(x);
+    console.log(pic);
+    console.log(dados);
+    console.log(dadosProd);
+    pic.style.height = "9.7rem";
+    pic.style.width = "9.7rem";
+    pic.style.minWidth = "9.7rem";
+    dadosProd.style.display = "block";
+    mostrarMais.style.display = "none";
+    mostrarMenos.style.display = "flex";
+    
     }
 
-    function mostrarMais(x)
-    {
-        x.style.display="none";
-        x.style.display="block";
-        dados.style.width="100%";       
-        pic.style.height="9.7rem";
-        pic.style.width="9.7rem";
-        pic.style.minWidth="9.7rem";
-        dadosProd.style.display="block";
-    }
-    function mostrarMenos()
-    {
-        mostrarMaisBt.style.display="block";
-        mostrarMenosBt.style.display="none";
-        dados.style.width="90%";
-        pic.style.height="5.7rem";
-        pic.style.width="5.7rem";
-        pic.style.minWidth="5.7rem";
-        dadosProd.style.display="none";
+    function mostrarMenos(x) {
+        var pic = document.getElementById("pic" + x);
+        var dados = document.getElementById("dados" +x);
+        var dadosProd = document.getElementById("dadosProd" + x);
+        var mostrarMais = document.getElementById("mostrarMais" + x);
+        var mostrarMenos = document.getElementById("mostrarMenos" + x);
+        console.log(x);
+        console.log(pic);
+        console.log(dados);
+        console.log(dadosProd);
+        pic.style.height = "5.7rem";
+        pic.style.width = "5.7rem";
+        pic.style.minWidth = "5.7rem";
+        dadosProd.style.display = "none";
+        mostrarMais.style.display = "flex";
+        mostrarMenos.style.display = "none";
     }
 
     function aparecerEditar()
