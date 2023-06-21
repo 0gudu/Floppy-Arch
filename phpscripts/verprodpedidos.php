@@ -1,7 +1,9 @@
 <?php
                     include ("../includes/conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 20");
+                        echo $cu;
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = :pedidoselec");
                         $comando->bindParam(':user', $_SESSION['user']);
+                        $comando->bindParam(':pedidoselec', $cu);
                         $comando->execute();    
                     
                         $resultado = $comando->execute();
@@ -12,7 +14,7 @@
                                 $n = $linhas["item"];
 
                                                             echo('
-                                <div class="perfil">
+                                <div class="perfilf">
                                     <img class="fotos_perfis" src="');
                                    
 
@@ -29,8 +31,8 @@
                                     echo("$resultado");
 
                                     echo ('" width="10%">
-                                    <div class="cimabaixo">
-                                        <p class="nome_perfil">');
+                                    <div class="cimabaixof">
+                                        <p class="nome_perfilf">');
                                         $sql = "SELECT nome FROM produtos WHERE id_produto = :elemento";
                                         $stmt = $pdo->prepare($sql);
                                         $stmt->bindParam(':elemento', $n);
@@ -83,10 +85,8 @@
                                         echo('
                                         </p>
 
-                                        <div class="botoes_carrinho ">
-                                            <div class="butones">
-                                                <p class="valor_prod">R$' . $resultado1 . ',00</p>
-                                            </div>
+                                        <div class="botoes_carrinhof ">
+                                            
                                         </div>
                                     </div>
                                 </div>

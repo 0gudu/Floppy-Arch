@@ -12,15 +12,12 @@
     $comando->bindParam(':valor', $valortota);
     $comando->execute();
 
-    $comando = $pdo->prepare("SELECT LAST_INSERT_ID()");
-    $comando->execute();
-    $resultado = $comando->fetch();
-    $idpedido = $resultado[0]; // Acessando o valor retornado pelo fetch()
-    
+    $id_pedido = $pdo->lastInsertId();
+    echo $id_pedido;
     $comando = $pdo->prepare("UPDATE carrinho
     SET pedido = :idpedido
-    WHERE pedido = 0 AND usuario = :user");
-    $comando->bindParam(':idpedido', $idpedido);
+    WHERE pedido = 20 AND usuario = :user");
+    $comando->bindParam(':idpedido', $id_pedido);
     $comando->bindParam(':user', $_SESSION['user']);
     $comando->execute();
     
@@ -35,7 +32,8 @@
             echo ("item:$n pedido:$p <br>");
         }
 ?>
+
 <script>
-    var url = "../pages/pagamento_seleção.php?pedido=<?php echo $idpedido; ?>&valor=<?php echo $valortota; ?>&user=<?php echo $_SESSION['user']; ?>";
+    var url = "../pages/pagamento_seleção.php?pedido=<?php echo $id_pedido; ?>&valor=<?php echo $valortota; ?>&user=<?php echo $_SESSION['user']; ?>";
     window.open(url, "_self");
 </script>

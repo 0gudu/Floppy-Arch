@@ -314,7 +314,7 @@ rect {
 
 .verprod {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 50%;
     height: 50%;
@@ -339,7 +339,7 @@ rect {
     font-size: 150%;
     border: 5px solid black;
 }
-.perfil
+.perfilf
 {
     width: 90%;
     height: 100px;
@@ -352,7 +352,7 @@ rect {
     align-content: center;
     margin-bottom: 0%;
 }
-.cimabaixo
+.cimabaixof
 {
     width: 88%;
     height: 120%;
@@ -362,7 +362,7 @@ rect {
     padding: 0%;
     
 }
-.nome_perfil
+.nome_perfilf
 {
     margin: 0%;
     width: 100%;
@@ -377,7 +377,7 @@ rect {
     align-content: center;
 }
 
-.botoes_perfil
+.botoes_perfilf
 {
     margin: 0%;
     width: 100%;
@@ -393,7 +393,7 @@ rect {
     min-height: 2rem;
 
 }
-.butones
+.butonesf
 {
     height: 100%;
     display: flex;
@@ -401,7 +401,7 @@ rect {
     width: 100%;
     flex-direction: row;
 }
-.valor_prod
+.valor_prodf
 {
     color: lightgreen;
     font-size: xx-large;

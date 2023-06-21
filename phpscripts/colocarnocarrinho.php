@@ -2,6 +2,7 @@
     include("../includes/conecta.php");
     
     $preco = 0;
+    $ped = 20;
     $codigo = $_GET["codigo"];
     $valor = $_GET["valor"];
     $user = $_GET["user"];
@@ -28,10 +29,11 @@
             break;
   
     }
-    $comando = $pdo->prepare("INSERT INTO carrinho (item,valor,usuario,pedido) VALUES(:codigo,:valor,:user,20)");
+    $comando = $pdo->prepare("INSERT INTO carrinho (item,valor,usuario,pedido) VALUES(:codigo,:valor,:user, :ped)");
     $comando->bindParam(':codigo', $codigo);
     $comando->bindParam(':valor', $preco);
     $comando->bindParam(':user', $user);
+    $comando->bindParam(':ped', $ped);
     $comando->execute();
 
     header("location: ../pages/carrinho.php"); 
