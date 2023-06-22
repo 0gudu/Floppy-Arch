@@ -30,7 +30,7 @@ session_start();
                 <?php 
                     include ("../includes/conecta.php");
                     $comando = $pdo->prepare("SELECT * FROM produtos");
-                    $comando->execute();    
+                    $comando->execute();
                 
                     $resultado = $comando->execute();
 
@@ -38,20 +38,21 @@ session_start();
                         {
                             $idprod = $linhas["id_produto"]; //nome da coluna xampp
                             $nome = $linhas["nome"];
-                            $foto = $linhas["caminhofoto"];
-
+                            $dados_imagem = $linhas["foto"];
+                            
+                            $i = base64_encode($dados_imagem);
+                            
                             echo('
-                            <div onclick="Enviar(' . $idprod . ');" class="itemshowcase">
-                            <div class="disqueteshowcase">
-                                <img src="' . $foto . '" width="90%">
-                            </div>
-                            <div  class="legendashowcase">
-                                <u><b><p class="legendap">' . $nome . '</p></b></u>
-                            </div>
-                        </div>
-                            
-                            
+                                <div onclick="Enviar(' . $idprod . ');" class="itemshowcase">
+                                <div class="disqueteshowcase">
+                                    <img src="data:image/jpeg;base64,' . $i . '" width="90%">
+                                </div>
+                                <div class="legendashowcase">
+                                    <u><b><p class="legendap">' . $nome . '</p></b></u>
+                                </div>
+                                </div>
                             ');
+
 
                         }
                 ?>
