@@ -45,33 +45,33 @@
             <div class="edicao_perfil2 center">
                 <fieldset class="editar_foto_perfil">
                     <legend>Foto de perfil</legend>
-                    <input type="file" class="input_imagem" accept="image/*">
+                    <input type="file" class="input_imagem" accept="image/*" id="img">
                     <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
                 </fieldset>
                 <hr width="70%">
                 <div class="input_sq center">
                     Nome:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o nome..."></textarea>
+                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o nome..." id="nm"></textarea>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
                     Telefone:
-                    <input type="text" class="input" placeholder="Alterar a senha..."></input>
+                    <input type="text" class="input" placeholder="Alterar a senha..." id="tf"></input>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
                     Endereço:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o endereço..."></textarea>
+                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o endereço..." id="end"></textarea>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
                     Senha:
-                    <input type="password" class="input" placeholder="Alterar a senha..."></input>
+                    <input type="password" class="input" placeholder="Alterar a senha..." id="sn"></input>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
                     <button class="editar_button"><div class="dotted">Concluir</div>
-                    <button class="editar_button">Cancelar
+                    <button class="editar_button" onclick="cancelar()">Cancelar
                 </div>
             </div>
         </div>
