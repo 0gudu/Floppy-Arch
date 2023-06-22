@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/produtosadministrador.css" /> 
 </head>
 <body>
-    <div class="editar_perfil" id="editar_perfil">
+    <div class="editar_perfil center" id="editar_perfil">
         <div class="titulo_config center">
             <button class="fechar_voltar" onclick="voltarParaConfig()" id="fechar_editar">⬅ Voltar</button>
             Editar Perfil
@@ -138,9 +138,8 @@
         mostrarMenos.style.display = "none";
     }
 
-    function aparecerEditar()
+    function aparecerEditar(x)
     {
-        config.style.display = "none";
         editar_perfil.style.display = "flex";
 
     }
