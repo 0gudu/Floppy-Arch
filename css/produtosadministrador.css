@@ -384,7 +384,11 @@ rect {
     font-size: large;
     margin-bottom: 0%;
 }
-
+.hr_config
+{
+    width: 100%;
+    margin-top: 0%;
+}
 .edicao_perfil
 {
     width: 100%;
@@ -400,6 +404,12 @@ rect {
     min-height: 100%;
     flex-direction: column;
     justify-content: center;
+    padding: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .editar_foto_perfil
 {
