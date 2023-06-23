@@ -43,15 +43,13 @@
         <hr class="hr_config">
         <div class="edicao_perfil">
             <div class="edicao_perfil2 center">
-                <form action="../phpscripts/editarfoto.php" method="POST" enctype="multipart/form-data">
+                <form action="../phpscripts/editarperfil.php" method="post" enctype="multipart/form-data">
                     <fieldset class="editar_foto_perfil">
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
                         <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
-                </form>
-                <form action="../phpscripts/editarperfil.php" method="POST">
                     <hr width="70%">
                     <div class="input_sq center">
                         Nome:

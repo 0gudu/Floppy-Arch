@@ -8,9 +8,12 @@
     $comando->execute();    
                     
     while ($linhas = $comando->fetch()) {
-        $imagem = $linhas["caminhofoto"];
+        $imagem = $linhas["foto"];
         $titulo = $linhas["nome"];
         $info = $linhas["descricao"];
+
+        $i = base64_encode($imagem);                    
+        
     }   
 ?>
 <!DOCTYPE html>
@@ -41,7 +44,7 @@
                 </div>
                 <div class="disc_baixo">
                     <div class="disc_img">
-                        <img src="<?php echo($imagem); ?>" width="97%" >
+                        <?php echo '<img src="data:image/jpeg;base64,' . $i . '" width="90%">'; ?>
                     </div>
                     <div class="disc_info">
                         <div class="branco">a</div>
