@@ -33,7 +33,14 @@
         <div class="d2">
             <div class="d222">
                 <div class="cima">
-                    <img class="foto_adm" src="images/adm.png" >
+                <?php
+                        $comando = $pdo->prepare("SELECT foto from pessoas WHERE nome = :nome");
+                        $comando->bindParam(":nome", $_SESSION['user']);
+                        $resultado = $comando->execute();
+                        $dados_imagem = $comando->fetchColumn();
+                        $i = base64_encode($dados_imagem);
+                        echo '<img src="data:image/jpeg;base64,' . $i . '" class="foto_adm">';
+                        ?>
                     <p class="nome_adm"><?php echo $_SESSION['name'];?></p>
                 </div>
                 <div class="cima2">
