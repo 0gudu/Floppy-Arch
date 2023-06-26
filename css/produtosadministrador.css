@@ -176,12 +176,7 @@ body{
 }
 .picture
 {
-    height: 5.7rem;
-    width: 5.7rem;
-    min-width: 5.7rem;
-    border-color: white;
-    border-width: 2px;
-    border-style: solid;
+    width: 6rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

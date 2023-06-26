@@ -122,8 +122,10 @@
         console.log(x);
         document.getElementById(x).style.display="block";
    }*/
+
+   dadosProd.style.display = "none";
+
    function mostrarMais(x) {
-    
     var pic = document.getElementById("pic" + x);
     var dados = document.getElementById("dados" +x);
     var dadosProd = document.getElementById("dadosProd" + x);
@@ -133,12 +135,10 @@
     console.log(pic);
     console.log(dados);
     console.log(dadosProd);
-    pic.style.height = "9.7rem";
-    pic.style.width = "9.7rem";
-    pic.style.minWidth = "9.7rem";
-    dadosProd.style.display = "block";
-    mostrarMais.style.display = "none";
-    mostrarMenos.style.display = "flex";
+    dadosProd.style.display="flex";
+    mostrarMais.style.display="none";
+    mostrarMenos.style.display="flex";
+    pic.style.width="100rem";
     
     }
 
@@ -152,12 +152,10 @@
         console.log(pic);
         console.log(dados);
         console.log(dadosProd);
-        pic.style.height = "5.7rem";
-        pic.style.width = "5.7rem";
-        pic.style.minWidth = "5.7rem";
-        dadosProd.style.display = "none";
-        mostrarMais.style.display = "flex";
-        mostrarMenos.style.display = "none";
+        dadosProd.style.display="none";
+        mostrarMais.style.display="flex";
+        mostrarMenos.style.display="none";
+        pic.style.width="6rem";
     }
 
     function aparecerEditar(x)
