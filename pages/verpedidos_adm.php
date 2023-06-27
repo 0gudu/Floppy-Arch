@@ -1,5 +1,6 @@
 <?php
     session_start();
+    $cu = $_POST["user"];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,7 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos - FOPPY ARCH</title>
+    <title>Pedidos_user - FOPPY ARCH</title>
     <link rel="stylesheet" href="../css/pedidos.css" /> 
 </head>
 <body>
@@ -23,7 +24,7 @@
                         <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
-                        <p ><b>➝ Pedidos</b></p>    
+                        <p ><b>➝ Pedidos_user</b></p>    
                     </div>
                     
                 </div>
@@ -35,13 +36,13 @@
                 <div class="cima">
                 <?php
                         $comando = $pdo->prepare("SELECT foto from pessoas WHERE nome = :nome");
-                        $comando->bindParam(":nome", $_SESSION['user']);
+                        $comando->bindParam(":nome", $cu);
                         $resultado = $comando->execute();
                         $dados_imagem = $comando->fetchColumn();
                         $i = base64_encode($dados_imagem);
                         echo '<img src="data:image/jpeg;base64,' . $i . '" class="foto_adm">';
                         ?>
-                    <p class="nome_adm"><?php echo $_SESSION['name'];?></p>
+                    <p class="nome_adm"><?php echo $cu;?></p>
                 </div>
                 <div class="cima2">
                 </div>
@@ -55,7 +56,7 @@
                     include ("../includes/conecta.php");
 
                         $comando = $pdo->prepare("SELECT * FROM pedidos WHERE usuario = :user"); 
-                        $comando->bindParam(':user', $_SESSION['user']);
+                        $comando->bindParam(':user', $cu);
                         $resultado = $comando->execute();
 
                         while( $linhas = $comando->fetch()) 
@@ -130,7 +131,7 @@ function fechar() {
 }
 
 function pagar(x, y) {
-  var url = "pagamento_seleção.php?pedido=" + x + "&valor=" + y + "&user=" + "<?php echo $_SESSION['user']; ?>";
+  var url = "pagamento_seleção.php?pedido=" + x + "&valor=" + y + "&user=" + "<?php echo $cu; ?>";
   window.open(url, "_self");
 }
 
