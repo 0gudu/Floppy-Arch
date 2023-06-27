@@ -21,7 +21,7 @@
                             <div class="titulo_produto"><p style="margin: 0%; margin-left: 2%;">' . $n . '</p></div>
                             <p class="dados_prod" id="dadosProd' . $p . '">' . $m . '</p>
                             <div class="botoes_produto">
-                                <Button class="button_produto" onclick="remover(' . $p . ')">Remover</Button>
+                                <Button class="button_produto" onclick="Enviar(\'' . $p . '\')">Remover</Button>
                                 <Button class="txt_button_produto" onclick="mostrarMais(' . $p . ')" id="mostrarMais' . $p . '">Mostrar mais</Button>
                                 <Button class="txt_button_produto" onclick="mostrarMenos(' . $p . ')" id="mostrarMenos' . $p . '" style="display: none;">Mostrar menos</Button>
                                 <Button class="txt_button_produto" onclick="aparecerEditar(' . $p . ')" id="btnEditar' . $p . '">Editar</Button>

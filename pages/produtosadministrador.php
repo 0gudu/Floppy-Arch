@@ -11,6 +11,7 @@
     $comando->bindParam(':user', $_SESSION['user']);
     $comando->execute();
     $res =$comando->fetch();
+    
 ?>
 
 <!DOCTYPE html>
@@ -105,7 +106,20 @@
         <div class="d2">
             <div class="d222">
                 <div class="cima">
-                    <img class="foto_adm" src="images/adm.png" >
+                    <?php
+                        include ("../includes/conecta.php");
+                        $comando->execute();    
+                                        
+                        $resultado = $comando->execute();
+                    
+                        while( $linhas = $comando->fetch()) 
+                        {
+                            $n = $linhas["email"]; //nome da coluna xampp
+                            $s = $linhas["foto"];
+                            $f = base64_encode($s);
+                            echo'<img src="data:image/jpeg;base64,' . $f. '" class="picture">';
+                        }
+                    ?>
                     <p class="nome_adm"><?php echo $res['email'];?> </p>
                 </div>
                 <hr class="hr1">
@@ -174,34 +188,6 @@
         pic.style.width="100px";
         pic.style.heigth="100px";
     }
-
-    function aparecerEditar(x)
-    {
-        editar_perfil.style.display = "flex";
-
-    }
-    function voltarParaConfig()
-    {
-        editar_perfil.style.display = "none";
-        config.style.display = "flex";
-    }
-    function desaparecerEditarPerfil()
-    {
-        editar_perfil.style.display = "none";
-        input_ed_img.value="";
-        input_ed_tt.value="";
-        input_ed_dsc.value="";
-    }
-
-    function cancelar()
-    {
-        input_ed_img.value="";
-        input_ad_img.value="";
-        input_ed_tt.value="";
-        input_ad_tt.value="";
-        input_ed_dsc.value=""
-        input_ad_dsc.value="";
-    }
     function aparecerCriarProduto()
     {
         adicionarProduto.style.display = "flex";
@@ -211,22 +197,14 @@
         adicionarProduto.style.display = "none";
     }
 
-    function remover(x) {
-        // Enviar o valor da variável x para o arquivo PHP via AJAX
-        $.ajax({
-            url: 'seu_arquivo_php.php',
-            method: 'POST',
-            data: { id_produto: x },
-            success: function(response) {
-                // Lógica de sucesso, se necessário
-                console.log(response);
-            },
-            error: function(xhr, status, error) {
-                // Lógica de tratamento de erro, se necessário
-                console.log(error);
-            }
-        });
+    function Enviar(codigo) {
+        window.open("../phpscripts/excluir_produtosadm.php?codigo="+codigo,"_self")
+    }
 
+    function aparecerEditar(x)
+    {
+        var y = "e";
+        window.open("editprodutos.php?x=" + x,"_self" );
     }
 </script>
 </html>
