@@ -82,9 +82,9 @@
         window.open(url, "_self");
     }
     function remover(x) {
-    var url = "../phpscripts/remover_user.php?codigo=" + x;
-    window.open(url, "_self");
-}
+        var url = "../phpscripts/remover_user.php?codigo=" + x;
+        window.open(url, "_self");
+    }
 
 </script>
 </html>

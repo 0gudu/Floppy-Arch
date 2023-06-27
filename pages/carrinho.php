@@ -3,8 +3,7 @@
     $preco = 0;
     
     include("../phpscripts/carrinho_precototal.php");
-    
-    
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
