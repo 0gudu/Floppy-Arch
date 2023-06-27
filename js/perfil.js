@@ -21,18 +21,4 @@ function aparecerConfig()
     function desaparecerEditarPerfil()
     {
         editar_perfil.style.display = "none";
-        document.getElementById("img").value = "";
-        document.getElementById("nm").value = "";
-        document.getElementById("tf").value = "";
-        document.getElementById("end").value = "";
-        document.getElementById("sn").value = "";
-    }
-
-    function cancelar()
-    {
-        document.getElementById("img").value = "";
-        document.getElementById("nm").value = "";
-        document.getElementById("tf").value = "";
-        document.getElementById("end").value = "";
-        document.getElementById("sn").value = "";
     }
