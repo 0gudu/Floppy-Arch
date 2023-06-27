@@ -49,7 +49,7 @@
                 <hr width="70%">
                 <div class="input_sq center">
                     <button class="editar_button"><div class="dotted">Concluir</div>
-                    <button class="editar_button" onclick="cancelar()">Cancelar</button>
+                    <button class="editar_button" onclick="voltar()">Cancelar</button>
                 </div>
             </form>
         </div>
@@ -59,21 +59,9 @@
 <script>
   
 
-    function cancelar()
+    function voltar()
     {
-        input_ed_img.value="";
-        input_ed_tt.value="";
-        input_ed_dsc.value="";
-
-        window.open("produtosadministrador.php","_self");
-    }
-    function aparecerCriarProduto()
-    {
-        adicionarProduto.style.display = "flex";
-    }
-    function desaparecerCriarProduto()
-    {
-        adicionarProduto.style.display = "none";
+        window.open("produtosadministrador.php")
     }
 
     function Enviar(codigo) {

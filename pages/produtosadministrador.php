@@ -188,14 +188,7 @@
         pic.style.width="100px";
         pic.style.heigth="100px";
     }
-    function aparecerCriarProduto()
-    {
-        adicionarProduto.style.display = "flex";
-    }
-    function desaparecerCriarProduto()
-    {
-        adicionarProduto.style.display = "none";
-    }
+
 
     function Enviar(codigo) {
         window.open("../phpscripts/excluir_produtosadm.php?codigo="+codigo,"_self")
