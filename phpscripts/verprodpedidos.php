@@ -1,8 +1,10 @@
 <?php
                     include ("../includes/conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 20");
+                        echo $cu;
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = :pedidoselec");
                         $comando->bindParam(':user', $_SESSION['user']);
-                        $comando->execute(); 
+                        $comando->bindParam(':pedidoselec', $cu);
+                        $comando->execute();    
                     
                         $resultado = $comando->execute();
 
@@ -10,22 +12,27 @@
                             {
                                 $m = $linhas["id_coisa"]; //nome da coluna xampp
                                 $n = $linhas["item"];
-                                
-                                $c = $pdo->prepare("SELECT foto FROM produtos WHERE id_produto = :prod");
-                                $c->bindParam(':prod', $n);
-                                $c->execute();
-
-                                $res = $c->fetchColumn();
-                                $dados_imagem = $res;
-                            
-                                $i = base64_encode($dados_imagem);
-                
 
                                                             echo('
-                                <div class="perfil">
-                                    <img src="data:image/jpeg;base64,' . $i . '" class="fotos_perfis">
-                                    <div class="cimabaixo">
-                                        <p class="nome_perfil">');
+                                <div class="perfilf">
+                                    <img class="fotos_perfis" src="');
+                                   
+
+                                    // Preparando a consulta
+                                    $sql = "SELECT caminhofoto FROM produtos WHERE id_produto = :elemento";
+                                    $stmt = $pdo->prepare($sql);
+                                    $stmt->bindParam(':elemento', $n);
+
+                                    // Executando a consulta
+                                    $stmt->execute();
+
+                                    // Obtendo o resultado
+                                    $resultado = $stmt->fetchColumn();
+                                    echo("$resultado");
+
+                                    echo ('" width="10%">
+                                    <div class="cimabaixof">
+                                        <p class="nome_perfilf">');
                                         $sql = "SELECT nome FROM produtos WHERE id_produto = :elemento";
                                         $stmt = $pdo->prepare($sql);
                                         $stmt->bindParam(':elemento', $n);
@@ -78,14 +85,8 @@
                                         echo('
                                         </p>
 
-                                        <div class="botoes_carrinho ">
-                                            <div class="butones">
-                                                <div class="montedebotao">
-                                                    <button class="button_remover center" onclick="Enviar(\'' . $m . '\')">Remover</button>
-                                                    <button href="pagina_disquete.php" class="ver_prod">Ver produto</button>
-                                                </div>
-                                                <p class="valor_prod">R$' . $resultado1 . ',00</p>
-                                            </div>
+                                        <div class="botoes_carrinhof ">
+                                            
                                         </div>
                                     </div>
                                 </div>
