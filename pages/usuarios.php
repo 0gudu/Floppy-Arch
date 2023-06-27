@@ -38,7 +38,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="../images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Usuários</b></p>    
@@ -81,6 +81,10 @@
         var url = "perfil_user.php?codigo=" + x;
         window.open(url, "_self");
     }
+    function remover(x) {
+    var url = "../phpscripts/remover_user.php?codigo=" + x;
+    window.open(url, "_self");
+}
 
 </script>
 </html>

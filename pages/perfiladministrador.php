@@ -138,7 +138,7 @@
             
         </div>
         
-        <?php include("menu.php");?>
+        <?php include("../includes/menu.php");?>
     </div>  
 </body>
 <script src="../js/perfil.js"></script>

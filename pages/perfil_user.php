@@ -10,6 +10,7 @@
     $comando->execute();
     $res =$comando->fetch();
     
+    $cu = $_GET['codigo'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,15 +25,11 @@
 <body>
     <div class="config" id="config">
         <div class="titulo_config center">
-            Configurações 
+            Editar Informações 
             <button class="fechar_voltar" onclick="desaparecerConfig()" id="fechar">Fechar ✖</button>
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
-        <button class="button_config">Acessibilidade</button>
-        <form action="../phpscripts/sair.php">
-            <button type="submit" class="button_config">Sair</button>
-        </form>
         <button class="button_config_verm">Apagar conta</button>
 
     </div>
@@ -46,6 +43,7 @@
         <div class="edicao_perfil">
             <div class="edicao_perfil2 center">
                 <form action="../phpscripts/adm_editarperfil.php" method="post" enctype="multipart/form-data">
+                    <input type="hidden" value="<?php echo $cu;?>" name="user">
                     <fieldset class="editar_foto_perfil">
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
@@ -106,7 +104,7 @@
                         echo("<img src='data:image/jpeg;base64,$i' width='100%'> ");
                         ?>
                     </div>
-                    <div class="nome"><?php echo $res['email'];?></div>
+                    <div class="nome"><?php if($res['adm'] == 1){echo "adm - ";} echo $res['email'];?></div>
                 </div>
             </div>
             <hr width="60%">
@@ -118,8 +116,16 @@
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p>
                     <div class="botoes">
-                        <a href="verpedidos.php" class="href_pedidos"><button class="button">Pedidos</button></a>
-                        <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
+                        <form action="verpedidos_adm.php" method="POST">
+                            <input type="hidden" value="<?php echo $cu;?>" name="user">
+                            <a class="href_pedidos"><button type="submit" class="button">Ver Pedidos</button></a>
+                        </form>
+                        <button onclick="adm('<?php echo $res['adm'];?>','<?php echo $res['nome'];?>')" id="admt"><?php if($res['adm'] == 1) {
+                                echo "Remover Adm";
+                            }else {
+                                echo"Tornar Adm";
+                            }?></button>
+                        <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Editar Perfil</button>
                     </div> 
                 </div>
             </div>
@@ -130,4 +136,9 @@
     </div>  
 </body>
 <script src="../js/perfil.js"></script>
+<script>
+    function adm(x,y){
+        window.open("../phpscripts/tornaradm.php?amd=" + x + "&user=" + y, "_self");
+    }
+</script>
 </html>
