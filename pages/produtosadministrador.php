@@ -4,6 +4,15 @@
     
     include("../phpscripts/carrinho_precototal.php");
 ?>
+
+<?php 
+    include ("../includes/conecta.php");
+    $comando = $pdo->prepare("SELECT * FROM pessoas WHERE nome = :user");
+    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->execute();
+    $res =$comando->fetch();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -53,7 +62,7 @@
         </div>
         <hr class="hr_config" width="100%">
         <div class="edicao_perfil">
-            <div class="edicao_perfil2 center">
+            <form class="edicao_perfil2 center" method="POST">
                 <fieldset class="editar_foto_perfil">
                     <legend>Foto do produto</legend>
                     <input type="file" class="input_imagem" accept="image/*" id="input_ad_img">
@@ -74,7 +83,7 @@
                     <button class="editar_button"><div class="dotted">Concluir</div>
                     <button class="editar_button" onclick="cancelar()">Cancelar
                 </div>
-            </div>
+            </form>
         </div>
     </div>
  
@@ -97,7 +106,7 @@
             <div class="d222">
                 <div class="cima">
                     <img class="foto_adm" src="images/adm.png" >
-                    <p class="nome_adm">João Victor Ferreira </p>
+                    <p class="nome_adm"><?php echo $res['email'];?> </p>
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Produtos ➝</p>
@@ -126,7 +135,7 @@
    dadosProd.style.display = "none";
 
    function mostrarMais(x) {
-    var pic = document.getElementById("pic" + x);
+    var pic = document.getElementById('pic' + x);
     var dados = document.getElementById("dados" +x);
     var dadosProd = document.getElementById("dadosProd" + x);
     var mostrarMais = document.getElementById("mostrarMais" + x);
@@ -137,8 +146,9 @@
     console.log(dadosProd);
     dadosProd.style.display="flex";
     mostrarMais.style.display="none";
-    mostrarMenos.style.display="flex";
-    pic.style.width="100rem";
+    mostrarMenos.style.display="block";
+
+    pic.style.min-width="200px";
     
     }
 
@@ -153,9 +163,8 @@
         console.log(dados);
         console.log(dadosProd);
         dadosProd.style.display="none";
-        mostrarMais.style.display="flex";
+        mostrarMais.style.display="block";
         mostrarMenos.style.display="none";
-        pic.style.width="6rem";
     }
 
     function aparecerEditar(x)
@@ -192,6 +201,24 @@
     function desaparecerCriarProduto()
     {
         adicionarProduto.style.display = "none";
+    }
+
+    function remover(x) {
+        // Enviar o valor da variável x para o arquivo PHP via AJAX
+        $.ajax({
+            url: 'seu_arquivo_php.php',
+            method: 'POST',
+            data: { id_produto: x },
+            success: function(response) {
+                // Lógica de sucesso, se necessário
+                console.log(response);
+            },
+            error: function(xhr, status, error) {
+                // Lógica de tratamento de erro, se necessário
+                console.log(error);
+            }
+        });
+
     }
 </script>
 </html>

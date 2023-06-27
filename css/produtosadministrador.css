@@ -176,10 +176,7 @@ body{
 }
 .picture
 {
-    width: 6rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100px;
     display: block;
 
 }
@@ -198,6 +195,7 @@ body{
     color: white;
     margin-left: 5%;
     max-width: 90%;
+    overflow-wrap: break-word;
 }
 .picture_edit
 {
@@ -209,6 +207,7 @@ body{
     height: 3rem;
     display: flex;
     flex-direction: row;
+    margin-bottom: 0%;
 }
 .titulo_produto
 {
