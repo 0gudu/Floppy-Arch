@@ -2,7 +2,6 @@
 session_start();
 
 if (!isset($_SESSION['first_visit'])) {
-    // Perform actions for the first visit
     $_SESSION['first_visit'] = true;
     $_SESSION["user"] = "none";
 

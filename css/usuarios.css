@@ -208,6 +208,7 @@ body{
 .href_perfil:hover
 {
     color: orange;
+    cursor: pointer;
 }
 .href_perfil:active
 {
@@ -295,4 +296,9 @@ rect {
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
+}
+.imagem {
+    width: 9.5%;
+    height: 90%;
+    border: 3px solid white;
 }

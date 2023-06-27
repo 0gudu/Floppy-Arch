@@ -43,36 +43,39 @@
         <hr class="hr_config">
         <div class="edicao_perfil">
             <div class="edicao_perfil2 center">
-                <fieldset class="editar_foto_perfil">
-                    <legend>Foto de perfil</legend>
-                    <input type="file" class="input_imagem" accept="image/*" id="img">
-                    <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                </fieldset>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Nome:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o nome..." id="nm"></textarea>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Telefone:
-                    <input type="text" class="input" placeholder="Alterar a senha..." id="tf"></input>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Endereço:
-                    <textarea min-rows="1" cols="50" class="input" placeholder="Alterar o endereço..." id="end"></textarea>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    Senha:
-                    <input type="password" class="input" placeholder="Alterar a senha..." id="sn"></input>
-                </div>
-                <hr width="70%">
-                <div class="input_sq center">
-                    <button class="editar_button"><div class="dotted">Concluir</div>
-                    <button class="editar_button" onclick="cancelar()">Cancelar
-                </div>
+                <form action="../phpscripts/editarperfil.php" method="post" enctype="multipart/form-data">
+                    <fieldset class="editar_foto_perfil">
+                        <legend>Foto de perfil</legend>
+                        <input type="file" name="imagem" class="input_imagem" accept="image/*" >
+                        <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
+                        <button type="submit" class="editar_button"><div class="dotted">enviar</div>
+                    </fieldset>
+                    <hr width="70%">
+                    <div class="input_sq center">
+                        Nome:
+                        <textarea min-rows="1" cols="50" class="input" placeholder="<?php echo $res['email'];?>..." name="nome"></textarea>
+                    </div>
+                    <hr width="70%">
+                    <div class="input_sq center">
+                        Telefone:
+                        <input type="number" class="input" placeholder="<?php echo $res['telefone'];?>..."name="telefone"></input>
+                    </div>
+                    <hr width="70%">
+                    <div class="input_sq center">
+                        Endereço:
+                        <textarea min-rows="1" cols="50" class="input" placeholder="<?php echo $res['endereco'];?>..."name="endereco"></textarea>
+                    </div>
+                    <hr width="70%">
+                    <div class="input_sq center">
+                        Senha:
+                        <input type="password" class="input" placeholder="Alterar sua senha" name="senha"></input>
+                    </div>
+                    <hr width="70%">
+                    <div class="input_sq center">
+                        <button type="submit" class="editar_button"><div class="dotted">Concluir</div>
+                        <button class="editar_button">Cancelar
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -96,7 +99,14 @@
             <div class="d4 center">
                 <div class="nome_foto center">
                     <div class="foto">
-                        Sua foto aqui
+                        <?php
+                        $comando = $pdo->prepare("SELECT foto from pessoas WHERE nome = :nome");
+                        $comando->bindParam(":nome", $_SESSION['user']);
+                        $resultado = $comando->execute();
+                        $dados_imagem = $comando->fetchColumn();
+                        $i = base64_encode($dados_imagem);
+                        echo("<img src='data:image/jpeg;base64,$i' width='100%'> ");
+                        ?>
                     </div>
                     <div class="nome"><?php echo $_SESSION['name'];?></div>
                 </div>

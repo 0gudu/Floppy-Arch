@@ -1,8 +1,8 @@
 <?php
                     include ("../includes/conecta.php");
-                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 0");
+                        $comando = $pdo->prepare("SELECT * FROM carrinho WHERE usuario = :user AND pedido = 20");
                         $comando->bindParam(':user', $_SESSION['user']);
-                        $comando->execute();    
+                        $comando->execute(); 
                     
                         $resultado = $comando->execute();
 
@@ -10,25 +10,20 @@
                             {
                                 $m = $linhas["id_coisa"]; //nome da coluna xampp
                                 $n = $linhas["item"];
+                                
+                                $c = $pdo->prepare("SELECT foto FROM produtos WHERE id_produto = :prod");
+                                $c->bindParam(':prod', $n);
+                                $c->execute();
+
+                                $res = $c->fetchColumn();
+                                $dados_imagem = $res;
+                            
+                                $i = base64_encode($dados_imagem);
+                
 
                                                             echo('
                                 <div class="perfil">
-                                    <img class="fotos_perfis" src="');
-                                   
-
-                                    // Preparando a consulta
-                                    $sql = "SELECT caminhofoto FROM produtos WHERE id_produto = :elemento";
-                                    $stmt = $pdo->prepare($sql);
-                                    $stmt->bindParam(':elemento', $n);
-
-                                    // Executando a consulta
-                                    $stmt->execute();
-
-                                    // Obtendo o resultado
-                                    $resultado = $stmt->fetchColumn();
-                                    echo("$resultado");
-
-                                    echo ('">
+                                    <img src="data:image/jpeg;base64,' . $i . '" class="fotos_perfis">
                                     <div class="cimabaixo">
                                         <p class="nome_perfil">');
                                         $sql = "SELECT nome FROM produtos WHERE id_produto = :elemento";
