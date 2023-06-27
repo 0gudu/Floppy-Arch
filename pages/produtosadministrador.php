@@ -95,7 +95,7 @@
                         <a href="index.html"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
-                        <p ><b>➝ Produtos </b></p>    
+                        <p ><b>➝ Produtos - ADM </b></p>    
                     </div>
                     
                 </div>
@@ -135,11 +135,12 @@
    dadosProd.style.display = "none";
 
    function mostrarMais(x) {
-    var pic = document.getElementById('pic' + x);
-    var dados = document.getElementById("dados" +x);
+    var pic = document.getElementById('pic'+ x);
+    var dados = document.getElementById("dados" + x);
     var dadosProd = document.getElementById("dadosProd" + x);
     var mostrarMais = document.getElementById("mostrarMais" + x);
     var mostrarMenos = document.getElementById("mostrarMenos" + x);
+    var imgTitulo = document.getElementById("imgTitulo" + x);
     console.log(x);
     console.log(pic);
     console.log(dados);
@@ -147,8 +148,10 @@
     dadosProd.style.display="flex";
     mostrarMais.style.display="none";
     mostrarMenos.style.display="block";
+    imgTitulo.style.height="200px";
 
-    pic.style.min-width="200px";
+    pic.style.width="200px";
+    pic.style.heigth="200px";
     
     }
 
@@ -158,6 +161,7 @@
         var dadosProd = document.getElementById("dadosProd" + x);
         var mostrarMais = document.getElementById("mostrarMais" + x);
         var mostrarMenos = document.getElementById("mostrarMenos" + x);
+        var imgTitulo = document.getElementById("imgTitulo" + x);
         console.log(x);
         console.log(pic);
         console.log(dados);
@@ -165,6 +169,10 @@
         dadosProd.style.display="none";
         mostrarMais.style.display="block";
         mostrarMenos.style.display="none";
+        imgTitulo.style.height="100px";
+
+        pic.style.width="100px";
+        pic.style.heigth="100px";
     }
 
     function aparecerEditar(x)
