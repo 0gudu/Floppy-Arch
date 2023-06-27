@@ -58,7 +58,7 @@
                     <hr width="70%">
                     <div class="input_sq center">
                         Telefone:
-                        <input type="text" class="input" placeholder="<?php echo $res['telefone'];?>..."name="telefone"></input>
+                        <input type="number" class="input" placeholder="<?php echo $res['telefone'];?>..."name="telefone"></input>
                     </div>
                     <hr width="70%">
                     <div class="input_sq center">

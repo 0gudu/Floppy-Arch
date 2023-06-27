@@ -1,3 +1,28 @@
+<?php 
+    session_start();
+    include ("../includes/conecta.php");
+    $comando = $pdo->prepare("SELECT adm FROM pessoas WHERE nome = :user");
+    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->execute();
+    $res =$comando->fetch();
+
+    if ($res['adm'] == 0) {
+        header("location: entrar.php");
+    }
+    if($_SESSION['user'] == "none"){
+        header("location: entrar.php");
+    }
+    
+
+    $comando = $pdo->prepare("SELECT adm FROM pessoas WHERE nome = :user");
+    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->execute();
+    $res =$comando->fetch();
+
+    if ($res['adm'] == 0) {
+        header("location: entrar.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,106 +51,24 @@
         <div class="d2">
             <div class="d222">
                 <div class="cima">
-                    <img class="foto_adm" src="images/adm.png" >
-                    <p class="nome_adm">João Victor Ferreira </p>
+                        <?php
+                            $comando = $pdo->prepare("SELECT foto from pessoas WHERE nome = :nome");
+                            $comando->bindParam(":nome", $_SESSION['user']);
+                            $resultado = $comando->execute();
+                            $dados_imagem = $comando->fetchColumn();
+                            $i = base64_encode($dados_imagem);
+                            echo("<img src='data:image/jpeg;base64,$i' width='30%'> ");
+                        ?>
+                    <p class="nome_adm"><?php echo $_SESSION['name'];?> </p>
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Perfis ➝</p>
-                    <a href="criarconta.html"><Button class="adicionar" href="criarconta.html" >Adicionar perfil</Button></a>
             </div>
             <hr class="hr2">
             <div class="d21">
 
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/jao.jpg">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Evandro Eraldo Diego Victor Ferreira
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
+                <?php include("../phpscripts/usuarios_adm.php")?>
 
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/jcf.png">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Heitor do Servidor
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
-
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/pau.png">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Paulo Cesar Ferreira do Amarante
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
-
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/jonataro.png">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Jonas Jonatas Jonataro
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
-
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/gang.png">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Gabriel Gang Motratelllllli
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
-
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/eve.png">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Evelin
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
-
-                <div class="perfil">
-                    <img class="fotos_perfis" src="images/pepe.jpg">
-                    <div class="cimabaixo">
-                        <p class="nome_perfil">
-                            Gabriel Vondrazeque
-                        </p>
-                        <div class="botoes_perfil">
-                            <div ></div><a class="href_perfil" href="?">Ver perfil</a><a class="href_perfil" href="?">Editar perfil</a><button class="botao_removerperfil">Remover perfil</button>
-                        </div>
-                    </div>
-                </div>
-                <hr class="hr3">
             </div>
             
         </div>
@@ -133,4 +76,11 @@
         <?php include("../includes/menu.php");?>
     </div>  
 </body>
+<script>
+   function editar(x) {
+        var url = "perfil_user.php?codigo=" + x;
+        window.open(url, "_self");
+    }
+
+</script>
 </html>

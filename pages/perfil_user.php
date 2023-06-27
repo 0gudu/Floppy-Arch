@@ -3,20 +3,13 @@
     if($_SESSION['user'] == "none"){
         header("location: entrar.php");
     }
+
     include ("../includes/conecta.php");
-
-    $comando = $pdo->prepare("SELECT adm FROM pessoas WHERE nome = :user");
-    $comando->bindParam(':user', $_SESSION['user']);
-    $comando->execute();
-    $res =$comando->fetch();
-
-    if ($res['adm'] == 0) {
-        header("location: entrar.php");
-    }
     $comando = $pdo->prepare("SELECT * FROM pessoas WHERE nome = :user");
-    $comando->bindParam(':user', $_SESSION['user']);
+    $comando->bindParam(':user', $_GET['codigo']);
     $comando->execute();
     $res =$comando->fetch();
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,8 +17,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil ADM - FOPPY ARCH</title>
-    <link rel="stylesheet" href="../css/perfiladministrador.css" /> 
+    <link rel="Websitr Icon" type="gif">
+    <title>Perfil - FOPPY ARCH</title>
+    <link rel="stylesheet" href="../css/perfil.css" /> 
 </head>
 <body>
     <div class="config" id="config">
@@ -34,7 +28,7 @@
             <button class="fechar_voltar" onclick="desaparecerConfig()" id="fechar">Fechar ✖</button>
         </div>
         <hr class="hr_config">
-        <button class="button_config" onclick="aparecerEditar()">Editar perfil</button>
+        <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
         <button class="button_config">Acessibilidade</button>
         <form action="../phpscripts/sair.php">
             <button type="submit" class="button_config">Sair</button>
@@ -42,7 +36,6 @@
         <button class="button_config_verm">Apagar conta</button>
 
     </div>
-
     <div class="editar_perfil" id="editar_perfil">
         <div class="titulo_config center">
             <button class="fechar_voltar" onclick="voltarParaConfig()" id="fechar_editar">⬅ Voltar</button>
@@ -52,7 +45,7 @@
         <hr class="hr_config">
         <div class="edicao_perfil">
             <div class="edicao_perfil2 center">
-            <form action="../phpscripts/editarperfil.php" method="post" enctype="multipart/form-data">
+                <form action="../phpscripts/adm_editarperfil.php" method="post" enctype="multipart/form-data">
                     <fieldset class="editar_foto_perfil">
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
@@ -97,7 +90,7 @@
                         <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="entrar">
-                        <p ><b>➝ Perfil - ADM</b></p>    
+                        <p ><b>➝ Perfil</b></p>    
                     </div>
                     
                 </div>
@@ -108,16 +101,12 @@
             <div class="d4 center">
                 <div class="nome_foto center">
                     <div class="foto">
-                    <?php
-                        $comando = $pdo->prepare("SELECT foto from pessoas WHERE nome = :nome");
-                        $comando->bindParam(":nome", $_SESSION['user']);
-                        $resultado = $comando->execute();
-                        $dados_imagem = $comando->fetchColumn();
-                        $i = base64_encode($dados_imagem);
+                        <?php
+                        $i = base64_encode($res['foto']);
                         echo("<img src='data:image/jpeg;base64,$i' width='100%'> ");
                         ?>
                     </div>
-                    <div class="nome"><?php echo $_SESSION['name'];?></div>
+                    <div class="nome"><?php echo $res['email'];?></div>
                 </div>
             </div>
             <hr width="60%">
@@ -127,10 +116,9 @@
                         E-mail: <?php echo $res['nome'];?><br><br>
                         Telefone: <?php echo $res['telefone'];?><br><br>
                         Endereço: <?php echo $res['endereco'];?><br><br>
-                    </p> 
+                    </p>
                     <div class="botoes">
-                        <a href="produtos_adm.html" class="href_produtos"><button class="button">Produtos</button></a>
-                        <a href="usuarios.php" class="button_txt">Usuários</a>
+                        <a href="verpedidos.php" class="href_pedidos"><button class="button">Pedidos</button></a>
                         <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 
                 </div>
@@ -138,7 +126,7 @@
             
         </div>
         
-        <?php include("menu.php");?>
+        <?php include("../includes/menu.php");?>
     </div>  
 </body>
 <script src="../js/perfil.js"></script>
