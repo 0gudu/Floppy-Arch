@@ -15,7 +15,7 @@
                                 $i = base64_encode($foto);
                                 echo '<div class="perfil">';
                                 echo '<div class="imagem">';
-                                    echo "<img src='data:image/jpeg;base64,$i' width='100%'> ";
+                                    echo "<img src='data:image/jpeg;base64,$i' class='db_foto'> ";
                                 echo '</div>';
                                 echo '<div class="cimabaixo">
                                     <p class="nome_perfil">';
