@@ -48,7 +48,6 @@
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                        <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
                     <hr width="70%">
                     <div class="input_sq center">
