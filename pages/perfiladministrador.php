@@ -59,27 +59,27 @@
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
                         <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
-                    <hr width="70%">
+                    <hr width="86%">
                     <div class="input_sq center">
                         Nome:
                         <textarea min-rows="1" cols="50" class="input" placeholder="<?php echo $res['email'];?>..." name="nome"></textarea>
                     </div>
-                    <hr width="70%">
+                    <hr width="85%">
                     <div class="input_sq center">
                         Telefone:
                         <input type="number" class="input" placeholder="<?php echo $res['telefone'];?>..."name="telefone"></input>
                     </div>
-                    <hr width="70%">
+                    <hr width="85%">
                     <div class="input_sq center">
                         Endereço:
                         <textarea min-rows="1" cols="50" class="input" placeholder="<?php echo $res['endereco'];?>..."name="endereco"></textarea>
                     </div>
-                    <hr width="70%">
+                    <hr width="85%">
                     <div class="input_sq center">
                         Senha:
                         <input type="password" class="input" placeholder="Alterar sua senha" name="senha"></input>
                     </div>
-                    <hr width="70%">
+                    <hr width="85%">
                     <div class="input_sq center">
                         <button type="submit" class="editar_button"><div class="dotted">Concluir</div>
                         <button class="editar_button">Cancelar

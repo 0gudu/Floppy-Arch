@@ -101,7 +101,7 @@
                     <div class="foto">
                         <?php
                         $i = base64_encode($res['foto']);
-                        echo("<img src='data:image/jpeg;base64,$i' width='100%'> ");
+                        echo("<img src='data:image/jpeg;base64,$i' class='db_foto'> ");
                         ?>
                     </div>
                     <div class="nome"><?php if($res['adm'] == 1){echo "adm - ";} echo $res['email'];?></div>
@@ -115,12 +115,12 @@
                         Telefone: <?php echo $res['telefone'];?><br><br>
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p>
-                    <div class="botoes">
-                        <form action="verpedidos_adm.php" method="POST">
+                    <div class="botoes_user">
+                        <form action="verpedidos_adm.php" method="POST" style="height: 100%; width: 35%;" >
                             <input type="hidden" value="<?php echo $cu;?>" name="user">
-                            <a class="href_pedidos"><button type="submit" class="button">Ver Pedidos</button></a>
+                            <a class="href_pedidos"><button type="submit" class="button_user" style="height: 100%; width: 100%;">Ver Pedidos</button></a>
                         </form>
-                        <button onclick="adm('<?php echo $res['adm'];?>','<?php echo $res['nome'];?>')" id="admt"><?php if($res['adm'] == 1) {
+                        <button onclick="adm('<?php echo $res['adm'];?>','<?php echo $res['nome'];?>')" id="admt" class="button_user"><?php if($res['adm'] == 1) {
                                 echo "Remover Adm";
                             }else {
                                 echo"Tornar Adm";

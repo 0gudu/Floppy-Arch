@@ -87,11 +87,9 @@ body{
 {
     width: 5rem;
     height: 5rem;
-    background-color: brown;
     border-width: 3px;
     border-color: white;
     border-style: solid;
-    background-color: gray;
     font-size: small;
 }
 .nome
@@ -374,23 +372,26 @@ rect {
 }
 .editar_foto_perfil
 {
-    width: 65%;
+    width: 80%;
+    margin: 0%;
     margin-bottom: 5%;
+    margin-left: 7%;
     border-color: white;
     border-style: solid;
 }
 .input_sq
 {
-    width: 70%;
+    width: 80%;
     min-height:20%;
+    margin-left: 10%;
     display: flex;
     flex-direction: space-between;
     justify-content: space-between;
 }
 .input
 {
-    min-width: 80%;
-    max-width: 80%;
+    min-width: 75%;
+    max-width: 75%;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     border-color: white;
