@@ -126,6 +126,19 @@ body{
     min-height: 3rem;
     min-width: 30rem;
 }
+.botoes_user
+{
+    width: 140%;
+    height: 15%;
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    min-height: 3rem;
+    min-width: 30rem;
+}
 .href_pedidos
 {
     height: 100%;
@@ -142,6 +155,22 @@ body{
     border-color: yellow;
 }
 .button:hover
+{
+    background-color: orange;
+    cursor: pointer;
+    border-color: orange;
+}
+.button_user {
+    height: 100%;
+    width: 35%;
+    background-color: yellow;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    border-width: 6px;
+    border-color: yellow;
+}
+.button_user:hover
 {
     background-color: orange;
     cursor: pointer;
@@ -374,23 +403,26 @@ rect {
 }
 .editar_foto_perfil
 {
-    width: 65%;
+    width: 80%;
+    margin: 0%;
     margin-bottom: 5%;
+    margin-left: 7%;
     border-color: white;
     border-style: solid;
 }
 .input_sq
 {
-    width: 70%;
+    width: 80%;
     min-height:20%;
+    margin-left: 10%;
     display: flex;
     flex-direction: space-between;
     justify-content: space-between;
 }
 .input
 {
-    min-width: 80%;
-    max-width: 80%;
+    min-width: 75%;
+    max-width: 75%;
     font-size: large;
     font-family: 'Times New Roman', Times, serif;
     border-color: white;
@@ -426,4 +458,11 @@ rect {
     border-style: dotted;
     border-color: gray;
     border-width: 3px;
+}
+
+.db_foto
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
