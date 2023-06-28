@@ -35,7 +35,6 @@
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()">Editar perfil</button>
-        <button class="button_config">Acessibilidade</button>
         <form action="../phpscripts/sair.php">
             <button type="submit" class="button_config">Sair</button>
         </form>

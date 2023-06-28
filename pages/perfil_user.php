@@ -30,7 +30,7 @@
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
-        <button class="button_config_verm">Apagar conta</button>
+        <button class="button_config_verm" onclick="apagar('<?php echo $_GET['codigo']; ?>')">Apagar conta</button>
 
     </div>
     <div class="editar_perfil" id="editar_perfil">

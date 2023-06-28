@@ -48,7 +48,7 @@
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Pedidos ➝</p>
-                    <Button class="adicionar" href="criarconta.html" >Cancelar pedidos</Button>
+                    
             </div>
             <hr class="hr2">
             <div class="d21">
