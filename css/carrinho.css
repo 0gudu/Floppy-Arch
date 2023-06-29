@@ -4,6 +4,8 @@ body{
     overflow: hidden;
     width: 100%;
     height: 99.7vh;
+    display: flex;
+    flex-direction: column;
 }
 .center
 {
@@ -98,7 +100,8 @@ body{
 }
 .foto_adm
 {
-    width: 40%;
+    width: 7rem;
+    height: 7rem;
     border-color: white;
     border-width: 2px;
     border-style: solid;
@@ -155,6 +158,7 @@ body{
     min-height: 10rem;
 
 }
+/*
 ::-webkit-scrollbar
 {
     border-color: white;
@@ -180,6 +184,7 @@ body{
     border-style: inset;
     border-color: orange;
 }
+*/
 .cimabaixo
 {
     width: 88%;
@@ -209,14 +214,13 @@ body{
 .button_remover
 {
     background-color:yellow;   
-    font-weight: bold; 
     width:20; 
-    height: 100%; 
+    height: 90%; 
     margin-left: 5%;
     border-width: 6px; 
     border-color: yellow;
     font-size: x-large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     min-width: 8rem;
 }
 .button_remover:hover
@@ -234,6 +238,11 @@ body{
     font-size: x-large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     min-width: 10rem;
+}
+.ver_prod:hover
+{
+    color:orange;
+    cursor: pointer;
 }
 .valor_prod
 {
@@ -320,4 +329,63 @@ body{
     margin-top: 2rem;
     border-style: solid;
     border-color: white;
+}
+
+.d3 
+{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.footer 
+{
+    display: flex;
+    width: 100%;
+    display: inline-block;
+    font-size: x-large;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.texto_menu
+{
+    color: yellow;
+    font-size: 130%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+.branco
+{
+    color: white;
+    background-color: white;    
+    font-size: 1px;
+    line-height: 300%;
+}
+.menu_branco
+{
+    color: white;
+}
+.menu_amarelo:hover
+{
+    cursor: pointer;
+}
+.menu_amarelo
+{
+    color: yellow;
+}
+.menu_amarelo
+{
+    cursor: pointer;
+}
+.voltar:hover
+{
+    cursor: pointer;
 }

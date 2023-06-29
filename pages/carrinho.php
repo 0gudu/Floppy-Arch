@@ -43,11 +43,7 @@
                         ?>
 
                 </div>
-                <div class="cima2">
-                    <a href="index.php" class="sair_alterar">← Sair</a>
-                    <a href="../pages/entrar.php" class="sair_alterar">Meu Perfil</a>
-                </div>
-                <hr class="hr1">
+
                     <p class="nome_adm">Valor Total ➝ R$<?php echo $preco; ?>,00</p>
                     <Button class="adicionar" onclick="pedido()">Finalizar Compra</Button>
             </div>
@@ -60,9 +56,55 @@
             
             
         </div>
+        <div class="d3">
+        <div class="footer" onmouseleave="aparecer();" onmouseover="ocultar();">
+            <div id="texto_menu" class="texto_menu">⬉⬉Menu⬈⬈</div>
+            <div class="menu" id="menu">
+                <div class="branco"> a</div>
+
+                <a class="voltar" style="color: white;" onclick="voltarPagina()" style="margin-left: 3%; margin-right: 3%;"><u><b>⬅ Voltar</b></u></a>
+                <span><u><b><a href="comprar.php"  class="menu_amarelo" id="comprar" style="margin-left: 3%; margin-right: 3%;">Comprar</a></b></u></span>
+                <span><u><b><a href="carrinho.php" class="menu_branco" id="menupadrao" style="margin-left: 3%; margin-right: 3%;">Carrinho</a></b></u></span>
+                <span><u><b><a href="entrar.php" class="menu_amarelo" style="margin-left: 3%; margin-right: 3%;">
+                <?php 
+                    if($_SESSION['user'] == "none"){
+                        echo "entrar";
+                    } else {
+                        echo $_SESSION['name'];
+                    }
+                
+                ?>  </a></u></b></span>
+                <span><u><b><a href="contato.php" class="menu_branco" style="margin-left: 3%; margin-right: 3%;">Contato</a></u></b></span>
+                <span><u><b><a href="faleconosco.php" class="menu_branco" style="margin-left: 3%; margin-right: 3%;">Fale conosco</a></u></b></span>
+                  
+                <div class="branco"> a</div>
+            </div>
+        </div>
+    </div>
     </div>  
 </body>
 <script>
+
+    texto_menu.style.display="inline";
+    menu.style.display="none";
+
+    function ocultar()
+    {
+    texto_menu.style.display="none";
+        menu.style.display="inline";
+    }
+
+    function aparecer()
+    {
+        texto_menu.style.display="inline";
+        menu.style.display="none";
+    }
+
+    function voltarPagina() 
+    {
+        window.history.back();
+    }
+
     if ("<?php echo $_SESSION['user']; ?>" === "none") {
             alert("Primeiramente faça login");
             window.open("entrar.php","_self");
