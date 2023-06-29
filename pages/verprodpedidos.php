@@ -110,7 +110,7 @@
 
                                         <div class="botoes_carrinho ">
                                             <div class="butones">
-                                                <p class="valor_prod">R$' . $resultado1 . ',00</p>
+                                                <p class="valor_prod">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspR$' . $resultado1 . ',00</p>
                                             </div>
                                         </div>
                                     </div>

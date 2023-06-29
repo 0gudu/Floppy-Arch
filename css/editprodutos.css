@@ -414,11 +414,14 @@ rect {
 }
 .input_sq
 {
-    width: 70%;
+    width: 100%;
     min-height:10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
 }
 .input
 {
@@ -501,7 +504,8 @@ rect {
 }
 .fotos_perfis
 {
-    width: 12%;
+    width: 6rem;
+    height: 6rem;
     margin-left: 0%;
     border-color: white;
     border-width: 2px;
@@ -546,4 +550,9 @@ rect {
     justify-content: space-between;
     width: 100%;
     flex-direction: row;
+}
+
+.valor_prod {
+    color: rgb(5, 177, 5);
+    font-size: large;
 }
