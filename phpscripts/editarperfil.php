@@ -23,6 +23,7 @@
             $comando->bindParam(":nomes", $_SESSION['user']);
             $resultado = $comando->execute();
         }
+        $_SESSION['name'] = $nome;
         
     }
     

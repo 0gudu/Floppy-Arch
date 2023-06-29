@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administrador - FOPPY ARCH</title>
+    <title>Carrinho - FOPPY ARCH</title>
     <link rel="stylesheet" href="../css/carrinho.css" /> 
 </head>
 <body>
@@ -75,7 +75,7 @@
                 
                 ?>  </a></u></b></span>
                 <span><u><b><a href="contato.php" class="menu_branco" style="margin-left: 3%; margin-right: 3%;">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.php" class="menu_branco" style="margin-left: 3%; margin-right: 3%;">Fale conosco</a></u></b></span>
+                <!--<span><u><b><a href="faleconosco.php" class="menu_branco" style="margin-left: 3%; margin-right: 3%;">Fale conosco</a></u></b></span>-->
                   
                 <div class="branco"> a</div>
             </div>
@@ -114,6 +114,9 @@
     }
     function Enviar(codigo) {
         window.open("../phpscripts/excluir_carrinho.php?codigo="+codigo,"_self")
+    }
+    function verprod(x){
+        window.open("../pages/pagina_disquete.php?codigo="+x,"_self");
     }
 </script>
 </html>

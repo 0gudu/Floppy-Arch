@@ -26,7 +26,7 @@
                 
                 ?>  </a></u></b></span>
                 <span><u><b><a href="contato.php" class="menu_branco">Contato</a></u></b></span>
-                <span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>
+                <!--<span><u><b><a href="faleconosco.php" class="menu_branco">Fale conosco</a></u></b></span>-->
                   
                 <div class="branco"> a</div>
             </div>
