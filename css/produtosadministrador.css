@@ -145,6 +145,7 @@ body{
 {
     background-color: orange;
     border-color: orange;
+    cursor: pointer;
 }
 .d21 {
     height: 80vh;

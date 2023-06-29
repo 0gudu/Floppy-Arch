@@ -146,27 +146,28 @@ select {
     height: 80%;
     font-family: 'Times New Roman', Times, serif;
     background-color: yellow;
-    font-size: 180%;
+    font-size: larger;
     display: flex;
     justify-content: center;
     align-items: center;
     align-content: center;
     justify-items: center;
     border-width: 6px;
-    border-color: rgb(173, 173, 5);
+    border-color: yellow;
 
 }
 
 .disc_comprar:hover {
     cursor: pointer;
     background-color: orange;
+    border-color: orange;
 }
 
 .disc_carrinho{
     width: 65%;
     height: 80%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 180%;
+    font-size: larger;
     background-color: yellow;
     display: flex;
     justify-content: center;
@@ -174,13 +175,14 @@ select {
     align-content: center;
     justify-items: center;
     border-width: 6px;
-    border-color: rgb(173, 173, 5);
+    border-color: yellow;
 
 }
 
 .disc_carrinho:hover {
     cursor: pointer;
     background-color: orange;
+    border-color: orange;
 }
 
 .titulo {
