@@ -20,11 +20,11 @@
                                 echo '<div class="cimabaixo">
                                     <p class="nome_perfil">';
                                 if($adm == 1){
-                                    echo "adm - ";
+                                    echo "ADM - ";
                                 }
                                 echo $nome . '</p>
                                     <div class="botoes_perfil">';
-                                echo '<div class="href_perfil" onclick="editar(\'' . $email . '\')">Editar perfil</div><button onclick="remover(\'' . $email . '\')"
+                                echo '<div class="href_perfil" onclick="editar(\'' . $email . '\')">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Ver Perfil</div><button onclick="remover(\'' . $email . '\')"
                                     class="botao_removerperfil">Remover perfil</button>';
 
                                 echo '</div>

@@ -16,7 +16,7 @@
             echo '
                 <div class="produto" id="produto' . $p . '">
                     <div class="img_titulo" id="imgTitulo' . $p . '">
-                        <img src="data:image/jpeg;base64,' . $i . '" class="picture" id="pic' . $p . '">
+                        <img src="data:image/jpeg;base64,' . $i . '" class="picture1" id="pic' . $p . '">
                         <div class="dados" id="dados' . $p . '">
                             <div class="titulo_produto"><p style="margin: 0%; margin-left: 2%;">' . $n . '</p></div>
                             <p class="dados_prod" id="dadosProd' . $p . '">' . $m . '</p>

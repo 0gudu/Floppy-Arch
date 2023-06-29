@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Websitr Icon" type="gif">
     <title>Perfil - FOPPY ARCH</title>
-    <link rel="stylesheet" href="../css/perfil.css" /> 
+    <link rel="stylesheet" href="../css/perfil_user.css" /> 
 </head>
 <body>
     <div class="config" id="config">
@@ -103,7 +103,7 @@
                         echo("<img src='data:image/jpeg;base64,$i' class='db_foto'> ");
                         ?>
                     </div>
-                    <div class="nome"><?php if($res['adm'] == 1){echo "adm - ";} echo $res['email'];?></div>
+                    <div class="nome"><?php if($res['adm'] == 1){echo "ADM - ";} echo $res['email'];?></div>
                 </div>
             </div>
             <hr width="60%">

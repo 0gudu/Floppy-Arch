@@ -86,24 +86,24 @@
 
    dadosProd.style.display = "none";
 
-   function mostrarMais(x) {
-    var pic = document.getElementById('pic'+ x);
-    var dados = document.getElementById("dados" + x);
-    var dadosProd = document.getElementById("dadosProd" + x);
-    var mostrarMais = document.getElementById("mostrarMais" + x);
-    var mostrarMenos = document.getElementById("mostrarMenos" + x);
-    var imgTitulo = document.getElementById("imgTitulo" + x);
-    console.log(x);
-    console.log(pic);
-    console.log(dados);
-    console.log(dadosProd);
-    dadosProd.style.display="flex";
-    mostrarMais.style.display="none";
-    mostrarMenos.style.display="block";
-    imgTitulo.style.height="200px";
+    function mostrarMais(x) {
+        var pic = document.getElementById('pic'+ x);
+        var dados = document.getElementById("dados" + x);
+        var dadosProd = document.getElementById("dadosProd" + x);
+        var mostrarMais = document.getElementById("mostrarMais" + x);
+        var mostrarMenos = document.getElementById("mostrarMenos" + x);
+        var imgTitulo = document.getElementById("imgTitulo" + x);
+        console.log(x);
+        console.log(pic);
+        console.log(dados);
+        console.log(dadosProd);
+        dadosProd.style.display="flex";
+        mostrarMais.style.display="none";
+        mostrarMenos.style.display="block";
+        imgTitulo.style.height="200px";
 
-    pic.style.width="200px";
-    pic.style.heigth="200px";
+        pic.style.width="12rem";
+        pic.style.height="12rem";
     
     }
 
@@ -123,8 +123,8 @@
         mostrarMenos.style.display="none";
         imgTitulo.style.height="100px";
 
-        pic.style.width="100px";
-        pic.style.heigth="100px";
+        pic.style.width="6rem";
+        pic.style.height="6rem";
     }
 
 

@@ -31,6 +31,7 @@
         <hr class="hr_config" width="100%">
         <div class="edicao_perfil">
             <form class="edicao_perfil2 center" method="POST" action="../phpscripts/editarprodutos.php" enctype="multipart/form-data">
+                <input type="hidden" value="<?php echo $_GET['x']; ?>" name="prod">
                 <fieldset class="editar_foto_perfil">
                     <legend>Foto do produto</legend>
                     <input type="file" class="input_imagem" accept="image/*" id="input_ad_img" name="foto">
@@ -48,7 +49,7 @@
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
-                    <button class="editar_button"><div class="dotted"  onmouseover="concluir()" onclick="enviarX()">Concluir</div>
+                    <button class="editar_button"><div class="dotted" type="submit">Concluir</div>
                     <button class="editar_button" type="button" onclick="cancelar()">Cancelar
                 </div>
             </form>
@@ -73,27 +74,5 @@
         window.open("../phpscripts/excluir_produtosadm.php?codigo="+codigo,"_self")
     }
 
-    function concluir()
-    {
-
-        // Obter os valores dos campos
-        var nome = document.getElementById("input_ad_tt").value;
-        var foto = document.getElementById("input_ad_img").value;
-        var descricao = document.getElementById("input_ad_dsc").value;
-
-        // Verificar se os campos estão preenchidos
-        if (nome.trim() === "" || foto.trim() === "" || descricao.trim() === "") {
-            // Exibir mensagem de erro
-            alert("Por favor, preencha todos os campos (nome, foto e descrição) antes de concluir.");
-        }
-    }
-    function enviarX() {
-        // Obter o valor da variável "x" da barra de endereço
-        var urlParams = new URLSearchParams(window.location.search);
-        var x = urlParams.get('x');
-
-        // Redirecionar para a página "editarprodutos.php" com o valor de "x"
-        window.location.href = "../phpscripts/editarprodutos.php?x=" + x;
-    }   
 </script>
 </html>

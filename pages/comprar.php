@@ -45,7 +45,7 @@ session_start();
                             echo('
                                 <div onclick="Enviar(' . $idprod . ');" class="itemshowcase">
                                 <div class="disqueteshowcase">
-                                    <img src="data:image/jpeg;base64,' . $i . '" width="90%">
+                                    <img src="data:image/jpeg;base64,' . $i . '" width="90%" height="85%">
                                 </div>
                                 <div class="legendashowcase">
                                     <u><b><p class="legendap">' . $nome . '</p></b></u>

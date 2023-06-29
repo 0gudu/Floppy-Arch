@@ -1,34 +1,41 @@
 <?php
 include("../includes/conecta.php");
 
-$id = $_GET["x"]; // Obtém o valor do ID da barra de endereço
-$nome = $_POST["nome"];
-$descricao = $_POST["descricao"];
+$id = $_POST["prod"]; // Obtém o valor do ID da barra de endereço
+
 
 // Verifica se um arquivo de imagem foi enviado
-if (isset($_FILES["foto"]) && $_FILES["foto"]["error"] === 0) {
-    $foto = $_FILES["foto"]["tmp_name"];
-    $foto_contents = file_get_contents($foto);
-} else {
-    // Trata o erro, se necessário, ou define um valor padrão para a foto
-    $foto_contents = null; // Ou defina um valor padrão para a foto no banco de dados
+if(isset($_FILES['foto']['tmp_name']) && !empty($_FILES['foto']['tmp_name'])) {
+    $foto = file_get_contents($_FILES["foto"]["tmp_name"]);
+    $comando = $pdo->prepare("UPDATE produtos SET foto = :foto where id_produto = :id");
+    $comando->bindParam(":foto", $foto, PDO::PARAM_LOB);
+    $comando->bindParam(":id", $id);
+    $resultado = $comando->execute();
 }
 
-$comando = $pdo->prepare("UPDATE produtos SET nome = :nome, foto = :foto, descricao = :descricao WHERE id_produto = :id");
-$comando->bindParam(":nome", $nome);
-$comando->bindParam(":foto", $foto_contents, PDO::PARAM_LOB); // Use PDO::PARAM_LOB para dados BLOB
-$comando->bindParam(":descricao", $descricao);
-$comando->bindParam(":id", $id);
+if(isset($_POST['nome'])){
+    $nome = $_POST['nome'];
+    if ($nome != ""){
+        $comando = $pdo->prepare("UPDATE produtos SET nome = :nome WHERE id_produto = :id");
+        $comando->bindParam(":nome", $nome);
+        $comando->bindParam(":id", $id);
+        $resultado = $comando->execute();
+    }
+    
+}
 
-$resultado = $comando->execute();
+if(isset($_POST['descricao'])){
+    $descricao = $_POST['descricao'];
+    if ($descricao != ""){
+        $comando = $pdo->prepare("UPDATE produtos SET descricao = :descs WHERE id_produto = :id");
+        $comando->bindParam(":descs", $descricao);
+        $comando->bindParam(":id", $id);
+        $resultado = $comando->execute();
+    }
+    
+}
 
-// Verifica se a atualização foi bem-sucedida
-if ($resultado) {
-    // Redireciona para a página de adicionar produtos
     header("Location: ../pages/produtosadministrador.php");
-    exit(); // Encerra o script após o redirecionamento
-} else {
-    // Trata algum erro na atualização
-    echo "Ocorreu um erro ao atualizar o produto.";
-}
+    exit(); 
+
 ?>

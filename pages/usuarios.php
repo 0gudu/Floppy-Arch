@@ -57,7 +57,7 @@
                             $resultado = $comando->execute();
                             $dados_imagem = $comando->fetchColumn();
                             $i = base64_encode($dados_imagem);
-                            echo("<img src='data:image/jpeg;base64,$i' class=''db_foto> ");
+                            echo("<img src='data:image/jpeg;base64,$i' class='db_foto1'> ");
                         ?>
                     <p class="nome_adm"><?php echo $_SESSION['name'];?> </p>
                 </div>
