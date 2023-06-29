@@ -85,7 +85,7 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            ';
+                                            <hr class="hr3"> ';
                                         } else if ($n == 'pago') {
                                             echo('
                                 
@@ -93,7 +93,7 @@
                                 <div class="cimabaixo">
                                     <p class="tt_pedido">
                                         Pedido (' . $m . ') - ');
-                                            echo 'Pago e não enviado</p>
+                                            echo 'Pago e Enviado</p>
                                                 <div class="botoes_perfil">
                                                     <button class="button_pedido" onclick="recebido(' . $id . ')">Confirmar recebimento</button>
                                                     <a class="href_perfil" onclick="produtosver(' . $id . ')">Ver produtos</a>
@@ -103,7 +103,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>';
+                                            </div>
+                                            <hr class="hr3">';
                                         }
                                         
                                         
@@ -113,7 +114,7 @@
 
                 ?>
                 
-                <hr class="hr3">
+                
 
             </div>
             

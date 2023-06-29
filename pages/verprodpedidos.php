@@ -122,8 +122,8 @@
                             }
                 ?>
             </div>
-                <div class="input_sq">
-                    <button class="editar_button" onclick="voltar()">voltar</button>
+                <div class="input_sq1">
+                    <button class="editar_button" onclick="voltar()">VOLTAR</button>
                 </div>
             </form>
         </div>

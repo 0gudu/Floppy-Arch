@@ -219,10 +219,9 @@ body{
     background-color: yellow;
     border-width: 6px;
     border-color: yellow;
-    width: 25%;
     font-size: 1.5rem;
-    height: 100%;
-    width: 35%;
+    height: 80%;
+    width: 26%;
 }
 .botao_removerperfil:hover
 {

@@ -420,6 +420,18 @@ rect {
     justify-content: space-between;
 
 }
+
+.input_sq1
+{
+    width: 100%;
+    min-height:10%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+
+}
 .input
 {
     min-width: 80%;
