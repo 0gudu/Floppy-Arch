@@ -29,20 +29,20 @@ session_start();
         <div class="d2">
             
             <div class="d222">
-                <img src="images/disquete.gif" width="70%">
+                <img src="../images/disquete.gif" width="70%">
             </div>
             <div class="d21">
                 
                 <fieldset class="login">
-                    <p>floppyarch@gmail.com</p>
-                    <p>@floppyarch</p>
-                    <p>04830295656</p>
+                    <p>E-mail: floppyarch@gmail.com</p>
+                    <p>Instagram: @floppyarch</p>
+                    <p>Telefone: 04830295656</p>
                    
                 </fieldset>
                 
             </div>
             <div class="d222">
-                <img src="images/disquete.gif" width="70%">
+                <img src="../images/disquete.gif" width="70%">
             </div>
             
         </div>
