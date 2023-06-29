@@ -261,7 +261,7 @@ rect {
     background: white;
 }
 .certo {
-    color: green;
+    color: rgb(5, 202, 5);
 }
 .errado {
     color: red;
