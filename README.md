@@ -2,6 +2,7 @@
 
 Floppy Arch - Site de Venda de Disquetes
 ========================================
+![opera_VbScOetUFl](https://github.com/0gudu/Floppy-Arch/assets/89671108/f496383a-6d88-4b3f-85e4-88b1d96cdebe)
 
 Descrição do Projeto
 --------------------
