@@ -12,6 +12,8 @@ O Floppy Arch é um site de venda de disquetes, voltado para os entusiastas de t
 O site foi desenvolvido como um projeto para o trabalho de conclusão do terceiro ano do Ensino Médio, com o intuito de explorar o conhecimento adquirido nas disciplinas de programação e design web.
 
 ![opera_6s1xdrUkp7](https://github.com/0gudu/Floppy-Arch/assets/89671108/7c67f1c4-7766-41f8-8825-af4f696f512d)
+![opera_2O6kuKHlUp](https://github.com/0gudu/Floppy-Arch/assets/89671108/01701263-46bd-497f-97ee-c30c3aa20636)
+![opera_v3oOJCpo5d](https://github.com/0gudu/Floppy-Arch/assets/89671108/fe685391-26ce-466b-921d-50df186501b3)
 
 Contribuição
 ------------
