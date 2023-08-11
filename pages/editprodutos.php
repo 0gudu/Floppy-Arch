@@ -30,26 +30,27 @@
         </div>
         <hr class="hr_config" width="100%">
         <div class="edicao_perfil">
-            <form class="edicao_perfil2 center" method="POST" action="../phpscripts/editarprodutos.php">
+            <form class="edicao_perfil2 center" method="POST" action="../phpscripts/editarprodutos.php" enctype="multipart/form-data">
+                <input type="hidden" value="<?php echo $_GET['x']; ?>" name="prod">
                 <fieldset class="editar_foto_perfil">
                     <legend>Foto do produto</legend>
-                    <input type="file" class="input_imagem" accept="image/*" id="input_ed_img" name="imagem">
+                    <input type="file" class="input_imagem" accept="image/*" id="input_ad_img" name="foto">
                     <p>Garanta que o objetivo da foto esteja no centro da imagem!</p>
                 </fieldset>
                 <hr width="70%">
                 <div class="input_sq center">
                     Título:
-                    <input type="text" class="input" id="input_ed_tt" placeholder="Alterar título..." name="titulo"></input>
+                    <input type="text" class="input" id="input_ad_tt" placeholder="Alterar título..." name="nome"></input>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
                     Descricao:
-                    <textarea min-rows="1" cols="50" id="input_ed_dsc" class="input" placeholder="Alterar descrição..." name="descricao"></textarea>
+                    <textarea min-rows="1" cols="50" id="input_ad_dsc" class="input" placeholder="Alterar descrição..." name="descricao"></textarea>
                 </div>
                 <hr width="70%">
                 <div class="input_sq center">
-                    <button class="editar_button"><div class="dotted">Concluir</div>
-                    <button class="editar_button" onclick="voltar()">Cancelar</button>
+                    <button class="editar_button"><div class="dotted" type="submit">Concluir</div>
+                    <button class="editar_button" type="button" onclick="cancelar()">Cancelar
                 </div>
             </form>
         </div>
@@ -59,13 +60,19 @@
 <script>
   
 
-    function voltar()
+
+  function cancelar()
     {
-        window.open("produtosadministrador.php")
+        input_ad_img.value="";
+        input_ad_tt.value="";
+        input_ad_dsc.value="";
+
+        window.open("produtosadministrador.php","_self")
     }
 
     function Enviar(codigo) {
         window.open("../phpscripts/excluir_produtosadm.php?codigo="+codigo,"_self")
     }
+
 </script>
 </html>

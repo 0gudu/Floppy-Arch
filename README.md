@@ -8,7 +8,7 @@ Descrição do Projeto
 
 O Floppy Arch é um site de venda de disquetes, voltado para os entusiastas de tecnologia retrô e colecionadores de mídias antigas. O objetivo do site é proporcionar uma experiência única aos usuários, oferecendo uma ampla variedade de disquetes e acessórios relacionados.
 
-O site foi desenvolvido como um projeto para um trabalho do terceiro ano do Ensino Médio, com o intuito de explorar o conhecimento adquirido nas disciplinas de programação e design web.
+O site foi desenvolvido como um projeto para o trabalho de conclusão do terceiro ano do Ensino Médio, com o intuito de explorar o conhecimento adquirido nas disciplinas de programação e design web.
 
 Contribuição
 ------------

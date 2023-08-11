@@ -313,3 +313,9 @@ rect {
     height: 100%;
     display: flex;
 }
+.db_foto1
+{
+    width: 35%;
+    height: 35%;
+    border: 3px solid white;
+}

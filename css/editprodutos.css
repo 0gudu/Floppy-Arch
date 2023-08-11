@@ -415,10 +415,22 @@ rect {
 .input_sq
 {
     width: 70%;
-    min-height:20%;
+    min-height:10%;
     display: flex;
-    flex-direction: space-between;
     justify-content: space-between;
+
+}
+
+.input_sq1
+{
+    width: 100%;
+    min-height:10%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+
 }
 .input
 {
@@ -479,4 +491,77 @@ rect {
     height: 2.5rem;
     position:relative
     
+}
+
+.produtos {
+    width: 100%;
+    height: 87%;
+    overflow-y: auto;
+}
+.perfil
+{
+    width: 90%;
+    height: 100px;
+    margin: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 0%;
+}
+.fotos_perfis
+{
+    width: 6rem;
+    height: 6rem;
+    margin-left: 0%;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+.nome_perfil
+{
+    margin: 0%;
+    width: 100%;
+    height: 49%;
+    display: flex;
+    color: white;
+    padding-left: 5%;
+    font-size: 180%;
+    justify-content: left;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+}
+.cimabaixo
+{
+    width: 88%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0%;
+    
+}
+.botoes_carrinho
+{
+    display: flex;
+    flex-direction: row;
+    height: 45%; 
+    width: 100%;
+    justify-content: space-between;
+}
+.butones
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+}
+
+.valor_prod {
+    color: rgb(5, 177, 5);
+    font-size: large;
 }

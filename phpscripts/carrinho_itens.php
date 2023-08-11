@@ -82,7 +82,7 @@
                                             <div class="butones">
                                                 <div class="montedebotao">
                                                     <button class="button_remover center" onclick="Enviar(\'' . $m . '\')">Remover</button>
-                                                    <button href="pagina_disquete.php" class="ver_prod">Ver produto</button>
+                                                    <button href="pagina_disquete.php" class="ver_prod" onclick="verprod(' . $n . ')">Ver produto</button>
                                                 </div>
                                                 <p class="valor_prod">R$' . $resultado1 . ',00</p>
                                             </div>

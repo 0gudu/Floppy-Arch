@@ -145,6 +145,7 @@ body{
 {
     background-color: orange;
     border-color: orange;
+    cursor: pointer;
 }
 .d21 {
     height: 80vh;
@@ -461,4 +462,19 @@ rect {
     border-style: dotted;
     border-color: gray;
     border-width: 3px;
+}
+
+.img_prod_adm
+{
+    height: 100px;
+    width: 100px;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+.picture1
+{
+    width: 6rem;
+    height: 6rem;
+
 }

@@ -48,7 +48,7 @@
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Pedidos ➝</p>
-                    <Button class="adicionar" href="criarconta.html" >Cancelar pedidos</Button>
+                    
             </div>
             <hr class="hr2">
             <div class="d21">
@@ -90,10 +90,10 @@
                                             echo 'Pago e não enviado</p>
                                                 <div class="botoes_perfil">
                                                     <button class="button_pedido" onclick="recebido(' . $id . ')">Confirmar recebimento</button>
-                                                    <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
+                                                    <a class="href_perfil" onclick="produtosver(' . $id . ')">Ver produtos</a>
                                                     <div class="preco_valor_preco">
                                                         <p class="preco">Valor total:</p>
-                                                        <p class="valor_preco">R$ 40,00</p>
+                                                        <p class="valor_preco">R$' . $valortota . ',00</p>
                                                     </div>
                                                 </div>
                                             </div>

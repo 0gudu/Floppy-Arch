@@ -22,3 +22,6 @@ function aparecerConfig()
     {
         editar_perfil.style.display = "none";
     }
+    function apagar(x) {
+        window.open("../phpscripts/apagarconta.php?user=" + x, "_self")
+    }

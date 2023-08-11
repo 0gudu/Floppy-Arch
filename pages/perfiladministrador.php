@@ -35,7 +35,6 @@
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()">Editar perfil</button>
-        <button class="button_config">Acessibilidade</button>
         <form action="../phpscripts/sair.php">
             <button type="submit" class="button_config">Sair</button>
         </form>
@@ -57,7 +56,6 @@
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                        <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
                     <hr width="86%">
                     <div class="input_sq center">
@@ -129,7 +127,7 @@
                         Endereço: <?php echo $res['endereco'];?><br><br>
                     </p> 
                     <div class="botoes">
-                        <a href="produtos_adm.html" class="href_produtos"><button class="button">Produtos</button></a>
+                        <a href="produtosadministrador.php" class="href_produtos"><button class="button">Produtos</button></a>
                         <a href="usuarios.php" class="button_txt">Usuários</a>
                         <button class="button_txt" onclick="aparecerConfig()" id="configuracoes">Configurações</button>
                     </div> 

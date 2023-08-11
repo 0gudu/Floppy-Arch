@@ -47,7 +47,7 @@
                 </div>
                 <hr class="hr1">
                     <p class="nome_adm">Pedidos ➝</p>
-                    <Button class="adicionar" href="criarconta.html" >Cancelar pedidos</Button>
+                    
             </div>
             <hr class="hr2">
             <div class="d21">
@@ -65,13 +65,14 @@
                                 $n = $linhas["statuss"];
                                 $valortota = $linhas["valor"];
                                 
-                                echo('
+                                
+                                        if ($n == 'n pago') {
+                                            echo('
                                 
                                 <div class="perfil">
                                 <div class="cimabaixo">
                                     <p class="tt_pedido">
                                         Pedido (' . $m . ') - ');
-                                        if ($n == 'n pago') {
                                             echo 'Não pago</p>
                                                 <div class="botoes_perfil">
                                                     <button class="button_pedido" onclick="pagar(' . $id . ',' . $valortota . ')">Pagar</button>
@@ -84,19 +85,26 @@
                                                 </div>
                                             </div>
                                             </div>
-                                            ';
+                                            <hr class="hr3"> ';
                                         } else if ($n == 'pago') {
-                                            echo 'Pago e não enviado</p>
+                                            echo('
+                                
+                                <div class="perfil">
+                                <div class="cimabaixo">
+                                    <p class="tt_pedido">
+                                        Pedido (' . $m . ') - ');
+                                            echo 'Pago e Enviado</p>
                                                 <div class="botoes_perfil">
                                                     <button class="button_pedido" onclick="recebido(' . $id . ')">Confirmar recebimento</button>
-                                                    <a class="href_perfil" onclick="produtosver()">Ver produtos</a>
+                                                    <a class="href_perfil" onclick="produtosver(' . $id . ')">Ver produtos</a>
                                                     <div class="preco_valor_preco">
                                                         <p class="preco">Valor total:</p>
-                                                        <p class="valor_preco">R$ 40,00</p>
+                                                        <p class="valor_preco">R$ '. $valortota .',00</p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            </div>';
+                                            </div>
+                                            <hr class="hr3">';
                                         }
                                         
                                         
@@ -106,7 +114,7 @@
 
                 ?>
                 
-                <hr class="hr3">
+                
 
             </div>
             
@@ -121,7 +129,7 @@ function cancelar(x) {
 }
 
 function produtosver(x) {
-  verprod.style.display = "flex";
+  window.open("verprodpedidos.php?pedido="+x,"_self")
   
 }
 
@@ -135,7 +143,7 @@ function pagar(x, y) {
 }
 
 function recebido(x) {
-    var url = "prodrecebido.php?pedido=" + x ;
+    var url = "../phpscripts/prodrecebido.php?pedido=" + x ;
   window.open(url, "_self");
 }
 </script>

@@ -27,11 +27,10 @@
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
-        <button class="button_config">Acessibilidade</button>
         <form action="../phpscripts/sair.php">
             <button type="submit" class="button_config">Sair</button>
         </form>
-        <button class="button_config_verm">Apagar conta</button>
+        <button class="button_config_verm" onclick="apagar('<?php echo $_SESSION['user']; ?>')">Apagar conta</button>
 
     </div>
     <div class="editar_perfil" id="editar_perfil">
@@ -48,7 +47,6 @@
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                        <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
                     <hr width="85%">
                     <div class="input_sq center">

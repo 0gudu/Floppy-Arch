@@ -19,7 +19,7 @@
             <div class="tits">
                 <div class="titulo">
                     <div class="flop">
-                        <a href="index.html"><img src="images/floppy_arch_title.png" width="100%"></a>
+                        <a href="index.php"><img src="../images/floppy_arch_title.png" width="100%"></a>
                     </div>
                     <div class="criar_conta">
                         <p ><b>➝ Pagamento (pix)</b></p>    

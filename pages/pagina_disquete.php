@@ -44,7 +44,7 @@
                 </div>
                 <div class="disc_baixo">
                     <div class="disc_img">
-                        <?php echo '<img src="data:image/jpeg;base64,' . $i . '" width="90%">'; ?>
+                    <?php echo '<img src="data:image/jpeg;base64,' . $i . '" style="width: 20rem; height: 20rem;">'; ?>
                     </div>
                     <div class="disc_info">
                         <div class="branco">a</div>

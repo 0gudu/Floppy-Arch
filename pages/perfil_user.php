@@ -20,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Websitr Icon" type="gif">
     <title>Perfil - FOPPY ARCH</title>
-    <link rel="stylesheet" href="../css/perfil.css" /> 
+    <link rel="stylesheet" href="../css/perfil_user.css" /> 
 </head>
 <body>
     <div class="config" id="config">
@@ -30,7 +30,7 @@
         </div>
         <hr class="hr_config">
         <button class="button_config" onclick="aparecerEditar()" id="botao_editar_perfil">Editar perfil</button>
-        <button class="button_config_verm">Apagar conta</button>
+        <button class="button_config_verm" onclick="apagar('<?php echo $_GET['codigo']; ?>')">Apagar conta</button>
 
     </div>
     <div class="editar_perfil" id="editar_perfil">
@@ -48,7 +48,6 @@
                         <legend>Foto de perfil</legend>
                         <input type="file" name="imagem" class="input_imagem" accept="image/*" >
                         <p>Garanta que você ou o objetivo da foto esteja no centro da imagem!</p>
-                        <button type="submit" class="editar_button"><div class="dotted">enviar</div>
                     </fieldset>
                     <hr width="70%">
                     <div class="input_sq center">
@@ -104,7 +103,7 @@
                         echo("<img src='data:image/jpeg;base64,$i' class='db_foto'> ");
                         ?>
                     </div>
-                    <div class="nome"><?php if($res['adm'] == 1){echo "adm - ";} echo $res['email'];?></div>
+                    <div class="nome"><?php if($res['adm'] == 1){echo "ADM - ";} echo $res['email'];?></div>
                 </div>
             </div>
             <hr width="60%">
