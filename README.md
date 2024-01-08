@@ -1,6 +1,6 @@
 ![floppy_arch_title](https://github.com/0gudu/Floppy-Arch/assets/89671108/f84c5f24-ceb9-41d4-9eab-02baf498d0fa)
 
-Floppy Arch - Site de Venda de Disquetes
+Floppy Arch - Projeto de site de vendas
 ========================================
 ![opera_VbScOetUFl](https://github.com/0gudu/Floppy-Arch/assets/89671108/f496383a-6d88-4b3f-85e4-88b1d96cdebe)
 
