@@ -37,6 +37,7 @@ O site foi desenvolvido com o intuito de explorar o conhecimento adquirido nas d
      ```
      http://localhost/floppy-arch/pages
      ```
+  - Esse projeto foi infelizmente feito somente com compatibilidade a resoluções 16:9.
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests
 
