@@ -13,6 +13,33 @@ O site foi desenvolvido com o intuito de explorar o conhecimento adquirido nas d
 
 ![opera_6s1xdrUkp7](https://github.com/0gudu/Floppy-Arch/assets/89671108/7c67f1c4-7766-41f8-8825-af4f696f512d)
 
+# Instalação do Projeto
+
+## Pré-requisitos
+- Certifique-se de ter um servidor web configurado, como Apache, e o PHP instalado em seu ambiente local.
+
+## Configuração do Banco de Dados
+1. **Script SQL:**
+   - Na raiz do projeto, localize o script SQL `database_script.sql`.
+   - Execute o script no seu banco de dados local. Isso criará a tabela necessária chamada "fd".
+
+## Configuração do Ambiente Web
+1. **Cópia dos Arquivos:**
+   - Baixe ou clone o repositório na sua máquina local.
+   - Certifique-se de que os arquivos estejam em um diretório acessível pelo servidor web.
+
+2. **Configuração do Apache:**
+   - Se estiver usando Apache, certifique-se de que a configuração do VirtualHost aponte para a pasta do projeto.
+
+## Acesso à Aplicação
+**Acesse pelo Navegador:**
+   - Abra seu navegador e acesse o projeto localmente:
+     ```
+     http://localhost/floppy-arch
+     ```
+## Contribuições
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests
+
 Contribuição
 ------------
 
