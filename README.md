@@ -20,7 +20,7 @@ O site foi desenvolvido com o intuito de explorar o conhecimento adquirido nas d
 
 ## Configuração do Banco de Dados
 1. **Script SQL:**
-   - Na raiz do projeto, localize o script SQL `database_script.sql`.
+   - Na raiz do projeto, localize o script SQL `fd.sql`.
    - Execute o script no seu banco de dados local. Isso criará a tabela necessária chamada "fd".
 
 ## Configuração do Ambiente Web
@@ -35,7 +35,7 @@ O site foi desenvolvido com o intuito de explorar o conhecimento adquirido nas d
 **Acesse pelo Navegador:**
    - Abra seu navegador e acesse o projeto localmente:
      ```
-     http://localhost/floppy-arch
+     http://localhost/floppy-arch/pages
      ```
 ## Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests
